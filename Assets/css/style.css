@@ -129,6 +129,7 @@ body {
         flex-direction: column;
         margin: 30px;
         cursor: pointer;
+        text-align: center;
 
 
         img {
@@ -137,6 +138,7 @@ body {
         }
 
         span {
+            display: block;
             font-family: var(--fontN);
             margin-top: 8px;
             color: #fff;
