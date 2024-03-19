@@ -11,7 +11,8 @@ ES7
 # vscode 단축키
 
 설정 : ctrl + ,        
-사이드 바 : ctrl + b            
+사이드 바 : ctrl + b      
+줄복사 : alt + shift + ↕      
 
 
 # 수업 규칙
