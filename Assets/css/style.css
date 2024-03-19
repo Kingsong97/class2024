@@ -127,7 +127,7 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin: 10px;
+        margin: 30px;
         cursor: pointer;
 
 
@@ -138,8 +138,9 @@ body {
 
         span {
             font-family: var(--fontN);
-            margin-top: 5px;
+            margin-top: 8px;
             color: #fff;
+            font-size: 13px;
         }
     }
 }
