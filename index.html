@@ -11,7 +11,7 @@
 
 <body>
     <div class="main__icons">
-        <div class="draggableIcon icon">
+        <div id="myComputerIcon" class="draggableIcon icon">
             <img src="Assets/img/FACE.png" alt="내 컴퓨터">
             <span>내 컴퓨터</span>
         </div>
@@ -24,7 +24,7 @@
     </div>
     <!-- //main__icons -->
 
-    <div class="layer__wrap" style="display: none;">
+    <div class="layer__wrap" id="infoLayer" style="display: block">
         <div class="layer__inner">
             <div class="layer">
                 <div class="layer__conts">
@@ -45,17 +45,47 @@
 
                             저의 장점으로는 커뮤니케이션 능력, 책임감, 끈기가 있습니다. 저는 프로젝트를 진행함에 있어, 매사 커뮤니케이션의 중요성을 되새기며 팀원들과 유기적으로 소통하여,
                             프로젝트 진행간 불필요한 소모를 줄였습니다. 또한, 저는 주어진 임무와 목표를 주인의식을 지니고 끝까지 해내는 성격으로 프로젝트를 함에 있어 주어진 업무를 완벽히
-                            수행하는 것을 목표로 합니다. 이러한 요소들은 귀사에 도움이 될 것이라 확신하기에 지원하였습니다.
-
-                            뽑아만 주신다면 항상 최선을다하고, 팀원들과 유기적으로 화합하며, 귀사와 개인의 목표를 모두 이룰 수 있도록 분골쇄신하여 열심히 일하겠습니다.
+                            수행하는 것을 목표로 합니다.
                         </p>
                     </div>
+                    <div class="skill">
+                        <h3>Skill</h3>
+                        <dl>
+                            <dt>html</dt>
+                            <dd>웹 페이지의 구조를 정의하는 마크업 언어입니다.</dd>
+                            <dt>css</dt>
+                            <dd>웹 페이지의 스타일을 설정하는 스타일 시트 언어입니다.</dd>
+                            <dt>javascript</dt>
+                            <dd>웹 페이지에 인터랙티브한 요소를 추가하기 위한 프로그래밍 언어입니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>react.js</dt>
+                            <dd>사용자 인터페이스를 구축하기 위한 선언적, 효율적, 유연한 JavaScript 라이브러리입니다.</dd>
+                            <dt>node.js</dt>
+                            <dd>서버 측 애플리케이션을 구축하기 위한 JavaScript 런타임 환경입니다.</dd>
+                            <dt>next.js</dt>
+                            <dd>React 기반의 프레임워크로, 서버 사이드 렌더링과 정적 웹 사이트 생성을 간편하게 해주는 기능을 제공합니다.</dd>
+                        </dl>
+                    </div>
+                    <div class="picture"></div>
                 </div>
                 <div class="layer__footer"></div>
             </div>
         </div>
     </div>
     <!-- //layer__wrap  -->
+    <script>
+        // "내 컴퓨터" 아이콘을 위한 클릭 이벤트 리스너 추가
+        document.getElementById('myComputerIcon').addEventListener('click', function () {
+            let layer = document.getElementById('infoLayer');
+            // 레이어의 현재 표시 상태에 따라 보이거나 숨김 처리
+            if (layer.style.display === "none") {
+                layer.style.display = "block"; // 레이어를 보이게 함
+            } else {
+                layer.style.display = "none"; // 레이어를 숨김
+            }
+        });
+    </script>
 </body>
 
 </html>
