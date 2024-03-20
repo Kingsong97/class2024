@@ -265,7 +265,106 @@ body {
                 }
             }
         }
-    }
 
-    .layer__footer {}
+        .layer__footer {}
+
+        .picture {
+            h3 {
+                width: 100%;
+                border-bottom: 1px solid #fff;
+                font-weight: 100;
+                font-size: 16px;
+                line-height: 2;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    width: 25%;
+                    list-style: none;
+
+                    img {
+                        width: 100%;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .layer__inner {
+        .layer {
+            width: 90vw;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .layer__inner {
+        .layer {
+            width: 95vw;
+            height: 95vh;
+
+            .layer__conts {
+                .picture {
+                    ul {
+                        li {
+                            width: 33.3333%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .layer__inner {
+        .layer {
+            .layer__conts {
+                .skill {
+                    flex-direction: column;
+                }
+
+                .picture {
+                    ul {
+                        li {
+                            width: 50%;
+                        }
+                    }
+                }
+
+                dl {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .layer__inner {
+        .layer {
+            .layer__conts {
+                .picture {
+                    ul {
+                        li {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                dl {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
