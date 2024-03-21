@@ -1,5 +1,8 @@
 # 오늘의 수업
-
+[메인페이지](https://kingsong97.github.io/class2024/)   
+[Javasciprt](https://kingsong97.github.io/class2024/Javascript/index.html)   
+[MySQL](https://kingsong97.github.io/class2024/mysql/index.html)   
+ 
 # vscode 확장 프로그램
 
 Live Server     
