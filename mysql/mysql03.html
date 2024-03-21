@@ -29,12 +29,52 @@
     <main id="main">
         <div class="main__sample container">
             <div id="sample01" class="sample">
-                <h3>DataBase</h3>
-                <p class="strong">DataBase 만들기</p>
+                <h3>1.DataBase 보기</h3>
                 <div class="info">
                     show databases;
                 </div>
                 <pre><code class="language-js">mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)</code></pre>
+
+            </div>
+            <div id="sample02" class="sample">
+                <h3>2.DataBase 만들기</h3>
+                <div class="info">
+                    create database 이름;
+                </div>
+                <pre><code class="language-js">create database test;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)</code></pre>
+
+            </div>
+            <div id="sample03" class="sample">
+                <h3>3.DataBase 삭제</h3>
+                <div class="info">
+                    drop database 이름;
+                </div>
+                <pre><code class="language-js">mysql> drop table members;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show databases;
 +--------------------+
 | Database           |
 +--------------------+
