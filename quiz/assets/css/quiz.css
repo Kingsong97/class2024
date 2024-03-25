@@ -157,14 +157,13 @@ body::after {
     background-color: #fff;
     padding: 40px 30px;
     border-radius: 10px;
+    margin: 10px;
 }
 
 .quiz__header {
     color: #696969;
     margin-bottom: 20px;
 }
-
-.quiz__main {}
 
 .quiz__main .question {
     margin-bottom: 20px;
@@ -181,12 +180,58 @@ body::after {
     line-height: 1.4;
 }
 
-.quiz__main .input {}
+.quiz__main .input input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #b8a8ff;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
 
-.quiz__main .answer {}
+.quiz__main .answer {
+    border: 1px solid #b8a8ff;
+    padding: 20px;
+    background-color: #e7e2ff;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;    
+}
 
-.quiz__main .desc {}
+.quiz__main .answer::before {
+    content: "🙌 정답 : ";
+}
 
-.quiz__footer {}
+.quiz__main .desc {border: 1px solid #e0d9ff;
+    padding: 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;}
 
-.quiz__footer .confirm{}
+.quiz__main .desc::before {
+    content: "🤷‍♂️ 설명 : ";
+}
+
+.quiz__footer .confirm{
+    background-color: #412E91;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.quiz__footer .confirm:hover {
+    background-color: transparent;
+    border: 1px dashed #412E91;
+    color: #412E91;
+    cursor: pointer;
+}
