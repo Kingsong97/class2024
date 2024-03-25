@@ -40,8 +40,8 @@
                     <div class="input">
                         <input type="text" placeholder="정답을 입력해주세요!">
                     </div>
-                    <div class="answer"></div>
-                    <div class="desc"></div>
+                    <div class="answer none"></div>
+                    <div class="desc none"></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
@@ -59,7 +59,7 @@
         // 변수
         const infoDate = "2021년 1회";
         const infoType = "정보처리기능사";
-        const infoNum = "1";
+        const infoNum = "01";
         const infoQuestion = "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?";
         const infoAnswer = "MIPS";
         const infoDesc = "LIPS는 초당 1개, KIPS는 초당 1,000개, MIPS는 초당 1,000,000개의 연산을 수행하는 것을 의미합니다.";
@@ -67,6 +67,26 @@
         // 문제출력
         document.querySelector(".quiz__header .data").innerText = infoDate;
         document.querySelector(".quiz__header .type").innerText = infoType;
+        document.querySelector(".quiz__main .question em").innerText = infoNum;
+        document.querySelector(".quiz__main .question span").innerText = infoQuestion;
+        document.querySelector(".quiz__main .answer").innerText = infoAnswer;
+        document.querySelector(".quiz__main .desc").innerText = infoDesc;
+
+        // 정답 확인하기
+        document.querySelector(".quiz__footer .confirm").addEventListener("click", function () {
+            const userAnswer = document.querySelector(".quiz__main input").value; // 사용자가 입력한 정답.
+
+            // 사용자 정답과 실제 정답을 확인
+            if (infoAnswer == userAnswer) {
+                alert("🎉정답🎉");
+            } else {
+                alert("🤦‍♂️오답🤦‍♂️");
+            }
+
+            // 정답과 설명을 보여주기
+            document.querySelector(".quiz__main .answer").classList.remove("none");
+            document.querySelector(".quiz__main .desc").classList.remove("none");
+        });
     </script>
 </body>
 
