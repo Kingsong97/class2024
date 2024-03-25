@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 선언 함수
+        {
+            function func() {
+                console.log("object");
+            };
+            func();
+        }
+
+        // 2. 익명 함수
+        {
+            const func = function () {
+                console.log("object2");
+            };
+            func();
+        }
+
+        // 3. 매개변수
+        {
+            function func(str) {
+                console.log(str);
+            };
+            func("ob3");
+        }
+        {
+            const func = function (str) {
+                console.log(str);
+            };
+            func("ob3-1");
+        }
+
+        // 4. 리턴값 함수
+        {
+            function func() {
+                return "ob4"
+            };
+            console.log(func);
+        }
+        {
+            const func = function () { }
+        }
+    </script>
+</body>
+
+</html>
