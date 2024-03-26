@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz 01</title>
+    <title>퀴즈 01</title>
     <link rel="stylesheet" href="assets/css/quiz.css">
 </head>
 
@@ -25,11 +25,12 @@
         </nav>
     </header>
     <!-- //header -->
+
     <main id="main">
-        <div class="quiz_wrap">
+        <div class="quiz__wrap">
             <div class="quiz">
                 <div class="quiz__header">
-                    <span class="data"></span>
+                    <span class="date"></span>
                     <span class="type"></span>
                 </div>
                 <div class="quiz__main">
@@ -50,22 +51,23 @@
         </div>
     </main>
     <!-- //main -->
+
     <footer id="footer">
-        <a href="mailto:kingsongsm97@gmail.com">kingsongsm97@gmail.com</a>
+        <a href="mailto:webstoyboy@naver.com">webstoyboy@naver.com</a>
     </footer>
     <!-- //footer -->
+
     <script>
-        // 문제 정보
-        // 변수
+        // 문제 정보 
         const infoDate = "2021년 1회";
         const infoType = "정보처리기능사";
         const infoNum = "01";
         const infoQuestion = "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?";
         const infoAnswer = "MIPS";
-        const infoDesc = "LIPS는 초당 1개, KIPS는 초당 1,000개, MIPS는 초당 1,000,000개의 연산을 수행하는 것을 의미합니다.";
+        const infoDesc = "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다.";
 
-        // 문제출력
-        document.querySelector(".quiz__header .data").innerText = infoDate;
+        // 문제 출력 
+        document.querySelector(".quiz__header .date").innerText = infoDate;
         document.querySelector(".quiz__header .type").innerText = infoType;
         document.querySelector(".quiz__main .question em").innerText = infoNum;
         document.querySelector(".quiz__main .question span").innerText = infoQuestion;
@@ -74,13 +76,13 @@
 
         // 정답 확인하기
         document.querySelector(".quiz__footer .confirm").addEventListener("click", function () {
-            const userAnswer = document.querySelector(".quiz__main input").value; // 사용자가 입력한 정답.
+            const userAnswer = document.querySelector(".quiz__main input").value;   // 사용자가 쓴 정답
 
             // 사용자 정답과 실제 정답을 확인
             if (infoAnswer == userAnswer) {
-                alert("🎉정답🎉");
+                alert("정답입니다.");
             } else {
-                alert("🤦‍♂️오답🤦‍♂️");
+                alert("오답입니다.");
             }
 
             // 정답과 설명을 보여주기

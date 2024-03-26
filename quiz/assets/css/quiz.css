@@ -4,53 +4,57 @@
     font-style: normal;
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.eot");
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.eot?#iefix") format("embedded-opentype"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.woff2") format("woff2"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.woff") format("woff"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.ttf") format("truetype");
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.ttf") format("truetype");
     font-display: swap;
-} 
+}
+
 @font-face {
     font-family: "nanumSquareNeo";
     font-weight: 400;
     font-style: normal;
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.eot");
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.eot?#iefix") format("embedded-opentype"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.woff2") format("woff2"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.woff") format("woff"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.ttf") format("truetype");
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.ttf") format("truetype");
     font-display: swap;
-} 
+}
+
 @font-face {
     font-family: "nanumSquareNeo";
     font-weight: 700;
     font-style: normal;
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.eot");
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.eot?#iefix") format("embedded-opentype"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.woff2") format("woff2"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.woff") format("woff"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.ttf") format("truetype");
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.ttf") format("truetype");
     font-display: swap;
-} 
+}
+
 @font-face {
     font-family: "nanumSquareNeo";
     font-weight: 800;
     font-style: normal;
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.eot");
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.eot?#iefix") format("embedded-opentype"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.woff2") format("woff2"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.woff") format("woff"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.ttf") format("truetype");
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.ttf") format("truetype");
     font-display: swap;
-} 
+}
+
 @font-face {
     font-family: "nanumSquareNeo";
     font-weight: 900;
     font-style: normal;
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.eot");
     src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.eot?#iefix") format("embedded-opentype"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.woff2") format("woff2"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.woff") format("woff"),
-         url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.ttf") format("truetype");
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -72,10 +76,33 @@ a {
     color: #000;
 }
 
+/* body */
+body {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-image: url(../img/bg01.jpg);
+    width: 100%;
+    min-height: 100vh;
+}
+
+body::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
 /* common */
 .none {
     display: none;
 }
+
 /* header */
 #header {
     color: #fff;
@@ -83,18 +110,22 @@ a {
     align-items: center;
     justify-content: space-between;
 }
+
 #header h1 a {
     display: inline-block;
     color: #fff;
     padding: 20px;
     font-size: 30px;
 }
+
 #header nav {
     padding-right: 20px;
 }
+
 #header nav li {
     display: inline-block;
 }
+
 #header nav li a {
     padding: 10px;
     display: inline-block;
@@ -106,30 +137,10 @@ a {
     line-height: 1;
     color: #fff;
 }
+
 #header nav li.active a {
     background-color: #fff;
     color: #000;
-}
-
-/* body */
-body {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    position: relative;
-    background-image: url(../img/bg01.jpg);
-    width: 100%;
-    height: 100vh;
-}
-body::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.3);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
 }
 
 /* footer */
@@ -138,26 +149,28 @@ body::after {
     font-size: 14px;
     text-transform: uppercase;
 }
+
 #footer a {
     display: inline-block;
     color: #fff;
     padding: 40px;
 }
+
 #footer a:hover {
     text-decoration: underline;
     text-underline-position: under;
 }
 
-/* quiz_wrap */
-.quiz_wrap {
+/* quiz__wrap */
+.quiz__wrap {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.quiz_wrap .quiz {
-    max-width: 500px;
+.quiz__wrap .quiz {
+    width: 500px;
     background-color: #fff;
     padding: 40px 30px;
     border-radius: 10px;
@@ -191,6 +204,7 @@ body::after {
     border-radius: 3px;
     font-size: 16px;
     color: #666;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
@@ -202,26 +216,28 @@ body::after {
     font-size: 16px;
     color: #666;
     line-height: 1.5;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 }
 
 .quiz__main .answer::before {
-    content: "🙌 정답 : ";
+    content: '🥰 정답 : ';
 }
 
-.quiz__main .desc {border: 1px solid #e0d9ff;
+.quiz__main .desc {
+    border: 1px solid #e0d9ff;
     padding: 20px;
     border-radius: 3px;
     font-size: 16px;
     color: #666;
     line-height: 1.5;
-    margin-bottom: 10px;}
-
-.quiz__main .desc::before {
-    content: "🤷‍♂️ 설명 : ";
+    margin-bottom: 10px;
 }
 
-.quiz__footer .confirm{
+.quiz__main .desc::before {
+    content: '🥳 설명 : ';
+}
+
+.quiz__footer .confirm {
     background-color: #412E91;
     color: #fff;
     width: 100%;

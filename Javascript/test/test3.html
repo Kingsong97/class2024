@@ -11,35 +11,36 @@
     <script>
         // 1. 선언 함수
         {
-            function test() {
-                console.log("안녕")
+            function func() {
+                console.log("1");
             };
-            test();
-        };
+            func();
+        }
 
         // 2. 익명 함수
         {
-            test = function () {
-                console.log("그대");
+            const func = function () {
+                console.log("2");
             };
-            test();
+            func();
         }
 
         // 3. 매개변수
         {
-            test = function (str) {
+            const func = function (str) {
                 console.log(str);
             };
-            test("바보");
+            func("3");
         }
 
         // 4. 리턴값 함수
         {
-            test = function () {
-                return "그대"
+            const func = function (){
+                return "4"
             };
-            console.log(test());
+            func();
         }
+
 
         // 5. 매개변수 + 리턴값 함수
         {
@@ -75,50 +76,18 @@
         }
 
         // 11. for문
-        {
-            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            for (let i = 0; i < arr.length; i++) {
-                console.log(i);
-            }
-        }
+        
 
         // 12. forEach()
-        {
-            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            arr.forEach(function (e) {
-                console.log(e);
-            });
-        }
+        
 
         // 13. for in
-        {
-            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            for (let e in arr) {
-                console.log(e);
-            };
-        }
-
+        
         // 14. for of
-        {
-            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            for (let e of arr) {
-                console.log(e);
-            };
-        }
+        
 
         // 15. map()
-        {
-            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            arr.map(function (e) {
-                console.log(e);
-            });
-        }
-
+        
     </script>
 </body>
 
