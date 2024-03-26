@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 선언 함수
+        {
+            function test() {
+                console.log("안녕")
+            };
+            test();
+        };
+
+        // 2. 익명 함수
+        {
+            test = function () {
+                console.log("그대");
+            };
+            test();
+        }
+
+        // 3. 매개변수
+        {
+            test = function (str) {
+                console.log(str);
+            };
+            test("바보");
+        }
+
+        // 4. 리턴값 함수
+        {
+            test = function () {
+                return "그대"
+            };
+            console.log(test());
+        }
+
+        // 5. 매개변수 + 리턴값 함수
+        {
+        }
+
+        // 6. 선언 함수 화살표
+        {
+
+
+        }
+
+        // 7. 익명 함수 화살표
+        {
+
+
+        }
+
+        // 8. 매개변수 화살표
+        {
+
+
+        }
+
+        // 9. 리턴값 함수 화살표
+        {
+
+        }
+
+        // 10. 매개변수 + 리턴값 함수 화살표
+        {
+
+
+        }
+
+        // 11. for문
+        {
+            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            for (let i = 0; i < arr.length; i++) {
+                console.log(i);
+            }
+        }
+
+        // 12. forEach()
+        {
+            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            arr.forEach(function (e) {
+                console.log(e);
+            });
+        }
+
+        // 13. for in
+        {
+            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            for (let e in arr) {
+                console.log(e);
+            };
+        }
+
+        // 14. for of
+        {
+            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            for (let e of arr) {
+                console.log(e);
+            };
+        }
+
+        // 15. map()
+        {
+            arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            arr.map(function (e) {
+                console.log(e);
+            });
+        }
+
+    </script>
+</body>
+
+</html>

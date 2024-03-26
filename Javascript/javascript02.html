@@ -60,32 +60,87 @@
         <!-- //main__menu container -->
         <div class="main__sample container">
             <div id="sample01" class="sample">
-                <h3>01. 변수 : 데이터 저장</h3>
-                <p>
-                    자바스크립트에서 변수는 값을 지정하고 참조하는데 사용합니다.
-                    변수를 사용하면 데이터를 저장하고 나중에 해당 데이터를 재사용 할 수 있습니다.
-                </p>
+                <h3>01. 변수 : 데이터 불러오기</h3>
+                <p></p>
                 <pre><code>{
-        let x = 100;
-        let y = 200;
-        let z = "javascript";
+        let x = 100, y = 200, z = "javascript";
 
-        console.log(x);
-        console.log(y);
-        console.log(z);
+        console.log(x, y, z);
 }</code></pre>
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div>
-                            100<br />
-                            200<br />
-                            javascript
-                        </div>
+                        <div></div>
                     </details>
                 </div>
             </div>
             <!-- //sample01 -->
+            <div id="sample02" class="sample">
+                <h3>02. 상수 : 데이터 불러오기</h3>
+                <p></p>
+                <pre><code>{
+        const x = 100, y = 200, z = "javascript";
+
+        console.log(x, y, z);
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample02 -->
+            <div id="sample03" class="sample">
+                <h3>03. 배열 : 데이터 불러오기</h3>
+                <p></p>
+                <pre><code>{
+        const arr = [100, 200, "javascript"];
+
+        console.log(arr[0], arr[1], arr[2]);
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample03 -->
+            <div id="sample04" class="sample">
+                <h3>04. 배열 : 데이터 불러오기 : 갯수</h3>
+                <p></p>
+                <pre><code>{
+        const arr = [100, 200, "javascript"];
+
+        console.log(arr.length); // 배열안에 몇개 들었는지 확인
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample04 -->
+            <div id="sample05" class="sample">
+                <h3>05. 배열 : 데이터 불러오기 : for()</h3>
+                <p></p>
+                <pre><code>{
+                    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+                    for (let i = 0; i < arr.length; i++) {     // 초기값, 조건식, 증감값
+                        console.log(arr[i]); // 실행문
+                    };
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample05 -->
         </div>
         <!-- //main__sample containe -->
     </main>
@@ -173,10 +228,35 @@
         }
 
         // 07. 배열 : 데이터 불러오기 : for of
+        {
+            console.log("07. 배열 : 데이터 불러오기 : for of");
+            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            for (let e of arr) {
+                console.log(e);
+            };
+        }
 
         // 08. 배열 : 데이터 불러오기 : for in
+        {
+            console.log("08. 배열 : 데이터 불러오기 : for in");
+            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            for (let e in arr) {
+                console.log(arr[e]); // console.log(e); 이렇게 쓰면 0~8까지 출력됨
+            };
+        }
 
         // 09. 배열 : 데이터 불러오기 : map()
+        {
+            console.log("09. 배열 : 데이터 불러오기 : map()");
+            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            // 01
+            arr.map(function (e) {
+                console.log(e);
+            });
+            // foreach와의 차이는 map은 [100~900] 즉, 배열안에 감싸져있다.
+        }
         // 10. 배열 : 데이터 불러오기 : filter()
         // 11. 배열 : 데이터 불러오기 : 배열 펼침연산자
         // 12. 배열 : 데이터 불러오기 : 배열 구조 분해 할당

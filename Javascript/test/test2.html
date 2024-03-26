@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 선언 함수
+        {
+            function func() {
+                console.log("object");
+            };
+            func();
+        }
+
+        // 2. 익명 함수
+        {
+            const func = function () {
+                console.log("object2");
+            };
+            func();
+        }
+
+        // 3. 매개변수
+        {
+            function func(str) {
+                console.log(str);
+            };
+            func("03. 함수실행");
+        }
+        {
+            const func = function (str) {
+                console.log(str);
+            };
+            func("03-1. 함수실행");
+        }
+
+        // 4. 리턴값 함수
+        {
+            function func() {
+                return "0b4";
+            };
+            console.log(func());
+        }
+
+        {
+            const func = function () {
+                return "ob4-1";
+            };
+            console.log(func());
+        }
+
+
+        // 5. 매개변수 + 리턴값 함수
+        {
+            function func(str) {
+                return "str";
+            };
+            console.log("object5");
+
+            const func1 = function (str) {
+                return "str";
+            };
+            console.log("object5-1")
+        }
+        // 6. 선언 함수 화살표
+        {
+            func = () => {
+                console.log("object");
+            };
+            func();
+        }
+
+        // 7. 익명 함수 화살표
+        {
+            const func = () => {
+                console.log("object2");
+            };
+            func();
+        }
+
+        // 8. 매개변수 화살표
+        {
+            func = (str) => {
+                console.log(str);
+            };
+            func("ob3");
+        }
+        {
+            const func = (str) => {
+                console.log(str);
+            };
+            func("ob3-1");
+        }
+
+        // 9. 리턴값 함수 화살표
+        {
+            func = () => {
+                return "0b4";
+            };
+            console.log(func());
+        }
+
+        {
+            const func = () => {
+                return "ob4-1";
+            };
+            console.log(func());
+        }
+
+
+        // 10. 매개변수 + 리턴값 함수 화살표
+        {
+            func = (str) => {
+                return "str";
+            };
+            console.log("object5");
+
+            const func1 = (str) => {
+                return "str";
+            };
+            console.log("object5-1")
+        }
+
+        // 11. for문
+        {
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+            }
+        }
+
+        // 12. forEach()
+        {
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            arr.forEach(function (e) {
+                console.log(e);
+            });
+        }
+        // 13. for of
+        {
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            for (let e of arr) {
+                console.log(e);
+            };
+        }
+        // 14. for in
+        {
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            for (let e in arr) {
+                console.log(e);
+            };
+        }
+        // 15. map()
+        {
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            arr.map(function (e) {
+                console.log(e);
+            });
+        }
+    </script>
+</body>
+
+</html>
