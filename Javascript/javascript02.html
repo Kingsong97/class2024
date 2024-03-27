@@ -141,6 +141,101 @@
                 </div>
             </div>
             <!-- //sample05 -->
+            <div id="sample06" class="sample">
+                <h3>06. 배열 : 데이터 불러오기 : forEach()</h3>
+                <p></p>
+                <pre><code>{
+        const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+        // 01 요소값 
+        console.log("06. 배열 : 데이터 불러오기 : forEach()");
+        arr.forEach(function (element) {
+            console.log(element);
+        });
+        // 02 자리수
+        arr.forEach(function (element, index) {
+            console.log(index);
+        });
+        // 03 배열값
+        arr.forEach(function (element, index, array) {
+            console.log(array);
+        });
+        // 화살표 함수
+        const arr1 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+        // 01 요소값 
+        console.log("06. 배열 : 데이터 불러오기 : forEach()");
+        arr1.forEach((element) => {
+            console.log(element);
+        });
+        // 02
+        arr.forEach(e => {
+            console.log(e);
+        });
+        // 03
+        arr.forEach(e => console.log(e));
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample06 -->
+            <div id="sample07" class="sample">
+                <h3>07. 배열 : 데이터 불러오기 : for of</h3>
+                <p></p>
+                <pre><code>{
+        console.log("07. 배열 : 데이터 불러오기 : for of");
+        const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+        for (let e of arr) {
+            console.log(e);
+        };
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample07 -->
+            <div id="sample08" class="sample">
+                <h3>08. 배열 : 데이터 불러오기 : for in</h3>
+                <p></p>
+                <pre><code>{
+                    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+                    for (let i = 0; i < arr.length; i++) {     // 초기값, 조건식, 증감값
+                        console.log(arr[i]); // 실행문
+                    };
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample08 -->
+            <div id="sample09" class="sample">
+                <h3>09. 배열 : 데이터 불러오기 : map()</h3>
+                <p></p>
+                <pre><code>{
+                    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+                    for (let i = 0; i < arr.length; i++) {     // 초기값, 조건식, 증감값
+                        console.log(arr[i]); // 실행문
+                    };
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample09 -->
         </div>
         <!-- //main__sample containe -->
     </main>
