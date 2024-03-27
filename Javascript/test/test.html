@@ -9,35 +9,118 @@
 
 <body>
     <script>
-        // 1. 선언 함수
+        //선언
+        {
+            function test() {
+                console.log("1");
+            };
+            test();
+        };
 
-        // 2. 익명 함수
+        //익명
+        {
+            const test = function () {
+                console.log("2");
+            };
+            test();
+        };
 
-        // 3. 매개변수
+        //매개
+        {
+            function test(str) {
+                console.log(str);
+            };
+            test("3");
+        };
 
-        // 4. 리턴값 함수
+        //리턴
+        {
+            function test() {
+                return "4"
+            };
+            console.log(test());
+        };
 
-        // 5. 매개변수 + 리턴값 함수
+        //매개 리턴
+        {
+            function test(str) {
+                return str
+            };
+            console.log(test("5"));
+        };
 
-        // 6. 선언 함수 화살표
+        //선 화
+        {
+            test = () => {
+                console.log("1-1");
+            };
+            test();
+        };
 
-        // 7. 익명 함수 화살표
+        //익 화
+        {
+            const test = () => {
+                console.log("2-1");
+            };
+            test();
+        };
 
-        // 8. 매개변수 화살표
+        //매 화
+        {
+            test = (str) => {
+                console.log(str);
+            };
+            test("3-1");
+        };
 
-        // 9. 리턴값 함수 화살표
+        //리 화
 
-        // 10. 매개변수 + 리턴값 함수 화살표
+        {
+            test = () => {
+                return "4-1"
+            };
+            console.log(test());
+        };
 
-        // 11. for문
+        // 매리 화
+        {
+            test = (str) => {
+                return str
+            };
+            console.log(test("5-1"));
+        };
 
-        // 12. forEach()
-        
-        // 13. for in
+        // foreach
+        {
+            const arr = [1, 2, 3, 4, 5];
+            arr.forEach(function (e) {
+                console.log(e);
+            });
+        };
 
-        // 14. for of
+        // for in
+        {
+            const arr = [1, 2, 3, 4, 5];
+            for (let e in arr) {
+                console.log(e);
+            };
+        };
 
-        // 15. map()
+        // for of
+        {
+            const arr = [1, 2, 3, 4, 5];
+            for (let e of arr) {
+                console.log(e);
+            };
+        };
+
+        // map
+        {
+            const arr = [1, 2, 3, 4, 5];
+            arr.map(function (e) {
+                console.log(e);
+            });
+        };
 
     </script>
 </body>
