@@ -9,118 +9,88 @@
 
 <body>
     <script>
-        //선언
         {
-            function test() {
+            test = () => {
                 console.log("1");
             };
             test();
-        };
+        }
 
-        //익명
+
         {
-            const test = function () {
+            const test = () => {
                 console.log("2");
             };
             test();
-        };
+        }
 
-        //매개
         {
-            function test(str) {
+            test = (str) => {
                 console.log(str);
             };
-            test("3");
-        };
+            test("3")
+        }
 
-        //리턴
         {
-            function test() {
+            test = () => {
                 return "4"
             };
             console.log(test());
-        };
+        }
 
-        //매개 리턴
         {
-            function test(str) {
+            test = (str) => {
                 return str
             };
             console.log(test("5"));
-        };
+        }
 
-        //선 화
+        for (let i = 1; i <= 20; i++) {
+            console.log(i);
+        }
+
         {
-            test = () => {
-                console.log("1-1");
+            let num = [1, 2, 3, 4, 5, 6, 7, 8];
+            for (let i = 0; i <= num.length; i++) {
+                console.log(num[i]);
             };
-            test();
-        };
-
-        //익 화
-        {
-            const test = () => {
-                console.log("2-1");
-            };
-            test();
-        };
-
-        //매 화
-        {
-            test = (str) => {
-                console.log(str);
-            };
-            test("3-1");
-        };
-
-        //리 화
+        }
 
         {
-            test = () => {
-                return "4-1"
-            };
-            console.log(test());
-        };
-
-        // 매리 화
-        {
-            test = (str) => {
-                return str
-            };
-            console.log(test("5-1"));
-        };
-
-        // foreach
-        {
-            const arr = [1, 2, 3, 4, 5];
-            arr.forEach(function (e) {
+            let num = [1, 2, 3, 4, 5, 6, 7, 8];
+            num.forEach(e => {
                 console.log(e);
             });
-        };
+        }
 
-        // for in
         {
-            const arr = [1, 2, 3, 4, 5];
-            for (let e in arr) {
-                console.log(e);
+            let num = [1, 2, 3, 4, 5, 6, 7, 8];
+
+            for (let i in num) {
+                console.log(num[i]);
             };
-        };
-
-        // for of
+        }
         {
-            const arr = [1, 2, 3, 4, 5];
-            for (let e of arr) {
-                console.log(e);
+            let num = [1, 2, 3, 4, 5, 6, 7, 8];
+
+            for (let i of num) {
+                console.log(i);
             };
-        };
+        }
 
-        // map
         {
-            const arr = [1, 2, 3, 4, 5];
-            arr.map(function (e) {
+            let num = [1, 2, 3, 4, 5, 6, 7, 8];
+            num.map(e => {
                 console.log(e);
             });
-        };
+        }
+
+        {
+            let num = [1, 2, 3, 4, 5, 6, 7, 8];
+            num.filter(e => {
+                console.log(e);
+            });
+        }
 
     </script>
 </body>

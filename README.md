@@ -9,7 +9,12 @@
 [퀴즈01](https://kingsong97.github.io/class2024/quiz/quiz01.html)
 - 변수   
 - 선택자(querySelector)   
-- 메서드(innerText(), classList, addEventListener, if문)   
+- 메서드(innerText(), classList.remove, addEventListener, if문)   
+[퀴즈02](https://kingsong97.github.io/class2024/quiz/quiz02.html)
+- 배열, 객체   
+- 선택자(querySelectorAll())   
+- 반복문(for(), forEach)   
+- 메서드(innerText(), classList.add, addEventListener, if문) 
 
 # vscode 확장 프로그램
 

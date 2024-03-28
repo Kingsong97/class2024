@@ -61,7 +61,9 @@
         <div class="main__sample container">
             <div id="sample01" class="sample">
                 <h3>01. 변수 : 데이터 불러오기</h3>
-                <p></p>
+                <p>데이터 불러오기란 프로그래밍에서 변수, 상수 또는 객체 등에 저장된 정보를 검색하고 활용하는 과정을 의미합니다. 이는 프로그램이 필요한 정보를 가져와서 처리하고 결과를 생성하는데
+                    중요한 단계로, 일반적으로 변수나 상수에 할당된 데이터를 불러와 사용하는 것을 말합니다. 데이터 불러오기는 프로그램의 동작을 제어하고 데이터를 처리하여 원하는 결과를 생성하는데
+                    필수적인 과정입니다.</p>
                 <pre><code>{
         let x = 100, y = 200, z = "javascript";
 
@@ -70,14 +72,20 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            100 <br>
+                            200 <br>
+                            javascript <br>
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample01 -->
             <div id="sample02" class="sample">
                 <h3>02. 상수 : 데이터 불러오기</h3>
-                <p></p>
+                <p>상수 데이터 불러오기란 프로그래밍에서 변하지 않는 값을 변수로 저장하고 활용하는 과정을 의미합니다. 이러한 상수는 한 번 선언되면 변경할 수 없으며, 주로 프로그램의 여러 부분에서
+                    사용되는 고정된 값으로 정의됩니다. 상수는 데이터 불러오기의 한 형태로, 일반적으로 프로그램의 가독성과 유지보수성을 향상시키는 데 사용됩니다. 상수를 사용함으로써 프로그램의 구조를
+                    명확하게 정의하고, 중요한 값들을 보호하여 안정성을 높이는데 도움이 됩니다.</p>
                 <pre><code>{
         const x = 100, y = 200, z = "javascript";
 
@@ -86,7 +94,11 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            100 <br>
+                            200 <br>
+                            javascript <br>
+                        </div>
                     </details>
                 </div>
             </div>
@@ -236,6 +248,179 @@
                 </div>
             </div>
             <!-- //sample09 -->
+            <div id="sample13" class="sample">
+                <h3>13. 객체 : 데이터 불러오기 : 기본</h3>
+                <p></p>
+                <pre><code>{
+        const obj = {
+            a: 100,
+            b: 200,
+            c: "javascript"
+        }
+
+
+        console.log("13. 객체 : 데이터 불러오기 : 기본");
+        console.log(obj.a, obj.b, obj.c);
+
+        console.log(obj["a"]);
+        console.log(obj["b"]);
+        console.log(obj["c"]);
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br />
+                            200<br />
+                            javascript
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample13 -->
+            <div id="sample14" class="sample">
+                <h3>14. 객체 : 데이터 불러오기 : Object.keys()</h3>
+                <p></p>
+                <pre><code> {
+        const obj = {
+            a: 100,
+            b: 200,
+            c: "javascript"
+        }
+
+        console.log("14. 객체 : 데이터 불러오기 : Object.keys()")
+        console.log(Object.keys(obj))
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample14 -->
+            <div id="sample15" class="sample">
+                <h3>15. 객체 : 데이터 불러오기 : Object.values()</h3>
+                <p></p>
+                <pre><code>{
+        const obj = {
+            a: 100,
+            b: 200,
+            c: "javascript"
+        };
+
+        console.log("15. 객체 : 데이터 불러오기 : Object.values()");
+        console.log(Object.values(obj));
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample15 -->
+            <div id="sample16" class="sample">
+                <h3>16. 객체 : 데이터 불러오기 : Object.entries()</h3>
+                <p></p>
+                <pre><code>{
+        const obj = {
+            a: 100,
+            b: 200,
+            c: "javascript"
+        };
+
+        console.log("16. 객체 : 데이터 불러오기 : Object.entries()");
+        console.log(Object.entries(obj));
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample16 -->
+            <div id="sample17" class="sample">
+                <h3>17. 객체 : 데이터 불러오기 : Object.assign()</h3>
+                <p></p>
+                <pre><code>{
+        {
+            const obj1 = {
+                a: 100,
+                b: 200,
+            }
+            const obj2 = {
+                c: 300,
+                d: 400,
+            }
+            const obj3 = Object.assign(obj1, obj2);
+
+            console.log("17. 객체 : 데이터 불러오기 : Object.assign()")
+            console.log(obj3);
+        }
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample17 -->
+            <div id="sample18" class="sample">
+                <h3>18. 객체 : 데이터 불러오기 : hasOwnproperty()</h3>
+                <p></p>
+                <pre><code>{
+        const obj = {
+            a: 100,
+            b: 200,
+            c: "javascript"
+        }
+
+        console.log("18. 객체 : 데이터 불러오기 : hasOwnproperty()");
+        console.log(obj.hasOwnProperty("a"));  // true
+        console.log(obj.hasOwnProperty("b"));  // true
+        console.log(obj.hasOwnProperty("c"));  // true
+        console.log(obj.hasOwnProperty("d"));  // false
+
+        // in 연산자
+        console.log("a" in obj);     // true
+        console.log("b" in obj);     // true
+        console.log("c" in obj);     // true
+        console.log("d" in obj);     // false
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample18 -->
+            <div id="sample19" class="sample">
+                <h3>19. 객체 : 데이터 불러오기 : for in</h3>
+                <p></p>
+                <pre><code>{
+        const obj = {
+            a: 100,
+            b: 200,
+            c: "javascript"
+        }
+
+        for (let el in obj) {
+            console.log(el + ":" + obj[el]);
+        };
+};</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample19 -->
         </div>
         <!-- //main__sample containe -->
     </main>
@@ -353,15 +538,136 @@
             // foreach와의 차이는 map은 [100~900] 즉, 배열안에 감싸져있다.
         }
         // 10. 배열 : 데이터 불러오기 : filter()
+        {
+            const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            console.log("10. 배열 : 데이터 불러오기 : filter()")
+            num.filter(function (element) {
+                console.log(element);
+            });
+            num.filter(function (element, index) {
+                console.log(index);
+            });
+            num.filter(function (element, index, array) {
+                console.log(array);
+            });
+            // 반복문을 써서 조건을 거는것 여기서 return은 종료를 뜻함 함수를 변수안에 넣어야함
+            const arr = num.filter(function (element) {
+                return element > 5;
+            });
+            console.log(arr);
+            //화살표함수
+            const arr1 = num.filter((element) => {
+                return element > 5;
+            });
+            //() 생략가능
+            const arr2 = num.filter(element => {
+                return element > 5;
+            });
+            //리턴도 생략가능
+            const arr3 = num.filter(element => element > 5);
+            console.log(arr);
+        }
+
         // 11. 배열 : 데이터 불러오기 : 배열 펼침연산자
         // 12. 배열 : 데이터 불러오기 : 배열 구조 분해 할당
         // 13. 객체 : 데이터 불러오기 : 기본
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+
+
+            console.log("13. 객체 : 데이터 불러오기 : 기본");
+            console.log(obj.a, obj.b, obj.c);
+
+            console.log(obj["a"]);
+            console.log(obj["b"]);
+            console.log(obj["c"]);
+        }
         // 14. 객체 : 데이터 불러오기 : Object.keys()
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+
+            console.log("14. 객체 : 데이터 불러오기 : Object.keys()")
+            console.log(Object.keys(obj))
+        }
         // 15. 객체 : 데이터 불러오기 : Object.values()
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            };
+
+            console.log("15. 객체 : 데이터 불러오기 : Object.values()");
+            console.log(Object.values(obj));
+        }
         // 16. 객체 : 데이터 불러오기 : Object.entries()
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            };
+
+            console.log("16. 객체 : 데이터 불러오기 : Object.entries()");
+            console.log(Object.entries(obj));
+        }
         // 17. 객체 : 데이터 불러오기 : Object.assign()
+        {
+            {
+                const obj1 = {
+                    a: 100,
+                    b: 200,
+                }
+                const obj2 = {
+                    c: 300,
+                    d: 400,
+                }
+                const obj3 = Object.assign(obj1, obj2);
+
+                console.log("17. 객체 : 데이터 불러오기 : Object.assign()")
+                console.log(obj3);
+            }
+        }
         // 18. 객체 : 데이터 불러오기 : hasOwnproperty()
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+
+            console.log("18. 객체 : 데이터 불러오기 : hasOwnproperty()");
+            console.log(obj.hasOwnProperty("a"));  // true
+            console.log(obj.hasOwnProperty("b"));  // true
+            console.log(obj.hasOwnProperty("c"));  // true
+            console.log(obj.hasOwnProperty("d"));  // false
+
+            // in 연산자
+            console.log("a" in obj);     // true
+            console.log("b" in obj);     // true
+            console.log("c" in obj);     // true
+            console.log("d" in obj);     // false
+        }
         // 19. 객체 : 데이터 불러오기 : for in
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+
+            for (let el in obj) {
+                console.log(el + ":" + obj[el]);
+            };
+        };
         // 20. 객체 : 데이터 불러오기 : 객체 펼침연산자
         // 21. 객체 : 데이터 불러오기 : 객체 구조 분해 할당
         // 22. 서버 데이터 불러오기 : XMLHttpRequest
