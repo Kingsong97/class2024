@@ -105,7 +105,9 @@
             <!-- //sample02 -->
             <div id="sample03" class="sample">
                 <h3>03. 배열 : 데이터 불러오기</h3>
-                <p></p>
+                <p> 배열 데이터 불러오기란 프로그래밍에서 여러 값을 하나의 변수에 저장하고 관리하는 과정을 말합니다. 배열은 순서가 있는 데이터의 모음으로, 각 요소에는 인덱스를 사용하여 접근할 수
+                    있습니다. 이러한 배열은 일련의 데이터를 쉽게 조작하고 처리할 수 있도록 도와주며, 프로그램에서 데이터를 그룹화하고 구조화하는 데 유용합니다. 배열 데이터 불러오기는 배열의 각
+                    요소를 개별적으로 접근하여 원하는 값을 가져오는 과정을 의미합니다. 이는 프로그램에서 데이터를 효율적으로 활용하는 데 중요한 역할을 합니다.</p>
                 <pre><code>{
         const arr = [100, 200, "javascript"];
 
@@ -114,14 +116,22 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            100 <br>
+                            200 <br>
+                            javascript <br>
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample03 -->
             <div id="sample04" class="sample">
                 <h3>04. 배열 : 데이터 불러오기 : 갯수</h3>
-                <p></p>
+                <p>배열의 데이터 불러오기에서 "갯수"란 배열에 포함된 요소의 개수를 나타냅니다. JavaScript에서는 배열의 길이를 확인하기 위해 length 속성을 사용합니다. 이 속성은
+                    배열의 요소 수를 반환하며, 배열의 크기 또는 길이를 파악하는데 유용합니다. 배열의 길이를 확인하는 것은 프로그램에서 배열을 동적으로 조작하고 배열의 상태를 파악하는데 중요한
+                    역할을 합니다. 이는 배열의 크기를 미리 알 필요 없이 동적으로 배열을 조작할 수 있는 JavaScript의 특징 중 하나입니다.
+                </p>
+                </p>
                 <pre><code>{
         const arr = [100, 200, "javascript"];
 
@@ -130,14 +140,20 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            3
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample04 -->
             <div id="sample05" class="sample">
                 <h3>05. 배열 : 데이터 불러오기 : for()</h3>
-                <p></p>
+                <p> 위 코드는 for 반복문을 사용하여 배열의 데이터를 불러오고 출력하는 예시입니다. for 반복문은 초기값, 조건식, 증감값을 설정하여 반복 작업을 수행합니다.
+
+                    for (let i = 0; i &lt; arr.length; i++): i 변수를 0으로 초기화하고, 배열 arr의 길이보다 작은 동안 반복하며, 각 반복마다 i 값을 1씩
+                    증가시킵니다. console.log(arr[i]);: 반복문 내에서 arr 배열의 i번째 요소를 출력합니다. 이렇게 함으로써 for 반복문을 사용하여 배열의 데이터를
+                    순회하면서 각 요소를 출력할 수 있습니다. 이는 배열의 모든 요소에 대해 반복 작업을 수행할 때 유용한 방법입니다.</p>
                 <pre><code>{
                     const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
@@ -148,14 +164,32 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            100 <br>
+                            200 <br>
+                            300 <br>
+                            400 <br>
+                            500 <br>
+                            600 <br>
+                            700 <br>
+                            800 <br>
+                            900
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample05 -->
             <div id="sample06" class="sample">
-                <h3>06. 배열 : 데이터 불러오기 : forEach()</h3>
-                <p></p>
+                <h3>06. 배열 : 데이터 불러오기 : forEach() : 함수가 두개있을때 순서대로 작동이 되게 하는 것(콜백함수)</h3>
+                <p> forEach() 메소드는 다음과 같은 값들을 매개변수로 받습니다: <br>
+
+                    콜백 함수(callback function): 배열의 각 요소에 대해 실행할 함수를 나타냅니다. 이 함수는 세 가지 매개변수를 가질 수 있습니다. <br>
+
+                    첫 번째 매개변수: 배열의 각 요소 값에 해당하는 변수 (보통 element 또는 item으로 명명됩니다). <br>
+                    두 번째 매개변수: 배열의 각 요소의 인덱스에 해당하는 변수 (보통 index로 명명됩니다). <br>
+                    세 번째 매개변수: 원본 배열 자체를 나타내는 변수 (보통 array로 명명됩니다). <br>
+                    옵션: 콜백 함수에 대한 this로 사용될 객체를 지정할 수 있는데, 이 값은 선택 사항입니다. 만약 지정되지 않으면 undefined가 됩니다. <br>
+                    forEach() 메소드는 배열의 각 요소에 대해 지정된 콜백 함수를 실행하며, 이때 콜백 함수의 매개변수로는 해당 요소의 값, 인덱스, 그리고 원본 배열이 전달됩니다.</p>
                 <pre><code>{
         const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
         // 01 요소값 
@@ -188,14 +222,70 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div> 100
+                            200
+                            300
+                            400
+                            500
+                            600
+                            700
+                            800
+                            900 <br>
+                            0
+                            1
+                            2
+                            3
+                            4
+                            5
+                            6
+                            7
+                            8 <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            100
+                            200
+                            300
+                            400
+                            500
+                            600
+                            700
+                            800
+                            900 <br>
+                            100
+                            200
+                            300
+                            400
+                            500
+                            600
+                            700
+                            800
+                            900 <br>
+                            100
+                            200
+                            300
+                            400
+                            500
+                            600
+                            700
+                            800
+                            900 <br></div>
                     </details>
                 </div>
             </div>
             <!-- //sample06 -->
             <div id="sample07" class="sample">
                 <h3>07. 배열 : 데이터 불러오기 : for of</h3>
-                <p></p>
+                <p>for...of 루프는 JavaScript에서 사용되는 반복문 중 하나로, 반복 가능한(iterable) 객체의 각 요소에 대해 반복하면서 지정된 코드 블록을 실행합니다. 이
+                    루프는 배열, 문자열, 맵(Map), 세트(Set), 배열과 유사한 객체(NodeList 등)와 같은 반복 가능한 객체에 모두 사용할 수 있습니다. for...of 루프는 반복
+                    가능한 객체의 값을 직접 가져와 사용하므로, 인덱스나 조건식을 명시적으로 작성하지 않아도 됩니다. 이러한 특성으로 인해 for...of 루프는 가독성이 높고 코드를 간결하게 작성할
+                    수 있으며, 반복 작업을 수행할 때 매우 유용합니다.</p>
                 <pre><code>{
         console.log("07. 배열 : 데이터 불러오기 : for of");
         const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
@@ -207,50 +297,196 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            100 <br>
+                            200 <br>
+                            300 <br>
+                            400 <br>
+                            500 <br>
+                            600 <br>
+                            700 <br>
+                            800 <br>
+                            900 <br>
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample07 -->
             <div id="sample08" class="sample">
                 <h3>08. 배열 : 데이터 불러오기 : for in</h3>
-                <p></p>
+                <p>
+                    for...in 루프는 JavaScript에서 사용되는 반복문 중 하나로, 객체의 열거 가능한 속성들을 반복하면서 지정된 코드를 실행합니다. 배열 또한 객체의 일종으로 취급되기
+                    때문에 for...in 루프를 배열에 사용할 수 있습니다. 이를 통해 배열의 각 요소의 인덱스가 반복됩니다. 그러나 이 방법은 배열 요소를 순서대로 접근하는 것이 아니라, 속성
+                    이름을 열거하므로 일반적으로 배열의 순서가 보장되지 않습니다. 때문에 배열의 요소를 순차적으로 접근하기 위해선 for...of 루프를 사용하는 것이 바람직합니다.
+                </p>
                 <pre><code>{
-                    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+        const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-                    for (let i = 0; i < arr.length; i++) {     // 초기값, 조건식, 증감값
-                        console.log(arr[i]); // 실행문
-                    };
+        for (let element in arr) {
+            console.log(arr[element]);      //배열로 출력 할려면 arr[element]
+        };
 }</code></pre>
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            100 <br>
+                            200 <br>
+                            300 <br>
+                            400 <br>
+                            500 <br>
+                            600 <br>
+                            700 <br>
+                            800 <br>
+                            900
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample08 -->
             <div id="sample09" class="sample">
                 <h3>09. 배열 : 데이터 불러오기 : map()</h3>
-                <p></p>
+                <p>
+                    map() 메소드는 JavaScript 배열 객체에서 사용되며, 배열의 각 요소에 대해 지정된 함수를 호출하고, 그 결과로 새로운 배열을 생성합니다. 각 함수에는 요소
+                    값(element), 인덱스(index), 그리고 배열 자체(array)가 매개변수로 전달되며, 콜백 함수 내에서 이를 활용하여 원하는 작업을 수행할 수 있습니다. 이렇게 생성된
+                    새로운 배열은 각 요소를 변형하거나 새로운 데이터를 생성하는 등의 용도로 사용될 수 있습니다.
+                </p>
                 <pre><code>{
-                    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-                    for (let i = 0; i < arr.length; i++) {     // 초기값, 조건식, 증감값
-                        console.log(arr[i]); // 실행문
-                    };
+        const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+        // 01
+        arr.map(function (element) {
+            console.log(element); //[100~900] forEach문이랑 비교하자면 배열안에 감싸져있어서
+        });
+            
+        // 02
+        arr.map(function (element, index) {
+            console.log(index);
+        })
+            
+        // 03
+        arr.map(function (element, index, array) {
+            console.log(array);
+        })
 }</code></pre>
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            100
+                            200
+                            300
+                            400
+                            500
+                            600
+                            700
+                            800
+                            900 <br>
+                            0
+                            1
+                            2
+                            3
+                            4
+                            5
+                            6
+                            7
+                            8 <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                            (9) [100, 200, 300, 400, 500, 600, 700, 800, 900] <br>
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample09 -->
+            <div id="sample10" class="sample">
+                <h3>10. 배열 : 데이터 불러오기 : filter() (함수안에 함수 콜백함수) 걸러주는 역할</h3>
+                <p>
+                    ilter() 메소드는 배열의 각 요소를 순회하면서 주어진 조건에 따라 요소를 필터링하여 새로운 배열을 생성하는 JavaScript 배열 메소드입니다.
+                    즉, 요약하자면.
+                    filter() 메소드는 주어진 함수를 사용하여 배열의 각 요소를 순회합니다.
+                    함수는 각 요소, 해당 요소의 인덱스, 그리고 배열 전체를 매개변수로 받습니다.
+                    함수는 true를 반환하는 요소만을 새로운 배열에 포함시킵니다.
+                    새로운 배열을 반환합니다.
+                    요약하면, filter() 메소드는 배열에서 주어진 조건을 만족하는 요소만을 가진 새로운 배열을 반환합니다.
+                </p>
+                <pre><code>{
+        const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    
+        console.log("10.배열 : filter()문")
+            
+        num.filter(function (element) {
+            console.log(element);
+        });
+            
+        num.filter(function (element, index) {
+            console.log(index);
+        });
+            
+        num.filter(function (element, index, array) {
+            console.log(array);
+        });
+            
+        // 반복문을 써서 조건을 거는것 여기서 return은 종료를 뜻함 함수를 변수안에 넣어야함
+        const arr = num.filter(function (element) {
+            return element > 5;
+        });
+        console.log(arr);
+            
+        //화살표함수
+        const arr1 = num.filter((element) => {
+            return element > 5;
+        });
+            
+        //() 생략가능
+        const arr2 = num.filter(element => {
+            return element > 5;
+        });
+            
+        //리턴도 생략가능
+        const arr3 = num.filter(element => element > 5);
+        console.log(arr);
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            1 <br>
+                            2 <br>
+                            3 <br>
+                            4 <br>
+                            5 <br>
+                            6 <br>
+                            7 <br>
+                            8 <br>
+                            9 <br>
+                            0 <br>
+                            1 <br>
+                            2 <br>
+                            3 <br>
+                            4 <br>
+                            5 <br>
+                            6 <br>
+                            7 <br>
+                            8
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample10 -->
             <div id="sample13" class="sample">
                 <h3>13. 객체 : 데이터 불러오기 : 기본</h3>
-                <p></p>
+                <p>
+                    객체 속성에 점 표기법을 사용하여 접근할 수 있습니다. 예를 들어, obj.a는 객체 obj의 a 속성 값을 가져옵니다.
+                    객체 속성에 대괄호 표기법을 사용하여도 접근할 수 있습니다. 즉, obj["a"] 역시 obj.a와 동일한 결과를 가져옵니다.
+                    코드는 객체 obj의 속성 a, b, c의 값을 순차적으로 출력하고 있습니다.
+                    이 코드는 객체의 속성에 접근하는 다양한 방법을 보여주고 있습니다.
+                </p>
                 <pre><code>{
         const obj = {
             a: 100,
@@ -270,8 +506,11 @@
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100<br />
-                            200<br />
+                            100 <br>
+                            200 <br>
+                            javascript <br>
+                            100 <br>
+                            200 <br>
                             javascript
                         </div>
                     </details>
@@ -280,7 +519,10 @@
             <!-- //sample13 -->
             <div id="sample14" class="sample">
                 <h3>14. 객체 : 데이터 불러오기 : Object.keys()</h3>
-                <p></p>
+                <p>
+                    Object.keys() 메소드는 JavaScript에서 객체의 속성 이름을 배열로 반환합니다. 반환된 배열은 객체의 속성 이름들을 순서대로 담고 있으며, 값이나 다른 속성들은
+                    포함되지 않습니다. 이 메소드를 사용하면 객체의 속성 이름들을 쉽게 가져와서 처리할 수 있습니다.
+                </p>
                 <pre><code> {
         const obj = {
             a: 100,
@@ -295,14 +537,18 @@
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
+                            (3) ['a', 'b', 'c']
                         </div>
                     </details>
                 </div>
             </div>
             <!-- //sample14 -->
             <div id="sample15" class="sample">
-                <h3>15. 객체 : 데이터 불러오기 : Object.values()</h3>
-                <p></p>
+                <h3>15. 객체 : 데이터 불러오기 : Object.values() 배열 안에 있는 데이터로 불러옴 [100, 200, 'javascript']</h3>
+                <p>
+                    Object.values() 메소드는 JavaScript에서 사용되는 내장 함수 중 하나로, 주어진 객체의 속성 값들을 배열로 반환합니다. 이 메소드는 객체의 속성 값들만을 배열로
+                    반환하며, 속성 이름이나 다른 속성들은 반환하지 않습니다. 반환된 배열은 객체의 속성 값들을 순서대로 포함하며, 객체의 속성 값들을 쉽게 가져와서 처리할 수 있습니다.
+                </p>
                 <pre><code>{
         const obj = {
             a: 100,
@@ -316,14 +562,19 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            (3) [100, 200, 'javascript']
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample15 -->
             <div id="sample16" class="sample">
                 <h3>16. 객체 : 데이터 불러오기 : Object.entries()</h3>
-                <p></p>
+                <p>
+                    Object.entries() 메소드는 주어진 객체의 속성들을 [키, 값] 쌍의 배열로 반환합니다. 이 메소드를 사용하면 객체의 속성과 해당 값에 대한 정보를 함께 배열로 가져올
+                    수 있습니다. 반환된 배열은 객체의 각 속성에 대해 [키, 값]의 쌍을 담고 있으며, 이를 통해 객체의 내용을 쉽게 탐색하고 처리할 수 있습니다.
+                </p>
                 <pre><code>{
         const obj = {
             a: 100,
@@ -337,41 +588,56 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            (3) [Array(2), Array(2), Array(2)] <br>
+                            0 : (2) ['a', 100] <br>
+                            1 : (2) ['b', 200] <br>
+                            2 : (2) ['c', 'javascript']
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample16 -->
             <div id="sample17" class="sample">
                 <h3>17. 객체 : 데이터 불러오기 : Object.assign()</h3>
-                <p></p>
+                <p>
+                    Object.assign() 메소드는 JavaScript에서 사용되는 내장 함수 중 하나입니다. 이 메소드는 하나 이상의 소스 객체를 대상 객체에 병합하고, 병합된 결과를
+                    반환합니다. 소스 객체들의 속성들이 대상 객체에 복사되며, 소스 객체들은 변경되지 않습니다. 반환된 객체는 대상 객체와 소스 객체들의 속성들을 포함하고 있으며, 중복되는 속성이
+                    있을 경우 나중에 오는 소스 객체의 속성으로 대체됩니다. 이를 통해 객체들을 병합하고 새로운 객체를 생성할 수 있습니다.
+                </p>
                 <pre><code>{
-        {
-            const obj1 = {
-                a: 100,
-                b: 200,
-            }
-            const obj2 = {
-                c: 300,
-                d: 400,
-            }
-            const obj3 = Object.assign(obj1, obj2);
-
-            console.log("17. 객체 : 데이터 불러오기 : Object.assign()")
-            console.log(obj3);
+    {
+        const obj1 = {
+            a: 100,
+            b: 200,
         }
+        const obj2 = {
+            c: 100,
+            d: 200,
+        }
+    
+        console.log("17")
+        const obj3 = Object.assign(obj1, obj2);
+        console.log(obj3);
+    }
 }</code></pre>
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            {a: 100, b: 200, c: 100, d: 200}
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample17 -->
             <div id="sample18" class="sample">
                 <h3>18. 객체 : 데이터 불러오기 : hasOwnproperty()</h3>
-                <p></p>
+                <p>
+                    hasOwnProperty 메소드는 JavaScript 객체의 메소드 중 하나로, 해당 객체가 특정 속성을 직접 소유하고 있는지를 판별합니다. 즉, 해당 속성이 객체의 프로퍼티인지
+                    확인합니다. 이 메소드는 객체가 상속 받은 속성이 아닌, 직접 정의한 속성에 대해서만 true를 반환하며, 프로토타입 체인을 통해 상속된 속성은 체크하지 않습니다. 따라서 객체가
+                    직접 소유한 속성인지를 판별할 때 사용됩니다. 이 메소드는 객체의 프로퍼티를 안전하게 확인할 때 유용하게 사용될 수 있습니다.
+                </p>
                 <pre><code>{
         const obj = {
             a: 100,
@@ -394,13 +660,22 @@
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            true <br>
+                            true <br>
+                            true <br>
+                            false <br>
+                            true <br>
+                            true <br>
+                            true <br>
+                            false
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample18 -->
             <div id="sample19" class="sample">
-                <h3>19. 객체 : 데이터 불러오기 : for in</h3>
+                <h3>19. 객체 : 데이터 불러오기 : for in : 배열안에 들어있지 않음.</h3>
                 <p></p>
                 <pre><code>{
         const obj = {
@@ -408,15 +683,19 @@
             b: 200,
             c: "javascript"
         }
-
-        for (let el in obj) {
-            console.log(el + ":" + obj[el]);
-        };
-};</code></pre>
+    
+        for (let element in obj) {
+            console.log(element + " : " + obj[element]); // obj값을 전부다 줄력 a:100, b:200 등 결합할땐 + 필수
+        }
+}</code></pre>
                 <div class="reuslt">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div></div>
+                        <div>
+                            a : 100 <br>
+                            b : 200 <br>
+                            c : javascript
+                        </div>
                     </details>
                 </div>
             </div>
