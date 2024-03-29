@@ -29,9 +29,9 @@
     <main id="main">
         <div class="quiz__wrap">
             <div class="quiz">
-                <div class="quiz__header"> </div>
+                <div class="quiz__header"></div>
                 <div class="quiz__main">
-                    <div class="question"> </div>
+                    <div class="question"></div>
                     <div class="choices">
                         <label for="choice1">
                             <input type="radio" id="choice1" name="choice" value="1">
@@ -59,11 +59,10 @@
             </div>
         </div>
     </main>
-
     <!-- //main -->
 
     <footer id="footer">
-        <a href="mailto:Kingsongsm97@gmail.com">Kingsongsm97@gmail.com</a>
+        <a href="mailto:kingsongsm97@gmail.com">kingsongsm97@gmail.com</a>
     </footer>
     <!-- //footer -->
 
@@ -71,30 +70,27 @@
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizHeader = quizWrap.querySelector(".quiz__header");
-        const quizQuestion = quizWrap.querySelector(".quiz__main .question");
+        const quizNum = quizWrap.querySelector(".quiz__main .question em");
+        const quizQuestion = quizWrap.querySelector(".quiz__main .question span");
         const quizChoices = quizWrap.querySelector(".quiz__main .choices");
         const quizAnswer = quizWrap.querySelector(".quiz__main .answer");
         const quizDesc = quizWrap.querySelector(".quiz__main .desc");
         const quizConfirm = quizWrap.querySelector(".quiz__footer .confirm");
 
-        // 문제 정보 
+        // 문제 정보
         const quizInfo = {
             date: "2021년 1회",
-            type: "정보처리기능사",
+            type: "웹디자인기능사",
             num: "01",
-            question: "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?",
+            question: "다음 중 디자인의 기본 요소들로 옳은 것은?",
+            choices: ["선, 색채, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"],
             answer: "2",
-            choices: ["KIPS", "MIPS", "LIPS", "VIPS"],
-            desc: "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다.",
+            desc: "디자인의 기본 요소에는 점, 선, 면, 질감이 있습니다."
         }
 
         // 문제 출력
         quizHeader.innerHTML = quizInfo.date + " " + quizInfo.type;
-        quizQuestion.innerHTML = quizInfo.num + " " + quizInfo.question;
-        quizChoices.innerHTML = quizInfo.choices;
-
     </script>
-
 </body>
 
 </html>
