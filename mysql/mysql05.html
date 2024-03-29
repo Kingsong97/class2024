@@ -406,6 +406,76 @@
 |       12 | 김혜지  | 1234    |     28 |   951002 |  123456789 |
 +----------+---------+---------+--------+----------+------------+
 4 rows in set (0.00 sec)</code></pre>
+                <h4>데이터를 5개만 불러오기</h4>
+                <div class="info">SELECT * FROM members LIMIT 5;</div>
+                <pre><code class="language-js">mysql> SELECT * FROM members LIMIT 5;
++----------+---------+---------+--------+----------+------------+
+| memberID | youName | youPass | youAge | youBirth | regTime    |
++----------+---------+---------+--------+----------+------------+
+|        1 | 황상연  | 1234    |     33 |   990304 | 1023958375 |
+|        2 | 김진우  | 1234    |     21 |    40416 | 1231231233 |
+|        3 | 최선화  | 1234    |     26 |   990123 | 1104781152 |
+|        4 | 서대원  | 1234    |     26 |    11019 | 1111100000 |
+|        5 | 김현민  | 1234    |     32 |   930604 | 1023958375 |
++----------+---------+---------+--------+----------+------------+
+5 rows in set (0.00 sec)</code></pre>
+                <h4>데이터를 5개만 불러오기(6번~10번)</h4>
+                <div class="info">SELECT * FROM members LIMIT 5, 5;</div>
+                <pre><code class="language-js">mysql> SELECT * FROM members LIMIT 5, 5;
++----------+---------+---------+--------+----------+------------+
+| memberID | youName | youPass | youAge | youBirth | regTime    |
++----------+---------+---------+--------+----------+------------+
+|        6 | 황인지  | 1234    |     20 |   990315 | 1474187756 |
+|        7 | 박정민  | 1234    |     29 |   961017 | 1023958375 |
+|        8 | 강서연  | 1234    |     27 |   980420 |  123456744 |
+|        9 | 박소현  | 1234    |     29 |   960917 | 1231223123 |
+|       10 | 김혜지  | 1234    |     28 |   951002 |  123456789 |
++----------+---------+---------+--------+----------+------------+
+5 rows in set (0.00 sec)</code></pre>
+                <h4>이름 필드 데이터 총 갯수 불러오기</h4>
+                <div class="info">SELECT count(*) FROM members;</div>
+                <pre><code class="language-js">mysql> SELECT count(*) FROM members;
++----------+
+| count(*) |
++----------+
+|       12 |
++----------+
+1 row in set (0.00 sec)
+// *에 필드값이 들어갈 수 도 있음 ex. count(youName)</code></pre>
+                <h4>나이 불러오기(중복된 나이를 제거)</h4>
+                <div class="info">SELECT DISTINCT youAge FROM members;</div>
+                <pre><code class="language-js">mysql> SELECT DISTINCT youAge FROM members;
++--------+
+| youAge |
++--------+
+|     33 |
+|     21 |
+|     26 |
+|     32 |
+|     20 |
+|     29 |
+|     27 |
+|     28 |
++--------+
+8 rows in set (0.00 sec)</code></pre>
+                <h4>나이가 25살 이상, 성이 황씨인 사람</h4>
+                <div class="info">SELECT * FROM members WHERE youAge > 25 AND youName LIKE "황%";</div>
+                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youAge > 25 AND youName LIKE "황%";
++----------+---------+---------+--------+----------+------------+
+| memberID | youName | youPass | youAge | youBirth | regTime    |
++----------+---------+---------+--------+----------+------------+
+|        1 | 황상연  | 1234    |     33 |   990304 | 1023958375 |
++----------+---------+---------+--------+----------+------------+
+1 row in set (0.00 sec)</code></pre>
+                <h4>나이가 30살 이상, memberID가 2 또는 9인 멤버</h4>
+                <div class="info">SELECT * FROM members WHERE memberID IN (2,9) AND youAge > 30;</div>
+                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youAge > 25 AND youName LIKE "황%";
++----------+---------+---------+--------+----------+------------+
+| memberID | youName | youPass | youAge | youBirth | regTime    |
++----------+---------+---------+--------+----------+------------+
+|        1 | 황상연  | 1234    |     33 |   990304 | 1023958375 |
++----------+---------+---------+--------+----------+------------+
+1 row in set (0.00 sec)</code></pre>
             </div>
     </main>
     <!-- //main -->
