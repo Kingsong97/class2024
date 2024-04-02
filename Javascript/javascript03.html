@@ -341,6 +341,243 @@
                 </div>
             </div>
             <!-- //sample10 -->
+            <div id="sample11" class="sample">
+                <h3>11. 함수 유형: 함수와 매개변수를 이용한 형태</h3>
+                <p></p>
+                <pre><code>{
+        function func(num, str) {
+            console.log(num + ". " + str); //템플릿 방식
+            console.log(`${num}. ${str}`); //리터럴 방식
+        }
+        func(11, "함수가 실행되었습니다.");
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>11. 함수가 실행되어습니다.</div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample11 -->
+            <div id="sample12" class="sample">
+                <h3>12. 함수 유형: 함수와 변수를 이용한 형태</h3>
+                <p></p>
+                <pre><code>{
+        const num = 12;
+        const str = "함수가 실행되었습니다.";
+
+        function func(num, str) {
+            console.log(`${num}. ${str}`);
+        }
+        func(num, str);
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>12. 함수가 실행되었습니다.</div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample12 -->
+            <div id="sample13" class="sample">
+                <h3>13. 함수 유형: 함수와 배열을 이용한 형태</h3>
+                <p></p>
+                <pre><code>{
+        const num = [13, 14];
+        const str = ["함수가 실행되었습니다.", "함수가 실행되었습니다."];
+
+        function func(num, str) {
+            console.log(`${num}. ${str}`);
+        }
+        func(num[0], str[0]);
+        func(num[1], str[1]);
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            13. 함수가 실행되었습니다.<br>
+                            14. 함수가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample13 -->
+            <div id="sample14" class="sample">
+                <h3>14. 함수 유형: 함수와 객체를 이용한 형태</h3>
+                <p></p>
+                <pre><code>{
+        const info = {
+            num: 15,
+            str: "함수가 실행되었습니다."
+        }
+        function func(num, str) {
+            console.log(`${num}. ${str}`);
+        }
+        func(info.num, info.str);
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            15. 함수가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample14 -->
+            <div id="sample15" class="sample">
+                <h3>15. 함수 유형: 함수와 배열 및 객체를 이용한 형태</h3>
+                <p></p>
+                <pre><code>{
+        const info = [
+            { num: 16, str: "함수가 실행되었습니다." },
+            { num: 17, str: "함수가 실행되었습니다." },
+        ];
+
+        function func(num, str) {
+            console.log(`${num}. ${str}`);
+        }
+        func(info[0].num, info[0].str);
+        func(info[1].num, info[1].str);
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            16. 함수가 실행되었습니다.<br>
+                            17. 함수가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample15 -->
+            <div id="sample16" class="sample">
+                <h3>16. 함수 유형: 함수와 객체 안에 함수를 이용한 형태</h3>
+                <p></p>
+                <pre><code>{
+        const info = {
+            num: 18,
+            str: "함수가 실행되었습니다.",
+            result: () => {
+                console.log(`${info.num}. ${info.str}`)
+            }
+        }
+        info.result();
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            18. 함수가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample16 -->
+            <div id="sample17" class="sample">
+                <h3>17. 함수 유형: 객체 생성자 함수</h3>
+                <p></p>
+                <pre><code>{
+        // 함수 정의
+        function Func(num, str) {
+            this.num = num;
+            this.str = str;
+            this.result = () => {
+                console.log(`${this.num}. ${this.str}`);
+            }
+        }
+        // 인스턴스 생성
+        const info1 = new Func(19, "함수가 실행되었습니다.");
+        const info2 = new Func(20, "함수가 실행되었습니다.");
+
+        // 호출
+        info1.result();
+        info2.result();
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            19. 함수가 실행되었습니다.<br>
+                            20. 함수가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample17 -->
+            <div id="sample18" class="sample">
+                <h3>18. 함수 유형: 프로토타입 함수</h3>
+                <p></p>
+                <pre><code>{
+        // 함수 정의
+        function Func(num, str) {
+            this.num = num;
+            this.str = str;
+        }
+
+        // 메서드 추가
+        Func.prototype.result = function () {
+            console.log(`${this.num}. ${this.str}`);
+        }
+
+        // 인스턴스 생성
+        const info1 = new Func(21, "함수가 실행되었습니다.")
+        const info2 = new Func(22, "함수가 실행되었습니다.")
+        // 호출 
+        info1.result();
+        info2.result();
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            21. 함수가 실행되었습니다.<br>
+                            22. 함수가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample18 -->
+            <div id="sample19" class="sample">
+                <h3>19. 함수 유형: 객체 리터럴 함수</h3>
+                <p></p>
+                <pre><code>{
+        // 함수 정의
+        function Func(num, str) {
+            this.num = num;
+            this.str = str;
+        }
+
+        // 메서드 추가
+        Func.prototype = {
+            result1: function () {
+                console.log(`${this.num}. ${this.str}`);
+            },
+            result2: function () {
+                console.log(`${this.num}. ${this.str}`);
+            },
+        }
+
+        // 인스턴스 생성
+        const info1 = new Func(23, "함수가 실행되었습니다.");
+        const info2 = new Func(24, "함수가 실행되었습니다.");
+
+        // 호출
+        info1.result1();
+        info2.result2();
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            23. 함수가 실행되었습니다.<br>
+                            24. 함수가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample19 -->
         </div>
         <!-- //main__sample -->
     </main>
@@ -484,6 +721,135 @@
             // 선언적 함수(가독성X)
             func4 = str => str;
             console.log(func4("10-3. 함수가 실행되었습니다."))
+        }
+
+        // 11. 함수 유형: 함수와 매개변수를 이용한 형태
+        {
+            function func(num, str) {
+                console.log(num + ". " + str); //템플릿 방식
+                console.log(`${num}. ${str}`); //리터럴 방식
+            }
+            func(11, "함수가 실행되었습니다.");
+        }
+        // 12. 함수 유형: 함수와 변수를 이용한 형태
+        {
+            const num = 12;
+            const str = "함수가 실행되었습니다.";
+
+            function func(num, str) {
+                console.log(`${num}. ${str}`);
+            }
+            func(num, str);
+        }
+        // 13. 함수 유형: 함수와 배열을 이용한 형태
+        {
+            const num = [13, 14];
+            const str = ["함수가 실행되었습니다.", "함수가 실행되었습니다."];
+
+            function func(num, str) {
+                console.log(`${num}. ${str}`);
+            }
+            func(num[0], str[0]);
+            func(num[1], str[1]);
+        }
+        // 14. 함수 유형: 함수와 객체를 이용한 형태
+        {
+            const info = {
+                num: 15,
+                str: "함수가 실행되었습니다."
+            }
+            function func(num, str) {
+                console.log(`${num}. ${str}`);
+            }
+            func(info.num, info.str);
+        }
+        // 15. 함수 유형: 함수와 배열 및 객체를 이용한 형태
+        {
+            const info = [
+                { num: 16, str: "함수가 실행되었습니다." },
+                { num: 17, str: "함수가 실행되었습니다." },
+            ];
+
+            function func(num, str) {
+                console.log(`${num}. ${str}`);
+            }
+            func(info[0].num, info[0].str);
+            func(info[1].num, info[1].str);
+        }
+        // 16. 함수 유형: 함수와 객체 안에 함수를 이용한 형태
+        {
+            const info = {
+                num: 18,
+                str: "함수가 실행되었습니다.",
+                result: () => {
+                    console.log(`${info.num}. ${info.str}`)
+                }
+            }
+            info.result();
+        }
+        // 17. 함수 유형: 객체 생성자 함수
+        {
+            // 함수 정의
+            function Func(num, str) {
+                this.num = num;
+                this.str = str;
+                this.result = () => {
+                    console.log(`${this.num}. ${this.str}`);
+                }
+            }
+            // 인스턴스 생성
+            const info1 = new Func(19, "함수가 실행되었습니다.");
+            const info2 = new Func(20, "함수가 실행되었습니다.");
+
+            // 호출
+            info1.result();
+            info2.result();
+        }
+        // 18. 함수 유형: 프로토타입 함수
+        {
+            // 함수 정의
+            function Func(num, str) {
+                this.num = num;
+                this.str = str;
+            }
+
+            // 메서드 추가
+            Func.prototype.result = function () {
+                console.log(`${this.num}. ${this.str}`);
+            }
+
+            // 인스턴스 생성
+            const info1 = new Func(21, "함수가 실행되었습니다.")
+            const info2 = new Func(22, "함수가 실행되었습니다.")
+            // 호출 
+            info1.result();
+            info2.result();
+        }
+        // 19. 함수 유형: 객체 리터럴 함수
+        {
+            // 함수 정의
+            function Func(num, str) {
+                this.num = num;
+                this.str = str;
+            }
+
+            // 메서드 추가
+            Func.prototype = {
+                result1: function () {
+                    console.log(`${this.num}. ${this.str}`);
+                },
+                result2: function () {
+                    console.log(`${this.num}. ${this.str}`);
+                },
+            }
+
+            // 인스턴스 생성
+            const info1 = new Func(23, "함수가 실행되었습니다.");
+            const info2 = new Func(24, "함수가 실행되었습니다.");
+
+            // 호출
+            info1.result1();
+            info2.result2();
         }
     </script>
 </body>

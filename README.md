@@ -15,6 +15,16 @@
 - 선택자(querySelectorAll())   
 - 반복문(for(), forEach)   
 - 메서드(innerText(), classList.add, addEventListener, if문) 
+[퀴즈03](https://kingsong97.github.io/class2024/quiz/quiz03.html)
+- 변수, 배열, 객체
+- 선택자(querySelectorAll()), (querySelector()) 
+- 반복문(for(), break문)
+- 메서드(innerText(), classList.add, addEventListener, if문)
+[퀴즈04](https://kingsong97.github.io/class2024/quiz/quiz04.html)
+- 변수, 배열, 객체, 템플릿 리터럴
+- 선택자(querySelectorAll()), (querySelector()) 
+- 반복문(forEach())
+- 메서드(join(), push(), innerText())
 
 # vscode 확장 프로그램
 
