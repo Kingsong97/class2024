@@ -307,10 +307,30 @@ body::after {
     transition: background-color 0.3s;
 }
 
+
 .quiz__footer .confirm:hover {
     background-color: transparent;
     border: 1px dashed #412E91;
     color: #412E91;
+    cursor: pointer;
+}
+
+.quiz__footer .next {
+    background-color: #341e8b;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.quiz__footer .next:hover {
+    background-color: transparent;
+    border: 1px dashed #341e8b;
+    color: #341e8b;
     cursor: pointer;
 }
 
