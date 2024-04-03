@@ -86,10 +86,9 @@
 
         // 변수
         let currentIndex = 0;   // 현재 문제에 대한 값 
-        console.log(currentIndex);
 
 
-        // 문제 출력
+        // 문제 출력 // 매개 변수 추후에 값이 추가 가능한 함수 
         const updateQuiz = (index) => {
             let quizWrapTag = `
             <div class="quiz">
@@ -122,7 +121,8 @@
                     <button class="next none">다음 문제</button>
                 </div>
             </div>
-            `
+            `;
+
             quizWrap.innerHTML = quizWrapTag;
 
             // 선택자
