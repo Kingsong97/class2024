@@ -56,8 +56,8 @@
             <div id="sample01" class="sample">
                 <h3>01. if문</h3>
                 <p>
-                    자바스크립트에서 변수는 값을 지정하고 참조하는데 사용합니다.
-                    변수를 사용하면 데이터를 저장하고 나중에 해당 데이터를 재사용 할 수 있습니다.
+                    if문은 지정한 조건이 참(true)인 경우 명령문을 실행한다.
+                    조건이 거짓(false)인 경우 또 다른 명령문이 실행 될 수 있다.
                 </p>
                 <pre><code>{
         // true, "문자열", 1, 2, [], {}
@@ -82,8 +82,9 @@
             <div id="sample02" class="sample">
                 <h3>02.다중 if문</h3>
                 <p>
-                    자바스크립트에서 변수는 값을 지정하고 참조하는데 사용합니다.
-                    변수를 사용하면 데이터를 저장하고 나중에 해당 데이터를 재사용 할 수 있습니다.
+                    다중 if문은 여러 조건을 순차적으로 검사할 때 사용됩니다. 각 if 또는 else if 절은 특정 조건을 평가하고, 해당 조건이 참(True)일 경우에만 그 안에 있는 코드
+                    블록을 실행합니다. 만약 조건이 거짓(False)이면, 다음 조건으로 넘어가서 검사를 계속합니다. 모든 조건이 거짓일 경우, optional else 절이 실행됩니다(else 절은
+                    필수가 아닙니다).
                 </p>
                 <pre><code>{
         const num = 100;
@@ -113,8 +114,10 @@
             <div id="sample03" class="sample">
                 <h3>03.중첩 if문</h3>
                 <p>
-                    자바스크립트에서 변수는 값을 지정하고 참조하는데 사용합니다.
-                    변수를 사용하면 데이터를 저장하고 나중에 해당 데이터를 재사용 할 수 있습니다.
+                    중첩 if문(nested if statements)은 if문 내부에 다른 if문이 들어가 있는 구조를 말합니다. 이 구조를 사용하면, 조건에 따라 다양한 레벨의 조건 검사를 수행할
+                    수 있습니다만 너무 많은 중첩은 코드의 가독성을 떨어트릴 수 있으므로 주의해야 합니다.
+                    아래코드는 num이라는 변수에 100이라는 값을 할당하고, 이 값을 조건문을 통해 비교하는 예시입니다. 여기서는 num의 값이 100인지 세 번 연속으로 검사하는 중첩 if문이
+                    사용되었습니다.
                 </p>
                 <pre><code>{
         const num = 100;
@@ -146,8 +149,8 @@
             <div id="sample04" class="sample">
                 <h3>04.if문 생략 & 삼항 연산자</h3>
                 <p>
-                    자바스크립트에서 변수는 값을 지정하고 참조하는데 사용합니다.
-                    변수를 사용하면 데이터를 저장하고 나중에 해당 데이터를 재사용 할 수 있습니다.
+                    조건문을 사용하는 기본적인 방법은 if-else 구문을 사용하는 것입니다. 하지만 코드를 더 간결하게 만들거나, 표현식 내에서 조건에 따른 값을 결정해야 할 때는 if문을
+                    생략하거나 삼항 연산자를 사용할 수 있습니다.
                 </p>
                 <pre><code>{
         const num = 100;
@@ -177,10 +180,12 @@
             </div>
             <!-- //sample04 -->
             <div id="sample05" class="sample">
-                <h3>04.if문 생략 & 삼항 연산자</h3>
+                <h3>05.switch문</h3>
                 <p>
-                    자바스크립트에서 변수는 값을 지정하고 참조하는데 사용합니다.
-                    변수를 사용하면 데이터를 저장하고 나중에 해당 데이터를 재사용 할 수 있습니다.
+                    switch 문도 if 와 거의 같은 기능을 수행하는 조건문이다.
+                    switch 문의 경우 if 문과 달리 모든 조건을 확인하지 않고, 맞는 구문을 만나면 break 를 통해 즉시 루프에서 벗어날 수 있다는 장점이 있다.
+                    반드시 break 가 필요하다. break 문을 사용하지 않을 경우 계속해서 다음 case 들을 확인하게 되고, 따라서 의도치 않게 원치않은 구문이 실행될 수 있으므로 주의해야
+                    한다.
                 </p>
                 <pre><code>{
         const num = 120;
@@ -214,6 +219,154 @@
                 </div>
             </div>
             <!-- //sample05 -->
+            <div id="sample06" class="sample">
+                <h3>06. while문</h3>
+                <p>
+                    자바스크립트에서 변수는 값을 지정하고 참조하는데 사용합니다.
+                    변수를 사용하면 데이터를 저장하고 나중에 해당 데이터를 재사용 할 수 있습니다.
+                </p>
+                <pre><code>{
+        let num = 1; //초기값
+
+        while (num <= 10) { //조건식
+            console.log(num); //실행문
+            num++; //증감값
+        }
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.1<br>
+                            실행되었습니다.2<br>
+                            실행되었습니다.3<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample06 -->
+            <div id="sample07" class="sample">
+                <h3>07. do while문</h3>
+                <p>
+                    do while문은 조건을 테스트하기 전에 코드 블록을 최소 한 번 실행하는 반복문입니다. 이는 while문과 비슷하지만, while문은 조건을 먼저 확인한 후 코드 블록을
+                    실행하는 반면, do while문은 코드 블록을 실행한 후 조건을 확인합니다. 이러한 특성 때문에 do while문 내의 코드는 조건의 참/거짓 여부와 상관없이 최소 한 번은
+                    실행됩니다. 때문에 사용자 입력을 받고 검증해야 하는 상황 등에서 유용하게 사용될 수 있습니다.
+                </p>
+                <pre><code>{
+        let num = 1; //초기값
+
+        while (num <= 10) { //조건식
+            console.log(num); //실행문
+            num++; //증감값
+        }
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            1 ~ 10
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample07 -->
+            <div id="sample08" class="sample">
+                <h3>08. for 문</h3>
+                <p>
+                    for문은 특정 조건이 만족될 때까지 코드 블록을 반복적으로 실행하기 위해 사용됩니다. 이 구문의 구조는 크게 세 부분으로 나눌 수 있으며, 각 부분은 세미콜론(;)으로
+                    구분됩니다.
+                </p>
+                <pre><code>{
+        console.log("08")
+        for (let i = 1; i <= 10; i++) {           //초깃값; 조건식; 증감값;
+            console.log(i);         //실행문
+        }
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            1 ~ 10
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample08 -->
+            <div id="sample09" class="sample">
+                <h3>09. 중첩 for문</h3>
+                <p>
+                    중첩 for 문은 하나의 for 문 내부에 다른 for 문이 있는 구조로, 주로 2차원 배열의 접근이나 다차원 구조에서 데이터를 처리할 때 사용되며 중첩 for 문은 다양한
+                    상황에서 사용될 수 있습니다. 예를 들어, 2차원 배열의 모든 요소를 처리하거나, 행렬의 곱셈을 수행하거나, 특정 패턴을 출력하는 등의 작업에서 유용하게 사용됩니다.
+                </p>
+                <pre><code>{
+        for (let i = 1; i <= 10; i++) {           //초깃값; 조건식; 증감값;
+            for (let j = 1; j <= 10; j++) {
+                console.log(i, j)
+            }
+        }
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            1 1 1 2 1 3 1 4 ~ 1 0 2 1 2 2 ~ 2 10
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample09 -->
+            <div id="sample10" class="sample">
+                <h3>10. break 문</h3>
+                <p>
+                    다중 if문은 여러 조건을 순차적으로 검사할 때 사용됩니다. 각 if 또는 else if 절은 특정 조건을 평가하고, 해당 조건이 참(True)일 경우에만 그 안에 있는 코드
+                    블록을 실행합니다. 만약 조건이 거짓(False)이면, 다음 조건으로 넘어가서 검사를 계속합니다. 모든 조건이 거짓일 경우, optional else 절이 실행됩니다(else 절은
+                    필수가 아닙니다).
+                </p>
+                <pre><code>{
+        console.log("10")
+        for (let i = 1; i < 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            console.log(i)
+        }
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            1 2 3 4
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample10 -->
+            <div id="sample11" class="sample">
+                <h3>11. continue 문</h3>
+                <p>
+                    다중 if문은 여러 조건을 순차적으로 검사할 때 사용됩니다. 각 if 또는 else if 절은 특정 조건을 평가하고, 해당 조건이 참(True)일 경우에만 그 안에 있는 코드
+                    블록을 실행합니다. 만약 조건이 거짓(False)이면, 다음 조건으로 넘어가서 검사를 계속합니다. 모든 조건이 거짓일 경우, optional else 절이 실행됩니다(else 절은
+                    필수가 아닙니다).
+                </p>
+                <pre><code>{
+        console.log("11")
+        for (let i = 1; i <= 10; i++) {
+            if (i == 5) {
+                continue;
+            }
+            console.log(i)
+        }
+}</code></pre>
+                <div class="reuslt">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            1 2 3 ~ 10
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample11 -->
         </div>
         <!-- //main__sample containe -->
     </main>
