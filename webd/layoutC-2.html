@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout C-2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1000px;
+            display: flex;
+        }
+
+        #asdie {
+            width: 20%;
+            height: 650px;
+            background-color: #ccc;
+        }
+
+        #asdie .logo {
+            height: 100px;
+            background-color: #ddd;
+        }
+
+        #asdie .nav {
+            height: 550px;
+            background-color: #9b9b9b;
+        }
+
+        #main {
+            width: 80%;
+        }
+
+        #slider {
+            height: 350px;
+            background-color: #aaa;
+        }
+
+        #content {
+            display: flex;
+        }
+
+        #content .content1 {
+            width: 33.33%;
+            height: 200px;
+            background-color: #eee;
+        }
+
+        #content .content2 {
+            width: 33.33%;
+            height: 200px;
+            background-color: #cac7c7;
+        }
+
+        #content .content3 {
+            width: 33.33%;
+            height: 200px;
+            background-color: #9c9999;
+        }
+
+        #footer {
+            display: flex;
+        }
+
+        #footer .footer1 {
+            width: 70%;
+            height: 100px;
+            background-color: #dadada;
+        }
+
+        #footer .footer2 {
+            width: 30%;
+            height: 100px;
+
+        }
+
+        #footer .footer2 .footer2-1 {
+            height: 50%;
+            background-color: #666464;
+        }
+
+        #footer .footer2 .footer2-2 {
+            height: 50%;
+            background-color: #aa9797;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="asdie">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </aside>
+        <main id="main">
+            <article id="slider"></article>
+            <section id="content">
+                <div class="content1"></div>
+                <div class="content2"></div>
+                <div class="content3"></div>
+            </section>
+            <footer id="footer">
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer2-1"></div>
+                    <div class="footer2-2"></div>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>

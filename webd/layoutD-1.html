@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout D-1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #aside {
+            width: 200px;
+            height: 850px;
+            background-color: #4d2828;
+        }
+
+        #aside #logo {
+            height: 20%;
+            background-color: #691717;
+        }
+
+        #main {
+            width: calc(100% - 200px);
+        }
+
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+
+        #footer .logo {
+            width: 10%;
+            height: 100px;
+            background-color: #383737;
+        }
+
+        #footer .copyright {
+            width: 60%;
+            height: 100px;
+            background-color: #312a2a;
+        }
+
+        #footer .sns {
+            width: 30%;
+            height: 100px;
+            background-color: #412c2c;
+        }
+
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: #ccc;
+        }
+
+        #link {
+            width: 150px;
+            height: 200px;
+            background-color: #b2b2b2;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+        }
+
+        #contents {
+            width: 100%;
+            height: 250px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 id="logo"></h1>
+            <nav id="menu"></nav>
+        </aside>
+        <main id="main">
+            <section id="slider">
+                <div id="link"></div>
+            </section>
+            <section id="banner"></section>
+            <section id="contents"></section>
+        </main>
+        <footer id="footer">
+            <div class="logo"></div>
+            <div class="copyright"></div>
+            <div class="sns"></div>
+        </footer>
+    </div>
+</body>
+
+</html>
