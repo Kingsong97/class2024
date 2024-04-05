@@ -72,17 +72,19 @@
     <script src="assets/js/prism.js"></script>
 
     <script>
-        // 01. 1부터 100까지 출력하기(for, while, do while)
-       
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript",
+            }
 
-        // 02. 0부터 100까지 짝수만 출력하기(for문, if문)
-      
+            const { a, b, c } = obj;
 
-        // 03. 0부터 100까지 짝수는 파란색, 홀수는 빨간색 출력하기
-      
-
-        // 04. 중첩 for문을 이용해서 구구단 출력하기
-      
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
     </script>
 
 
