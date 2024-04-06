@@ -31,10 +31,6 @@
                 <li><a href="object06.html">요소 객체</a></li>
                 <li><a href="object07.html">이벤트 객체</a></li>
             </ul>
-            <ul>
-                <li><a href="">데이터 효과</a></li>
-                <li><a href="">검색 효과</a></li>
-            </ul>
         </nav>
     </header>
     <!-- //header -->
@@ -165,7 +161,7 @@
                         <div>
                             300<br />
                             500<br />
-                            javascriptjavascript<br />
+                            javascriptjquery<br />
                         </div>
                     </details>
                 </div>
@@ -279,8 +275,7 @@
         console.log(arr[0]);
         console.log(arr[1]);
         console.log(arr[2]);
-}
-</code></pre>
+}</code></pre>
                 <p class="desc">
                     위의 코드는 배열 리터럴 방식을 사용하여 배열을 생성하고 초기값을 설정하는 예시입니다.
                 </p>
@@ -453,7 +448,8 @@
                             100 200<br />
                             100 200 300 400<br />
                             [100, 200, 300, 400]<br />
-                            [100, 200, javascript, 300, 400, jquery]
+                            [100, 200, javascript, 300, 400, jquery]<br />
+                            [100, 200, 300, 400]
                         </div>
                     </details>
                 </div>
@@ -693,7 +689,8 @@
             <div id="sample20" class="sample">
                 <h3>20. 객체 : 데이터 저장(키와값) : 표현방법 8 : 객체 + 함수가 있는 방식</h3>
                 <p>
-
+                    객체 내에 속성 뿐만 아니라 함수도 포함하는 방식을 보여줍니다. 이러한 구조는 객체 지향 프로그래밍의 기본적인 아이디어 중 하나로, 데이터(속성)와 그 데이터를 처리하는
+                    로직(메소드 또는 함수)을 하나의 단위(객체)로 묶어 관리합니다. 이를 통해 코드의 재사용성과 유지보수성을 높일 수 있습니다.
                 </p>
                 <pre><code>{
         const obj = {
@@ -1024,186 +1021,6 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
-    <script>
-
-        // 13. 객체 : 데이터 저장(키와값) : 표현방법 1 : 객체 선언 후 배열 방식으로 데이터 입력
-        {
-            const obj = new Object();  // 객체 선언
-
-            obj[0] = 100;  //obj변수에 숫자 100을 저장
-            obj[1] = 200;  //obj변수에 숫자 200을 저장
-            obj[2] = "JS";  //obj변수에 문자 JS을 저장
-
-            console.log("13. 객체 : 표현방법1")
-            console.log(obj[0]);
-            console.log(obj[1]);
-            console.log(obj[2]);
-        }
-        // 14. 객체 : 데이터 저장(키와값) : 표현방법 2 : 객체 선언 후 객체 방식으로 데이터 입력
-        {
-            const obj = new Object();  // 객체 선언
-
-            obj.a = 100;
-            obj.b = 200;
-            obj.c = "JS";
-
-            console.log("14. 객체 : 표현방법2");
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
-        }
-        // 15. 객체 : 데이터 저장(키와값) : 표현방법 3 : 리터럴 방식으로 객체 선언
-        {
-            const obj = {};
-
-            obj.a = 100;
-            obj.b = 200;
-            obj.c = "JS";
-
-            console.log("15. 객체 : 표현방법3");
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
-        }
-        // 16. 객체 : 데이터 저장(키와값) : 표현방법 4 : 리터럴 방식으로 객체 선언과 동시에 초깃값을 설정
-        {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "JS",
-            }
-
-            console.log("16. 객체 : 표현방법4");
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
-        }
-        // 17. 객체 : 데이터 저장(키와값) : 표현방법 5 : 배열안에 객체가 있는 방식
-        {
-            const obj = [
-                {
-                    a: 100,
-                    b: 200,
-                    c: "javascirpt",
-                }, {
-                    a: 300,
-                    b: 400,
-                    c: "jquery",
-                }
-            ];
-
-            console.log("17. 객체 : 표현방법5");
-            console.log(obj[0].a); // 100
-            console.log(obj[0].b); // 200
-            console.log(obj[0].c); // javascript
-
-            console.log(obj[1].a); // 300
-            console.log(obj[1].b); // 400
-            console.log(obj[1].c); // javascript
-        }
-        // 18. 객체 : 데이터 저장(키와값) : 표현방법 6 : 객체안에 배열이 있는 방식
-        {
-            const obj = {
-                a: 100,
-                b: [200, 300],
-                c: "javascript",
-            }
-
-            console.log("18. 객체 : 표현방법6");
-            console.log(obj.a); // 100
-            console.log(obj.b); // 200, 300
-            console.log(obj.b[0]); // 200
-            console.log(obj.b[1]); // 300
-            console.log(obj.c); // javascript
-        }
-        // 19. 객체 : 데이터 저장(키와값) : 표현방법 7 : 객체안에 객체가 있는 방식
-        {
-            const obj = {
-                a: 100,
-                b: { x: 200, y: 300 },
-                c: "javascript"
-            }
-
-            console.log("19. 객체 : 표현방법7");
-            console.log(obj.a);  //100
-            console.log(obj.b.x);  //200
-            console.log(obj.b.y);  //300
-            console.log(obj.c);  //javascript
-        }
-        // 20. 객체 : 데이터 저장(키와값) : 표현방법 8 : 객체 + 함수가 있는 방식
-        // → 변수 : 데이터 저장 : 숫자, 문자, 함수(실행문), 객체, 배열, 특수값(undefined, null) : 자료형
-        {
-            const obj = {
-                a: 100,
-                b: [200, 300],
-                c: { x: 400, y: 500 },
-                d: "javascript",
-                e: function () {
-                    console.log("javascript가 실행되었습니다.");
-                },
-                f: function () {
-                    console.log(obj.d + "가 실행되었습니다.");
-                },
-                g: function () {
-                    console.log(obj.d + "가 실행되었습니다.");
-                }
-            }
-
-            console.log(obj.a);
-            console.log(obj.b[0]);
-            console.log(obj.b[1]);
-            console.log(obj.c.x);
-            console.log(obj.c.y);
-            console.log(obj.d);
-            obj.e(); // 함수실행 FM
-            obj.f();
-            obj.g();
-        }
-        // 21. 객체 : 데이터 저장(키와값) : 표현방법 9 : 객체구조 분해 할당
-        {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javascript",
-            }
-
-            const { a, b, c } = obj;
-
-            console.log(a);
-            console.log(b);
-            console.log(c);
-        }
-        // 22. 객체 : 데이터 저장(키와값) : 표현방법 10 : 객체 펼침 연산자
-        {
-            const obj1 = { a: 100, b: 200, c: "javascript" }
-            const obj2 = { ...obj1, d: "jquery" }
-            const obj3 = { ...obj1, ...obj2 }
-
-            console.log("+++++++22")
-            console.log(obj2.a);
-            console.log(obj2.b);
-            console.log(obj2.c);
-            console.log(obj2.d);
-            console.log(obj3);
-        }
-
-        // 23. 파일 : 데이터 교환(JSON)
-        {
-            // 01 JSON 데이터 --&gt; 객체 변환
-            const jsonString = '{"name":"Song","age":28}'
-            const jsonObject = JSON.parse(jsonString);
-
-            console.log(jsonObject.name); //SONG
-            console.log(jsonObject.age); //28
-        };
-        {
-            // 02 객체 파일 --&gt; JSON 데이터
-            const person = { name: "SONG", age: 28 };
-            const jsonString = JSON.stringify(person);
-
-            console.log(jsonString); // {"name":"SONG","age":28}
-        };
-    </script>
 </body>
 
 </html>

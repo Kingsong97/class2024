@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+            background-color: #eb8d8d;
+        }
+
+        #header {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #d86868;
+        }
+
+        #contents {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #ca5959;
+        }
+
+        #slider {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+
+        }
+
+        #slider .slider1 {
+            width: 50%;
+            height: 600px;
+            background-color: #a84040;
+        }
+
+        #slider .slider2 {
+            width: 50%;
+            height: 600px;
+        }
+
+        #slider .slider2 .slider2-1 {
+            height: 33.33%;
+            display: flex;
+        }
+
+        #slider .slider2 .slider2-1 .slider2-1-1 {
+            width: 50%;
+            height: 100%;
+            background-color: #8d2929;
+        }
+
+        #slider .slider2 .slider2-1 .slider2-1-2 {
+            width: 50%;
+            height: 100%;
+            background-color: #943737;
+        }
+
+        #slider .slider2 .slider2-2 {
+            height: 33.33%;
+            background-color: #771c1c;
+        }
+
+        #slider .slider2 .slider2-3 {
+            height: 33.33%;
+            background-color: #790d0d;
+        }
+
+        #footer {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #3d0505;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+        </header>
+        <!-- //header -->
+        <article id="contents">
+        </article>
+        <!-- //contents -->
+        <section id="slider">
+            <div class="slider1"></div>
+            <div class="slider2">
+                <div class="slider2-1">
+                    <div class="slider2-1-1"></div>
+                    <div class="slider2-1-2"></div>
+                </div>
+                <div class="slider2-2"></div>
+                <div class="slider2-3"></div>
+            </div>
+        </section>
+        <!-- //slider -->
+        <footer id="footer">
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
