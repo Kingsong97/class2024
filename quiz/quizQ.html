@@ -4,154 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizQ!</title>
+    <title>퀴즈 Q</title>
+    <link rel="stylesheet" href="assets/css/quiz.css">
 </head>
 
 <body>
-    <div id="wrap"></div>
+    <header id="header">
+        <h1>
+            <a href="index.html">Quiz</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="quiz01.html">1</a></li>
+                <li><a href="quiz02.html">2</a></li>
+                <li><a href="quiz03.html">3</a></li>
+                <li><a href="quiz04.html">4</a></li>
+                <li><a href="quiz05.html">5</a></li>
+                <li><a href="quiz06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap"></div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:kingsongsm97@gmail.com">kingsongsm97@gmail.com</a>
+    </footer>
+    <!-- //footer -->
 
     <script>
         // 선택자
-        const quizWrap = document.querySelector("#wrap");
+        const quizWrap = document.querySelector(".quiz__wrap");
 
-        // 문제정보
+        // 문제 정보
         const quizInfo = [
             {
-                num : "1. ",
-                question: "다음 문제에 출력되는 값으로 옳은 것은?",
-                choices: ["100", "200", "300", "400"],
-                answer: "1",
-                desc: "let x = 100이므로 정답은 100",
-                code: `<pre><code class="hljs">{
-    let x = 100;
-    let y = 200;
-    let z = "javascript";
-
-    console.log(x);
- }</code></pre>`
-            },
-            {
-                num: "2. ",
+                date: "2017년 상시",
                 type: "정보처리기능사",
-                question: "다음 문제 정답은?",
-                choices: ["100",
-                    "200",
-                    "javascript",
-                    "100, 200, javasciprt"],
-                answer: "3",
-                desc: "객체 리터럴 방식으로 선언되었을 경우 `.`을 통하여 불러올 수 있다.",
-                code: `<pre><code class="hljs">{
-    const obj = {
-        a: 100,
-        b: 200,
-        c: "javasript"
-    }
-
-    console.log(obj.c);
- }</code></pre>`
-            },
-            {
-                num: "3. ",
-                type: "정보처리기능사",
-                question: "다음 문제에 출력되는 값으로 옳은 것은?",
-                choices: ["ture", "ture", "ture", "false"],
+                question: "피변조파로부터 원래의 신호파를 만드는 것을 무엇이라고 하는가?",
+                choices: ["발진", "정류", "증폭", "복조"],
                 answer: "4",
-                desc: "hasOwnProperty는 객체가 자신의 속성으로 지정된 속성을 갖고 있는지 여부를 판단하는 매개변수입니다. 속성 가지고 있으면 ture 없으면 false로 반환합니다.",
-                code: `<pre><code class="hljs">{
-    const obj = {
-        a: 100,
-        b: 200,
-        c: "javascript"
-    }
-    console.log(obj.hasOwnProperty("d"));
-}</code></pre>`
+                desc: "피변조파는 변조된 신호를 의미합니다. 변조된 신호를 원래의 신호로 만드는 것을  복조라고 합니다."
             },
             {
-                num: "4. ",
+                date: "2047년 상시",
                 type: "정보처리기능사",
-                question: "다음 문제에 출력되는 값으로 옳은 것은?",
-                choices: ['["a","b,","c"]', "[100,200,javascript]", "javascript", "[a:100, b:200, c:javascript]"],
-                answer: "3",
-                desc: "주어진 객체의 열거 가능한 문자열 키 속성 키를 나타내는 문자열 배열입니다.",
-                code: `<pre><code class="hljs">{
-    const obj = {
-        a: 100,
-        b: 200,
-        c: "javascript"/
-    }
-    console.log(Object.keys(obj));
-}</code></pre>`
+                question: "반가산기(Half-Adder)에서 두 개의 입력 비트가 모두 1일 때 합(Sum)은?",
+                choices: ["0", "1", "10", "11"],
+                answer: "0",
+                desc: "반가산기(Half-Adder)에서 두 개의 입력 비트가 모두 1일 때 합(Sum)은 0입니다."
             },
             {
-                num: "5. ",
+                date: "1247년 상시",
                 type: "정보처리기능사",
-                question: "다음 문제에 출력되는 값으로 옳은 것은?",
-                choices: [
-                    "100",
-                    "200",
-                    "300",
-                    "450"
-                ],
-                answer: "1",
-                desc: "조건이 참일 경우에만 그에 해당하는 코드 블록을 실행합니다. 만약 이전의 조건이 이미 참이라면, 다음 조건들은 평가되지 않고 건너뜁니다. 마지막 else는 위의 모든 조건이 거짓일 때 실행될 코드를 지정합니다.",
-                code: `<pre><code class="hljs">{
-    const num = 100;
-
-    if (num == 90) {
-        console.log("실행되었습니다.(90)");
-    } else if (num == 100) {
-        console.log("실행되었습니다.(100)");
-    } else if (num == 110) {
-        console.log("실행되었습니다.(110)");
-    } else if (num == 120) {
-        console.log("실행되었습니다.(120)");
-    } else if (num == 130) {
-        console.log("실행되었습니다.(130)");
-    } else {
-        console.log("실행되었습니다.")
-    }
-}</code></pre>`
+                question: "컴퓨터에 의하여 다음에 실행될 명령어의 주소가 저장되어 있는 기억 장소는?",
+                choices: ["Memory Register", "Instruction Register", "Index Register", "Program Counter",],
+                answer: "4",
+                desc: "프로그램 카운터는 컴퓨터에의하여 다음에 실행될 명령어의 주소가 저장되어있는 기억장소입니다."
+            },
+            {
+                date: "2817년 상시",
+                type: "정보처리기능사",
+                question: "CPU 에서 명령이 실행되는 순서를 제어하거나 특정 프로그램에 관련된 컴퓨터 시스템의 상태를 나타내고 유지하기 위한 제어 워드로서, 실행중인 CPU의 상황을 나타내는 것은?",
+                choices: ["MBR", "MAR", "PC", "PSW"],
+                answer: "4",
+                desc: "CPU 에서 명령이 실행되는 순서를 제어하거나 특정 프로그램에 관련된 컴퓨터 시스템의 상태를 나타내고 유지하기 위한 제어 워드로서, 실행중인 CPU의 상황을 나타내는 것은 PSW입니다."
+            },
+            {
+                date: "2017년 상시",
+                type: "정보처리기능사",
+                question: "명령어는 연산자 부분과 주소 부분으로 구성되는데 주소(Operand)부분의 구성 요소가 아닌 것은?",
+                choices: ["데이터의 주소자체", "명령어 순서", "데이터가 있는 주소를 구하는데 필요한 정보", "데이터 종류"],
+                answer: "4",
+                desc: "명령어는 연산자 부분과 주소 부분으로 구성되는데 다양한 구성요소중 데이터 종류는 주소부분의 구성요소가 아닙니다."
             },
         ]
 
-        let currentIndex = 0;
+        // 변수
+        let currentIndex = 0;   // 현재 문제에 대한 값 
 
+
+        // 문제 출력 // 매개 변수 추후에 값이 추가 가능한 함수 
         const updateQuiz = (index) => {
-            let = quizWraptag = `        <div class="quiz">
-            <div class="quiz__header"></div>
+            let quizWrapTag = `
+            <div class="quiz">
+                <div class="quiz__header"></div>
                 <div class="quiz__main">
-                    <div class="question">${index + 1}. ${quizInfo[index].question}</div>
-                    <div class="code"><pre><code class="code_ex">${quizInfo[index].code}</code></pre></div>
+                    <div class="question"></div>
                     <div class="choices">
-                        <label for="choices1">
-                            <input type="radio" id="choices1" name="choice" value="1">
-                            <span>${quizInfo[index].choices[0]}</span>
+                        <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" value="1">
+                            <span></span>
                         </label>
-                        <label for="choices2">
-                            <input type="radio" id="choices2" name="choice" value="2">
-                            <span>${quizInfo[index].choices[1]}</span>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" value="2">
+                            <span></span>
                         </label>
-                        <label for="choices3">
-                            <input type="radio" id="choices3" name="choice" value="3">
-                            <span>${quizInfo[index].choices[2]}</span>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" value="3">
+                            <span></span>
                         </label>
-                        <label for="choices4">
-                            <input type="radio" id="choices4" name="choice" value="4">
-                            <span>${quizInfo[index].choices[3]}</span>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" value="4">
+                            <span></span>
                         </label>
                     </div>
-                    <div class="answer none">${quizInfo[index].answer}</div>
-                    <div class="desc none">${quizInfo[index].desc}</div>
+                    <div class="answer none"></div>
+                    <div class="desc none"></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
                     <button class="next none">다음 문제</button>
+                </div>
             </div>
-        </div>`
+            `;
 
-        quizWrap.innerHTML = quizWraptag;
+            quizWrap.innerHTML = quizWrapTag;
+
+            // 선택자
+            const quizConfirm = quizWrap.querySelector(".confirm");
+            const quizNext = quizWrap.querySelector(".next");
+
+            // 정답 버튼을 클릭
+            quizConfirm.addEventListener("click", () => {
+                // 사용자가 클릭한 정답 확인
+                const quizChecked = quizWrap.querySelector("input[name='choice']:checked"); // 사용자가 클릭한 정답
+
+                if (quizChecked) {
+                    const userAnswer = quizChecked.value; // 사용자가 클릭한 value 값 
+                    const quizAnswer = quizInfo[currentIndex].answer // 정답지의 정답
+                    const quizElement = quizWrap.querySelector(".quiz");
+                    const answerElement = quizWrap.querySelector(".answer");
+                    const descElement = quizWrap.querySelector(".desc");
+
+                    // 사용자 정답과 정답지 정답을 비교
+                    if (userAnswer === quizAnswer) {
+                        quizElement.classList.add("good");
+                    } else {
+                        quizElement.classList.add("bad");
+                        answerElement.classList.remove("none");
+                    }
+                    descElement.classList.remove("none");
+                    quizNext.classList.remove("none");
+                    quizConfirm.classList.add("none");
+
+                } else {
+                    alert("답을 선택해주세요!!");
+                };
+
+
+            })
+
+            // 다음 문제 버튼을 클릭하면 alert()
+            quizNext.addEventListener("click", () => {
+                // currentIndex 1을 추가
+                if (currentIndex < quizInfo.length - 1) {
+                    currentIndex++; // 문제 번호 증가
+                    updateQuiz(currentIndex); // 퀴즈 반영
+                } else {
+                    alert("종료!");
+                }
+            });
         }
 
+        // 페이지가 로드 된 후 실행
         document.addEventListener("DOMContentLoaded", () => {
             updateQuiz(currentIndex);
         });

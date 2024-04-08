@@ -81,6 +81,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
     background-image: url(../img/bg01.jpg);
     width: 100%;
@@ -380,4 +381,27 @@ body::after {
     border-radius: 30px;
     transform: rotate(-45deg);
     z-index: 100;
+}
+
+.quiz__check {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #412E91;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #b8a8ff;
+    box-sizing: 3px solid #b8a8ff;
+    transition: all 0.3s;
+}
+
+.quiz__check:hover {
+    border: 3px solid transparent;
+    background-color: #e6e0ff;
+    color: #412E91;
 }
