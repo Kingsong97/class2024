@@ -1,0 +1,73 @@
+[
+    {
+        "type": "정보처리 기능사",
+        "question": "GoF(Gang of Four)의 디자인 패턴에서 행위 패턴에 속하는 것은?",
+        "incorrect_answers": [
+            "Builder",
+            "Prototype",
+            "Bridge"
+        ],
+        "correct_answer": "Visitor",
+        "desc": "연산작업을 할 때, 연산의 중간 결과나 데이터 저장시 레지스터를 사용하는 주된 이유는 연산속도 향상을 위해서 입니다."
+    },
+    {
+        "type": "정보처리 기능사",
+        "question": "객체지향 프로그램에서 데이터를 추상화하는 단위는?",
+        "incorrect_answers": [
+            "메소드",
+            "클래스",
+            "상속성",
+            "메시지"
+        ],
+        "correct_answer": "",
+        "desc": ""
+    },
+    {
+        "type": "정보처리 기능사",
+        "question": "객체지향 기법에서 클래스들 사이의 '부분-전체(part-whole)' 관계 또는 '부분(is-a-part-of)'의 관계로 설명되는 연관성을 나타내는 용어는?",
+        "incorrect_answers": [
+            "일반화",
+            "추상화",
+            "캡슐화",
+            "집단화"
+        ],
+        "correct_answer": "",
+        "desc": ""
+    },
+    {
+        "type": "정보처리 기능사",
+        "question": "객체지향 분석 방법론 중 E-R 다이어그램을 사용하여 객체의 행위를 모델링하며, 객체 식별, 구조식별, 주체 정의, 속성 및 관계 정의, 서비스 정의 등의 과정으로 구성되는 것은?",
+        "incorrect_answers": [
+            "Coad와 Yourdon 방법",
+            "Booch 방법",
+            "Jacobson 방법",
+            "Wirfs-Brocks 방법"
+        ],
+        "correct_answer": "",
+        "desc": ""
+    },
+    {
+        "type": "정보처리 기능사",
+        "question": "코드 설계에서 일정한 일련번호를 부여하는 방식의 코드는?",
+        "incorrect_answers": [
+            "연상 코드",
+            "블록 코드",
+            "순차 코드",
+            "표의 숫자 코드"
+        ],
+        "correct_answer": "",
+        "desc": ""
+    },
+    {
+        "type": "정보처리 기능사",
+        "question": "소프트웨어 설계 시 구축된 플랫폼의 성능특성 분석에 사용되는 측정 항목이 아닌 것은?",
+        "incorrect_answers": [
+            "응답시간(Response Time)",
+            "가용성(Availability)",
+            "사용률(Utilization)",
+            "서버 튜닝(Sever Tuning)"
+        ],
+        "correct_answer": "",
+        "desc": ""
+    },
+]

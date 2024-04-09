@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    width: 1200px;
+    height: 600px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.quiz_header {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #000;
+}
+
+.quiz_main {
+    width: 100%;
+    height: 400px;
+    border-bottom: 1px solid #000;
+}
+
+.quiz_main .quiz_question {}
+.quiz_main .quiz_inputbox {}
