@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>type 선택자</title>
     <style>
-        #title {color: #000;}
+        /* 인접 선택자 */
+        #title + p {
+            color: blue;
+        }
+        /* 일반 형제 선택자 */
+        #title ~ p {
+            color: blue;
+        }
     </style>
 </head>
 <body>
-    <h1 id="title">힘들어도 달려라</h1>
-    <p>노력하면 이뤄진다</p>
+    <h1 class="title"></h1>
+    <p>노력하면 이뤄진다.</p>
+    <p>정말이다.</p>
 </body>
 </html>
