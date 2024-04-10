@@ -4,7 +4,8 @@
 }
 
 #wrap {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     height: 600px;
     border: 1px solid #000;
     margin: 0 auto;
@@ -15,15 +16,43 @@
 
 .quiz_header {
     width: 100%;
-    height: 100px;
+    height: 50px;
     border-bottom: 1px solid #000;
 }
 
 .quiz_main {
     width: 100%;
-    height: 400px;
+    height: 450px;
     border-bottom: 1px solid #000;
 }
 
-.quiz_main .quiz_question {}
-.quiz_main .quiz_inputbox {}
+.quiz_main .quiz_quizbox {
+    width: 100%;
+    height: 450px;
+    display: flex;
+}
+
+.quiz_main .question {
+    width: 100%;
+}
+
+.quiz_main #input {
+    width: 50%;
+    border-left: 1px solid #000;
+    position: relative;
+}
+
+.quiz_main #input input {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+}
+
+.quiz_gauge {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #000;
+}

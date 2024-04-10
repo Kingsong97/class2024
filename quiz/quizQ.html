@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Quest</title>
     <link rel="stylesheet" href="../quiz/assets/css/quizQ.css">
 </head>
+
 <body>
     <div id="wrap">
         <div class="quiz">
-            <div class="quiz_header"></div>
+            <div class="quiz_header"></div> <!-- 문제 종목 및 현재문항/남은문항 표시구역-->
             <div class="quiz_main">
-                <div class="quiz_question"></div>
-                <div class="quiz_inputbox"></div>
+                <div class="quiz_quizbox"> <!-- 퀴즈정보(문제,번호 등)-->
+                    <div class="question"></div> <!-- 문제가 표출될 곳-->
+                    <div id="input">
+                        <input type="text" placeholder="정답 입력란">
+                    </div> <!-- 답 적는곳 (주관식)-->
+                </div>
             </div>
+            <div class="quiz_gauge"></div> <!-- 문제 게이지 -->
             <div class="quiz_footer">
-                <button class="confirm"></button>
-                <button class="next"></button>
+                <button class="previous"></button> <!-- 이전 문항 버튼 -->
+                <button class="confirm"></button> <!-- 정답 제출 버튼 -->
+                <button class="next"></button> <!-- 다음 문항 버튼-->
             </div>
         </div>
     </div>
 
 
-    <script></script>
+    <script>
+        let quizInfo = [];
+
+        const fetchQuiz = () => {
+            fetch('https://kingsong97.github.io/class2024/json/gineungsaJC2005_04.json')
+                .then(res => res.json())
+                .then(items => {
+                    quizInfo = items.map((item, idx) => {
+                        const formattedQuiz = {
+                            Date: "20240401",
+                            Type: item.subject,
+                            Question: item.question,
+                            desc: item.desc,
+                            answer: item.correct_answer
+                        }
+                    })
+                })
+                .catch(error => console.error('데이터 로딩 실패', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchQuiz);
+    </script>
 </body>
+
 </html>
