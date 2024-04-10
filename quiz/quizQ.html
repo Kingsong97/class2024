@@ -39,12 +39,12 @@
 
     <script>
 
-        
+
         let quizInfo = [];
         let currentQuestionIndex = 0; // 현재 질문의 인덱스
         let correctAnswersCount = 0; // 정답 수
         let incorrectAnswersCount = 0; // 오답 수
-    
+
         const fetchQuiz = () => {
             fetch('https://webstoryboy.github.io/webstoryboy/w_json/gineungsaShort.json')
                 .then(res => res.json())
@@ -60,20 +60,20 @@
                 })
                 .catch(error => console.error('데이터 로딩 실패', error));
         };
-    
+
         const updateQuiz = () => {
             const quiz = quizInfo[currentQuestionIndex];
             const quizBox = document.querySelector('.quiz_quizbox');
             const currentQuestionNumberElement = document.getElementById('currentQuestionNumber');
             const totalQuestionsElement = document.getElementById('totalQuestions');
-            
+
             currentQuestionNumberElement.textContent = currentQuestionIndex + 1;
             totalQuestionsElement.textContent = quizInfo.length;
 
             const updateQuiz = () => {
-            // 기존 코드 유지
-             document.getElementById('userAnswer').value = ''; // 입력 필드 초기화
-            // 나머지 updateQuiz 코드
+                // 기존 코드 유지
+                document.getElementById('userAnswer').value = ''; // 입력 필드 초기화
+                // 나머지 updateQuiz 코드
             };
 
             quizBox.innerHTML = `
@@ -87,7 +87,7 @@
                 </div>
             `;
         };
-    
+
         // "정답 확인" 버튼 이벤트 리스너
         const checkAnswer = () => {
             const userAnswer = document.querySelector('#userAnswer').value;
@@ -97,7 +97,7 @@
                 alert("정답입니다!");
             } else {
                 alert(`틀렸습니다. 정답은 ${quiz.answer}입니다.`);
-                } 
+            }
 
             if (userAnswer.toLowerCase() === quiz.answer.toLowerCase()) {
                 correctAnswersCount += 1; // 정답 카운트 증가
@@ -107,32 +107,32 @@
                 incorrectAnswersCount += 1; // 오답 카운트 증가
                 quizElement.classList.add("bad"); // 오답일 때 'bad' 클래스 추가
                 quizElement.classList.remove("good"); // 'good' 클래스가 있다면 제거
-                }
+            }
 
             document.getElementById('correctCount').textContent = "정답 수: " + correctAnswersCount;
             document.getElementById('incorrectCount').textContent = "오답 수: " + incorrectAnswersCount;
             document.getElementById('totalScore').textContent = "총 점수: " + correctAnswersCount; // 각 정답당 1점
         };
-    
+
         // "이전 문항" 버튼 이벤트 리스너
         const previousQuestion = () => {
             if (currentQuestionIndex > 0) {
                 currentQuestionIndex--;
                 updateQuiz();
             } else {
-        // 이미 첫 번째 문제에 있을 경우 더 이상 이전으로 갈 수 없음
+                // 이미 첫 번째 문제에 있을 경우 더 이상 이전으로 갈 수 없음
                 alert("돌아갈 문제가 없습니다.");
             }
         };
-    
+
         // "다음 문항" 버튼 이벤트 리스너
         const nextQuestion = () => {
             if (currentQuestionIndex < quizInfo.length - 1) {
                 currentQuestionIndex++;
                 const quizElement = document.querySelector('.quiz');
-            if (quizElement) {
-                quizElement.classList.remove("good", "bad"); // 클래스 제거
-            }
+                if (quizElement) {
+                    quizElement.classList.remove("good", "bad"); // 클래스 제거
+                }
                 updateQuiz();
             } else {
                 alert("모든 퀴즈를 완료했습니다!");
@@ -140,12 +140,11 @@
             }
         };
 
-        
-        
+
         document.querySelector('.confirm').addEventListener('click', checkAnswer);
         document.querySelector('.previous').addEventListener('click', previousQuestion);
         document.querySelector('.next').addEventListener('click', nextQuestion);
-    
+
         document.addEventListener('DOMContentLoaded', fetchQuiz);
     </script>
 </body>
