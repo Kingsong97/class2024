@@ -3,28 +3,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'YanoljaYache';
 }
 
 body {
-    background-image: url(../img/QQ-min.jpg);
+    background-image: url(../img/RQBG.png);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
     overflow: hidden;
     margin-top: 150px;
+    cursor: url("https://cur.cursors-4u.net/others/oth-8/oth755.cur") 4 4, auto;
 }
 
 #wrap {
-    max-width: 800px;
+    max-width: 60%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ddd;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 헤더 및 푸터 */
-.quiz_header,
+.quiz_header {
+    text-align: right;
+    padding: 15px;
+}
+
+.quiz_header .quiz_total {
+    font-size: 20px;
+    background-color: #ccc;
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid #000;
+}
+
 .quiz_footer {
     text-align: center;
     padding: 15px;
@@ -47,28 +61,37 @@ body {
 /* 입력란 및 버튼 */
 #input input,
 button {
-    width: 100%;
+    width: 20%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #666;
     color: #fff;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+#userAnswer {
+    width: 40%;
+    text-align: center;
+    margin-top: 10px;
+    border: #000 1px solid;
+    color: #000;
+    line-height: 1.5;
+    font-size: 16px;
 }
 
-/* 문제 게이지 및 결과 스타일 */
-.quiz_gauge,
-.quiz_gauge div {
-    height: 20px;
-    background-color: #eee;
-    margin: 20px 0;
-    border-radius: 10px;
+#userAnswer:hover {
+    background-color: #ddd;
+    cursor: url("https://cur.cursors-4u.net/anime/ani-11/ani1090.cur") 4 4, auto;
 }
+
+button:hover {
+    background-color: #333;
+    cursor: url("https://cur.cursors-4u.net/others/oth-8/oth755.cur") 4 4, auto;
+}
+
+/* 결과 스타일 */
 
 .quiz_gauge div {
     width: 50%;

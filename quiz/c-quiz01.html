@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Quest</title>
     <link rel="stylesheet" href="../quiz/assets/css/quizQ.css">
+    <link href="https://webfontworld.github.io/yanolja/YanoljaYache.css" rel="stylesheet">
 </head>
 
 <body>
     <div id="wrap">
         <div class="quiz">
             <div class="quiz_header">
-                <span id="currentQuestionNumber">1</span> / <span id="totalQuestions"></span>
+                <div class="quiz_total">
+                    <span id="currentQuestionNumber">1</span> / <span id="totalQuestions"></span>
+                </div>
             </div> <!-- 문제 종목 및 현재문항/남은문항 표시구역-->
             <div class="quiz_main">
                 <div class="quiz_quizbox"> <!-- 퀴즈정보(문제,번호 등)-->
                     <div class="question"></div> <!-- 문제가 표출될 곳-->
                     <div id="input">
-                        <input type="text" placeholder="정답 입력란">
+                        <input type="text" id="userAnswer" placeholder="정답 입력란">
                     </div> <!-- 답 적는곳 (주관식)-->
                 </div>
             </div>
-            <div class="quiz_gauge"></div> <!-- 문제 게이지 -->
             <div class="quiz_footer">
                 <button class="previous">이전문제</button> <!-- 이전 문항 버튼 -->
                 <button class="confirm">확인</button> <!-- 정답 제출 버튼 -->
@@ -50,7 +52,6 @@
                 .then(res => res.json())
                 .then(items => {
                     quizInfo = items.map(item => ({
-                        Date: "20240401",
                         Type: item.time,
                         Question: item.question,
                         question_desc: item.question_desc,
@@ -78,7 +79,7 @@
 
             quizBox.innerHTML = `
                 <div class="quiz">
-                    <div class="quiz__header">${quiz.Date} ${quiz.Type}</div>
+                    <div class="quiz__header">${quiz.Type}</div>
                     <div class="quiz__main">
                         <div class="question">${currentQuestionIndex + 1}. ${quiz.Question}</div>
                         <div class="desc none">${quiz.question_desc}</div>
