@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="quiz__wrap">
-        <div class="quiz__start">
+        <div class="quiz__start none">
             <div class="title">
                 <span>2023.01.20.FRI</span>
             </div>
@@ -26,7 +26,16 @@
             </div>
         </div>
         <!-- //quiz__start -->
-        <div class="quiz__play"></div>
+        <div class="quiz__play">
+            <span class="number">01/100</span>
+            <div class="questioin">오늘 내 점심 메뉴는?</div>
+            <div class="answer">
+                <input type="text" placeholder="정답을 입력하세요!">
+            </div>
+            <div class="confirm">
+                <button>확인하기</button>
+            </div>
+        </div>
         <div class="quiz__finish"></div>
         <div class="quiz__bg">
             <svg id="canvas">

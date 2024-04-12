@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helpme somebody plz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+        }
+
+        #header .container {
+            margin: 0 auto;
+            display: flex;
+        }
+
+        #header .container h1 {
+            width: 20%;
+            height: 100px;
+            background-color: #ddee73;
+        }
+
+        #header .container nav {
+            width: 80%;
+            height: 100px;
+            background-color: #c0ee35;
+        }
+
+        #header .container nav ul {
+            display: flex;
+            justify-content: right;
+            margin-top: 60px;
+        }
+
+        #header .container nav ul li {
+            border: 1px solid #000;
+            display: flex;
+        }
+
+        #header .container nav ul li a {
+            padding: 10px 50px;
+            display: inline-block;
+        }
+
+        #header .container nav ul li ul {
+            display: none;
+        }
+
+        #slider {
+            width: 100%;
+            height: 350px;
+            background-color: #e98f8f;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #slider .container {
+            height: 20%;
+            margin: 0 auto;
+        }
+
+        #contents {
+            width: 100%;
+            height: 400px;
+        }
+
+        #contents .container {
+            height: 400px;
+            background-color: #be4848;
+            margin: 0 auto;
+        }
+
+        #footer {
+            width: 100%;
+            height: 120px;
+        }
+
+        #footer .container {
+            height: 120px;
+            margin: 0 auto;
+            background-color: #aaa;
+        }
+
+        .container {
+            width: 1340px;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <h1></h1>
+                <nav>
+                    <ul>
+                        <li><a href="">조회</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">이체</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">공과금</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">외환</a>
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <article id="slider">
+            <div class="container"></div>
+        </article>
+        <section id="contents">
+            <div class="container">
+
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container">
+
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("nav > ul > li").mouseover(function () {
+                $("nav > ul > li > ul").stop().fadeIn();
+                $("#header").addClass("on");
+            });
+            $("nav > ul > li").mouseout(function () {
+                $("nav > ul > li > ul").stop().fadeOut()
+                $("#header").removeClass("on");
+            })
+        })
+    </script>
+</body>
+
+</html>
