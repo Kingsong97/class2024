@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>helpme somebody plz</title>
+    <title>F3</title>
     <style>
         * {
             margin: 0;
@@ -16,8 +16,8 @@
         }
 
         a {
-            color: #000;
             text-decoration: none;
+            color: #000;
         }
 
         #wrap {
@@ -27,56 +27,92 @@
         #header {
             width: 100%;
             height: 100px;
+            position: relative;
+        }
+
+        #header::after {
+            content: '';
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            left: 0;
+            top: 80px;
+
+        }
+
+        #header.on::after {
+            height: 158px;
         }
 
         #header .container {
-            margin: 0 auto;
             display: flex;
         }
 
         #header .container h1 {
             width: 20%;
             height: 100px;
-            background-color: #ddee73;
+            background-color: #a8df2a;
         }
 
-        #header .container nav {
+        #header nav {
             width: 80%;
             height: 100px;
-            background-color: #c0ee35;
+            background-color: #58b715;
+            position: relative;
+            z-index: 100;
         }
 
-        #header .container nav ul {
+        #header nav>ul {
             display: flex;
             justify-content: right;
             margin-top: 60px;
         }
 
-        #header .container nav ul li {
-            border: 1px solid #000;
-            display: flex;
-        }
-
-        #header .container nav ul li a {
-            padding: 10px 50px;
+        #header nav>ul>li>a {
+            padding: 10px 60px;
+            background-color: #1c6b18;
             display: inline-block;
         }
 
-        #header .container nav ul li ul {
+        #header nav>ul>li>a:hover {
+            background-color: #158426;
+        }
+
+        #header nav>ul>li>ul {
             display: none;
+        }
+
+        #header nav>ul>li>ul>li {
+            text-align: center;
+        }
+
+        #header nav>ul>li>ul>li>a {
+            padding: 10px;
+            background-color: #187139;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #header nav>ul>li>ul>li>a:hover {
+            background-color: #18813d;
         }
 
         #slider {
             width: 100%;
             height: 350px;
-            background-color: #e98f8f;
-            display: flex;
-            align-items: flex-end;
+            background-color: #0f734d;
+            position: relative;
         }
 
-        #slider .container {
-            height: 20%;
-            margin: 0 auto;
+        #slider .link {
+            width: 1340px;
+            height: 100px;
+            background-color: #06de7d;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
         }
 
         #contents {
@@ -84,26 +120,16 @@
             height: 400px;
         }
 
-        #contents .container {
-            height: 400px;
-            background-color: #be4848;
-            margin: 0 auto;
-        }
-
         #footer {
             width: 100%;
             height: 120px;
         }
 
-        #footer .container {
-            height: 120px;
-            margin: 0 auto;
-            background-color: #aaa;
-        }
-
         .container {
             width: 1340px;
-            background-color: #000;
+            height: inherit;
+            margin: 0 auto;
+            background-color: #043d0c
         }
     </style>
 </head>
@@ -117,53 +143,62 @@
                     <ul>
                         <li><a href="">조회</a>
                             <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
+                                <li><a href="">계좌조회</a></li>
+                                <li><a href="">거래내역조회</a></li>
+                                <li><a href="">휴면계좌 조회</a></li>
+                                <li><a href="">수표/어음 조회</a></li>
                             </ul>
                         </li>
                         <li><a href="">이체</a>
                             <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
+                                <li><a href="">계좌이체</a></li>
+                                <li><a href="">다계좌이체</a></li>
+                                <li><a href="">자동이체</a></li>
+                                <li><a href="">예약이체</a></li>
                             </ul>
                         </li>
                         <li><a href="">공과금</a>
                             <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
+                                <li><a href="">지로/생활요금</a></li>
+                                <li><a href="">지방세</a></li>
+                                <li><a href="">국세/관세</a></li>
+                                <li><a href="">벌칙금/벌과금</a></li>
                             </ul>
                         </li>
                         <li><a href="">외환</a>
                             <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
-                                <li><a href="">1</a></li>
+                                <li><a href="">금리</a></li>
+                                <li><a href="">환율/외화예금</a></li>
+                                <li><a href="">글로벌뱅킹</a></li>
+                                <li><a href="">외화송금</a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
+        <!-- //header -->
         <article id="slider">
-            <div class="container"></div>
+            <div class="link"></div>
         </article>
+        <!-- //slider -->
         <section id="contents">
             <div class="container">
-
+                <section class="banner"></section>
+                <section class="notice"></section>
             </div>
         </section>
+        <!-- //contents -->
         <footer id="footer">
             <div class="container">
-
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer2-1"></div>
+                    <div class="footer2-2"></div>
+                </div>
             </div>
         </footer>
+        <!-- //footer -->
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
