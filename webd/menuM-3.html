@@ -150,12 +150,12 @@
         }
 
         /* 자바스크립트 CSS */
-        .nav>ul>li>ul {
+        /* .nav>ul>li>ul {
             display: block;
             height: 0px;
             overflow: hidden;
             transition: all 600ms;
-        }
+        } */
     </style>
 </head>
 
@@ -219,35 +219,35 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        // $(function(){
-        //     $(".nav > ul > li").mouseover(function(){
-        //         $(".nav > ul > li > ul").stop().fadeIn(900);
-        //         $("#header").addClass("on");
-        //     });
-        //     $(".nav > ul > li").mouseout(function(){
-        //         $(".nav > ul > li > ul").stop().fadeOut(100);
-        //         $("#header").removeClass("on");
-        //     });
-        // })
+        $(function(){
+            $(".nav > ul > li").mouseover(function(){
+                $(".nav > ul > li > ul").stop().fadeIn(900);
+                $("#header").addClass("on");
+            });
+            $(".nav > ul > li").mouseout(function(){
+                $(".nav > ul > li > ul").stop().fadeOut(100);
+                $("#header").removeClass("on");
+            });
+        })
     </script>
 
     <script>
-       window.onload = function () {
-            let navList = document.querySelector(".nav > ul")
+    //    window.onload = function () {
+    //         let navList = document.querySelector(".nav > ul")
 
-            navList.addEventListener("mouseover", () => {
-                navList.querySelectorAll(".submenu").forEach(sub => {
-                    sub.style.height = "158px";
-                });
-                document.getElementById("header").classList.add("on");
-            })
-            navList.addEventListener("mouseout", () => {
-                navList.querySelectorAll(".submenu").forEach(sub => {
-                    sub.style.height = "0px";
-                });
-                document.getElementById("header").classList.remove("on");
-            })
-       }
+    //         navList.addEventListener("mouseover", () => {
+    //             navList.querySelectorAll(".submenu").forEach(sub => {
+    //                 sub.style.height = "158px";
+    //             });
+    //             document.getElementById("header").classList.add("on");
+    //         })
+    //         navList.addEventListener("mouseout", () => {
+    //             navList.querySelectorAll(".submenu").forEach(sub => {
+    //                 sub.style.height = "0px";
+    //             });
+    //             document.getElementById("header").classList.remove("on");
+    //         })
+    //    }
     </script>
 </body>
 

@@ -1,0 +1,29 @@
+<script>
+  {
+        // 배열 합치기
+        const arr1 = [100, 200];
+        const arr2 = [300, 400];
+        const merged1 = [...arr1, ...arr2];
+        const merged2 = [...arr1, "javascript", ...arr2, "jquery"];
+
+        console.log(arr1.concat(arr2));
+        console.log(merged1);
+        console.log(merged2);
+    }
+    {
+        // 함수 인자로  사용하기
+        function numbers(a, b, c) {
+            return a + b + c;
+        }
+        const nums = [100, 200, 300];
+        console.log(numbers(...nums));
+    }
+    {
+        // 문자열 배열로 변환하기
+        const text1 = "javascript";
+        const text2 = [...text1];
+
+        console.log(text1);
+        console.log(text2);
+    }
+</script>
