@@ -4,166 +4,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>20240329test</title>
+    <title>Document</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
 
-        #header {
-            width: 100%;
+        li {
+            list-style: none;
         }
 
-        #header .header__box {
-            width: 1200px;
-            margin: 0 auto;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #ccc;
+        }
+
+        #header .container {
             display: flex;
         }
 
-        #header .header__box h1 {
-            width: 30%;
-            height: 200px;
-            background-color: #8f3030;
+        #header .container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #635454;
         }
 
-        #header .header__box nav {
-            width: 70%;
-            height: 200px;
-            background-color: #b93737;
+        #header .container .nav {
+            width: 80%;
+            height: 100px;
+
         }
 
-        /* header */
+        .nav>ul {
+            display: flex;
+            justify-content: right;
+            margin-top: 60px;
+        }
+
+        .nav>ul>li>a {
+            background-color: #614f4f;
+            padding: 10px 40px;
+            display: inline-block;
+            border: 1px solid #000;
+            background-color: #ccc;
+        }
+
+
+        .nav>ul>li>a:hover {
+            background-color: #939090;
+        }
+
+        .nav>ul>li>ul {
+            text-align: center;
+            display: none;
+        }
+
+        .nav>ul>li>ul>li {}
+
+        .nav>ul>li>ul>li>a {
+            background-color: #3f3535;
+            padding: 10px 40px;
+            display: inline-block;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .nav>ul>li>ul>li>a:hover {
+            background-color: #939090;
+        }
 
         #slider {
             width: 100%;
+            height: 300px;
+            background-color: #ddd;
         }
 
-        #slider .slider__box {
+        .container {
             width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
             margin: 0 auto;
-            display: flex;
         }
-
-        #slider .slider__box .slider1 {
-            width: 50%;
-            height: 300px;
-            background-color: #421616;
-        }
-
-        #slider .slider__box .slider2 {
-            width: 50%;
-            height: 300px;
-        }
-
-        #slider .slider__box .slider2 .slider2-1 {
-            height: 50%;
-            background-color: #831717;
-        }
-
-        #slider .slider__box .slider2 .slider2-2 {
-            height: 50%;
-            background-color: #c96767
-        }
-
-        /* slider */
-
-        #contents {
-            width: 100%;
-        }
-
-        #contents .contents__box {
-            width: 1200px;
-            margin: 0 auto;
-            display: flex;
-        }
-
-        #contents .contents__box .content1 {
-            width: 33.33%;
-            height: 300px;
-            background-color: #58c2ab;
-        }
-
-        #contents .contents__box .content2 {
-            width: 33.33%;
-            height: 300px;
-            background-color: #205f51;
-        }
-
-        #contents .contents__box .content3 {
-            width: 33.33%;
-            height: 300px;
-            background-color: #aee6d9;
-        }
-
-        /* contents */
-
-        #footer {
-            width: 100%;
-        }
-
-        #footer .footer__box {
-            width: 1200px;
-            margin: 0 auto;
-            display: flex;
-        }
-
-        #footer .footer__box .footer1 {
-            width: 20%;
-            height: 100px;
-            background-color: #2d9797;
-        }
-
-        #footer .footer__box .footer2 {
-            width: 60%;
-            height: 100px;
-            background-color: #491777;
-        }
-
-        #footer .footer__box .footer3 {
-            width: 20%;
-            height: 100px;
-            background-color: #25088f;
-        }
-
-        /* footer */
     </style>
 </head>
 
 <body>
     <header id="header">
-        <div class="header__box">
-            <h1></h1>
-            <nav></nav>
+        <div class="container">
+            <div class="logo"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="">1차메뉴</a>
+                        <ul>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">1차메뉴</a>
+                        <ul>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">1차메뉴</a>
+                        <ul>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">1차메뉴</a>
+                        <ul>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                            <li><a href="">2차메뉴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <!-- //header -->
+
     <article id="slider">
-        <div class="slider__box">
-            <div class="slider1"></div>
-            <div class="slider2">
-                <div class="slider2-1"></div>
-                <div class="slider2-2"></div>
-            </div>
-        </div>
+
     </article>
-    <!-- //slider -->
-    <main id="contents">
-        <div class="contents__box">
-            <div class="content1"></div>
-            <div class="content2"></div>
-            <div class="content3"></div>
-        </div>
-    </main>
-    <!-- //contents -->
-    <footer id="footer">
-        <div class="footer__box">
-            <div class="footer1"></div>
-            <div class="footer2"></div>
-            <div class="footer3"></div>
-        </div>
-    </footer>
-    <!-- //footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //1차 메뉴를 클릭했을 때 1차메뉴 백그라운드 색을 검은색으로 변경
+        // $(".nav>ul>li").click(function () {
+        //     $(".nav>ul>li>a").css("backgroundColor", "black");
+        // });
+
+
+        // 내가 클릭한것만 바뀌는걸로
+        // $(".nav>ul>li").click(function () {
+        //     $(this).find("a").css("backgroundColor", "black");
+        // });
+
+        // 이 두개 자바스크립트로 변경.
+        // 1차 메뉴를 오버 했을 때 2차 메뉴를 보이게 해주세요!
+        // $(function () {
+        //     $(".nav>ul>li").mouseover(function () {
+        //         $(".nav>ul>li>ul").stop().fadeIn(900);
+        //     })
+        //     $(".nav>ul>li").mouseout(function () {
+        //         $(".nav>ul>li>ul").stop().fadeOut(100);
+        //     })
+        // })
+
+        // 1차 메뉴를 오버 했을 때 해당 2차 메뉴만 보이게 하는법.
+        // $(function () {
+        //     $(".nav>ul>li").mouseover(function () {
+        //         $(this).find("ul").fadeIn(900);
+        //     })
+        //     $(".nav>ul>li").mouseout(function () {
+        //         $(this).find("ul").fadeOut(100);
+        //     })
+        // })
+
+
+    </script>
 </body>
 
 </html>
