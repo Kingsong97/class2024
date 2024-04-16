@@ -1,186 +1,511 @@
-<!DOCTYPE html>
-<html lang="ko">
+---
+layout: post
+title: JQuery를 이용한 이미지 슬라이드 효과주기
+date: 2024-04-16 17:30 +0900
+description:
+image: https://github.com/Kingsong97/Kingsong97.github.io/assets/161429740/6b14d54f-28c3-45e6-9b16-1e70d3abf82d
+category: JQuery
+tags: JQuery code
+published: true
+sitemap: true
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout F-1</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+# JQuery 를 이용한 슬라이드 효과 넣기.
 
-        #wrap {
-            width: 100%;
-            overflow: hidden;
-        }
+우리는 수많은 홈페이지를 보아오면서, 이미지가 한장씩 넘어가는 모습을 봐왔다. 그땐 아무 생각 없었지만 이제 개발자에 입문하려 공부하는 우리에겐 그 기능이 궁금하다! 오늘은 JQuery를 이용하여 그 비밀을
+풀어보자.
 
-        #header {
-            width: 100%;
-            height: 100px;
+## Html
 
-        }
+- 오늘 주제에 대해 궁금하여 공부 할 정도면 기초적인 Html과 css를 이용하여 구조를 만드는데에는 익숙할 것이다! 나는 오늘 아래와 같은 html을 사용할 것이다.
+<details>
+    <summary>Html</summary>
 
-        #header .container {
-            display: flex;
-        }
+    ```html
+    <!DOCTYPE html>
+    <html lang="ko">
 
-        #header .container .logo {
-            width: 20%;
-            height: 100px;
-            background-color: #e0e0e0;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>유진건설</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-        #header .container .nav {
-            width: 80%;
-            height: 100px;
-            background-color: #c9c9c9;
-        }
-
-        #slider {
-            width: 100%;
-            height: 350px;
-            background-color: #a1a1a1;
-            position: relative;
-        }
-
-        #slider .links {
-            width: 1340px;
-            height: 100px;
-            background-color: #000;
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translate(-50%);
-        }
-
-        #contents {
-            width: 100%;
-            height: 400px;
-
-        }
-
-        #contents .container .banner {
-            height: 100px;
-            background-color: #6c6c6c;
-        }
-
-        #contents .container .notice {
-            height: 300px;
-            background-color: #4b4b4b;
-        }
-
-        #footer {
-            width: 100%;
-        }
-
-        #footer .container {
-            display: flex;
-        }
-
-        #footer .container .copyright {
-            width: 80%;
-            height: 120px;
-            background-color: #4d4242;
-        }
-
-        #footer .container .nav {
-            width: 20%;
-            height: 120px;
-        }
-
-        #footer .container .nav .sns {
-            height: 50%;
-            background-color: #423d3d;
-        }
-
-        #footer .container .nav .familly_site {
-            height: 50%;
-            background-color: #2b2828;
-        }
-
-        .container {
-            width: 1340px;
-            margin: 0 auto;
-            height: inherit;
-        }
-    </style>
-</head>
-<style>
-
-</style>
-
-<body>
-    <wrap id="wrap">
-        <header id="header">
-            <div class="container">
-                <h1 class="logo"></h1>
-                <nav class="nav"></nav>
-            </div>
-        </header>
-        <!-- //header -->
-
-        <article id="slider">
-            <div class="sliderWrap">
-                <div class="slider s1">
-                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg" alt="이미지1">
-                    <span>이미지1</span>
+    <body>
+        <div id="wrap">
+            <header id="header">
+                <h1 class="logo">
+                    <a href="#">유진건설</a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">회사소개</a>
+                            <ul>
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">조직구성도</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">사업영역</a>
+                            <ul>
+                                <li><a href="#">전원주택</a></li>
+                                <li><a href="#">도시재생</a></li>
+                                <li><a href="#">인테리어</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">입주정보</a>
+                            <ul>
+                                <li><a href="#">입주단지</a></li>
+                                <li><a href="#">입주캘린더</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">회사소개</a>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">건축상담</a></li>
+                                <li><a href="#">홍보자료실</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- //header -->
+            <article id="slider">
+                <div class="slider-wrap">
+                    <div class="slider S1">
+                        <img src="../site/siteA/images/banner01.jpg" alt="건물이 아닌 미래를 만듭니다.">
+                        <div class="text">
+                            <h2>건물이 아닌 미래를 만듭니다.</h2>
+                            <p>미래를 선도하는 유진그룹</p>
+                        </div>
+                    </div>
+                    <div class="slider S2">
+                        <img src="../site/siteA/images/banner02.jpg" alt="과거와 미래를 이어갑니다.">
+                        <div class="text">
+                            <h2>과거와 미래를 이어갑니다.</h2>
+                            <p>조화를 이룩하는 유진그룹</p>
+                        </div>
+                    </div>
+                    <div class="slider S3">
+                        <img src="../site/siteA/images/banner03.jpg" alt="고객의 상상을 현실로 만듭니다.">
+                        <div class="text">
+                            <h2>고객의 상상을 현실로 만듭니다.</h2>
+                            <p>상상을 실현하는 유진그룹</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="slider s2">
-                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg" alt="이미지2">
-                    <span>이미지2</span>
+            </article>
+
+            <!-- //slider -->
+            <main id="main">
+                <section class="notice">
+                    <h3>공지사항</h3>
+                    <div>
+                        <ul>
+                            <li><a href="#">미래를 건설하는 혁신적인</a><span>2024.04.04</span></li>
+                            <li><a href="#">유진 건설 주주 총회</a><span>2024.04.05</span></li>
+                            <li><a href="#">유진 건설 세미나실 이용안내</a><span>2024.04.06</span></li>
+                            <li><a href="#">건설학자 세미나 신청 방법</a><span>2024.04.07</span></li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- //notice -->
+                <section class="gallery">
+                    <h3>갤러리</h3>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="../site/siteA/images/notice01.jpg" alt="건축 이미지01"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../site/siteA/images/notice02.jpg" alt="건축 이미지02"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../site/siteA/images/notice03.jpg" alt="건축 이미지03"></a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- //gallery -->
+                <section class="link">
+                    <h3>이벤트 바로가기</h3>
+                    <a href="#">바로가기</a>
+                </section>
+                <!-- //link -->
+            </main>
+
+            <!-- //main -->
+            <footer id="footer">
+                <div class="left">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">저작권 보호정책</a></li>
+                            <li><a href="#">이메일 무단수집 거부</a></li>
+                            <li><a href="#">CCTV 설치 및 운영</a></li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        COPYRIGHT 2024, All Rights Reserve
+                    </div>
                 </div>
-                <div class="slider s3">
-                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg" alt="이미지3">
-                    <span>이미지3</span>
+                <div class="right">
+                    <select>
+                        <option value="1">가나 건설회사</option>
+                        <option value="2">다라 건설회사</option>
+                        <option value="3">마바 건설회사</option>
+                    </select>
                 </div>
-        </article>
-        <!-- //slider -->
+            </footer>
+        </div>
+        ```
+</details>
 
-        <section id="contents">
-            <div class="container">
-                <article class="banner"></article>
-                <article class="notice"></article>
-            </div>
-        </section>
-        <!-- //contents -->
+<details>
+    <summary>CSS</summary>
 
-        <footer id="footer">
-            <div class="container">
-                <div class="copyright"></div>
-                <div class="nav">
-                    <div class="sns"></div>
-                    <div class="familly_site"></div>
-                </div>
-            </div>
-        </footer>
-        <!-- //footer -->
-    </wrap>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(function () {
-            let currentIndex = 0;
+    ```css
+    @charset "UTF-8";
 
-            setInterval(() => {
-                let nextIndex = (currentIndex + 1) % 3;
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
 
-                $("slider").eq(currentIndex).fadeOut(1000);
-                $("slider").eq(nextIndex).fadeIn(1000);
+    a {
+    text-decoration: none;
+    color: #000;
 
-                currentIndex = nextIndex;
+    }
 
-            }, 3000);
-        })
+    li {
+    list-style: none;
+    }
 
-        $(function () {
-            $(".nav>ul>li").mouseover(function () {
-                $(".nav>ul>li>ul").stop().fadeIn(900);
-                $("#header").addClass("on")
-            })
-        })
+    #wrap {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    }
 
-    </script>
-</body>
+    #header {
+    width: 100%;
+    display: flex;
+    background-color: aliceblue;
+    position: relative;
+    z-index: 1000;
+    }
 
-</html>
+    #header .logo {
+    width: 20%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    #header .logo a {
+    color: rgb(32, 165, 248);
+    }
+
+    #header nav {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    }
+
+    #header nav>ul {
+    display: flex;
+    margin-top: 60px;
+    }
+
+    #header nav>ul>li {
+    width: 144px;
+    background-color: rgb(201, 230, 255);
+    }
+
+    #header nav>ul>li>a {
+    padding: 10px 40px;
+    display: inline-block;
+    background-color: rgb(201, 230, 255);
+    }
+
+    #header nav>ul>li>a:hover {
+    background-color: rgb(168, 214, 255);
+    }
+
+    #header nav>ul>li>ul {
+    text-align: center;
+    display: none;
+    }
+
+    #header nav>ul>li>ul>li>a {
+    width: 100%;
+    padding: 10px 30px;
+    display: inline-block;
+    background-color: rgb(147, 204, 254);
+    }
+
+    #header nav>ul>li>ul>li>a:hover {
+    background-color: rgb(87, 177, 255);
+    }
+
+    #slider {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    }
+
+    .slider-wrap {
+    display: flex;
+    }
+
+
+    .slider-wrap .slider {
+    position: relative;
+    }
+
+    .slider-wrap .slider img {
+    vertical-align: top;
+    }
+
+    .slider-wrap .slider .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    }
+
+
+
+    #main {
+    width: 100%;
+    display: flex;
+    }
+
+    #main .notice {
+    width: 33.33%;
+    height: 200px;
+    padding: 20px;
+    }
+
+    #main .notice h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    }
+
+
+    #main .notice li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.8;
+    }
+
+    #main .notice li a {
+    width: 70%;
+    }
+
+    #main .notice li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    }
+
+    #main .notice li span {
+    width: 30%;
+    text-align: right;
+    }
+
+    #main .gallery {
+    width: 33.33%;
+    height: 200px;
+    background-color: #fff;
+    }
+
+    #main .gallery h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+
+    #main .gallery ul {
+    display: flex;
+    }
+
+    #main .gallery li {
+    margin-right: 15px;
+    transition: all 0.3s;
+    }
+
+    #main .gallery li:hover {
+    opacity: 0.4;
+    }
+
+    #main .gallery li img {
+    vertical-align: top;
+    }
+
+    #main .link {
+    width: 33.33%;
+    height: 200px;
+    background-image: url(../siteA/images/event.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    position: relative;
+    }
+
+    #main .link h3 {
+    color: #fff;
+    }
+
+    #main .link a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: all 0.3s;
+    }
+
+    #main .link a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    #footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #aaa;
+    }
+
+    #footer .left {
+    width: 80%;
+    }
+
+    #footer .left .menu {
+    padding: 20px;
+    }
+
+    #footer .left .menu ul {
+    display: flex;
+    justify-content: center;
+    }
+
+    #footer .left .menu li {
+    padding: 3px 10px;
+    }
+
+    #footer .left .menu li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    }
+
+    #footer .left .copy {
+    text-align: center;
+    }
+
+    #footer .right {
+    height: 20%;
+    }
+
+    #footer .right select {
+    border: 1px solid #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 30px;
+    }
+    ```
+</details>
+
+자신만의 양식에, 본문의 내용을 녹여 적용하는 것도 무척 좋다고 생각한다!
+
+## JQuery 사용하려면?
+
+JQuery를 사용하기 위한 방법은 크게 두가지인데,
+
+
+1 - JS 파일 다운로드<br>
+2 - URL을 입력하여 불러오는 방법(CDN)
+
+오늘은 CDN 방법을 이용할 예정이다.
+
+>참고로, CDN은 **C**ontent **D**elivery **N**erwork 의 약자
+
+CDM은 웹사이트의 접속자가 컨텐츠를 다운로드 할 때 자동으로 가장 가까운 서버에서 다운을 받도록 하는 기술이다. 즉, 인터넷 환경이 받쳐줘야만 사용 할 수 있는 방법!
+
+사용법은 간단하다 !
+
+> ```
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>```
+
+위 스크립트를 붙여 넣기만 한다면 사용준비 끝 !
+
+## JQuery 해석
+
+<details>
+    <summary>JQuery 전문</summary>
+
+    ```javascript
+    let currentIndex = 0;
+    $(".slider-wrap").append($(".slider").first().clone(true));
+    setInterval(() => {
+    currentIndex++;
+    $(".slider-wrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
+
+    if (currentIndex == 3) {
+    setTimeout(() => {
+    $(".slider-wrap").animate({ marginLeft: 0 }, 0);
+    currentIndex = 0;
+    }, 700);
+    }
+    }, 3000);
+    ```
+</details>
+
+```
+let currentIndex = 0;
+```
+슬라이더의 현재 번호를 선언해줍니다.
+
+```
+$(".slider-wrap").append($(".slider").first().clone(true));
+```
+
+(".slider").first().clone(true)를 통해 첫 번째 .slider 요소를 찾고, 이 요소를 복제합니다(true는 이벤트와 데이터까지 복제함을 의미).
+(".slider-wrap").append(...)를 사용하여 복제한 슬라이더 요소를 .slider-wrap 요소의 마지막 자식으로 추가합니다. 이는 슬라이더가 끝에 도달했을 때 원활하게 첫 번째 슬라이더로 넘어가는
+무한 슬라이드 효과를 위함입니다.
+
+```
+setInterval
+```
+setInterval 함수를 사용하여 주어진 함수를 반복적으로 실행합니다. 이 함수는 슬라이더의 애니메이션을 처리하는 데 사용됩니다.
+
+```
+currentIndex++;
+```
+currentIndex의 값을 1 증가시킵니다. 이는 다음 슬라이드로 넘어가기 위해 인덱스를 업데이트하는 작업입니다.
+
+```
+$(".slider-wrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
+```
+
+## 사용 메서드
+
+메서드는 왜이렇게 많은건지 조금 공부했다 싶으면 새로운게 나온다.
+
+
+first(): 선택된 요소들 중 첫 번째 요소를 가져옵니다.<br>
+.clone(true): 선택된 요소를 복사합니다. true 매개변수는 이벤트 핸들러와 데이터까지 복사하도록 지정합니다.<br>
+.append(): 선택된 요소 내부의 마지막에 새로운 요소나 내용을 추가합니다.<br>
+.animate(): CSS 속성을 사용하여 애니메이션 효과를 적용합니다..<br>
+.setInterval(): 지정된 시간 간격으로 함수를 반복 실행합니다. <br>
+.setTimeout(): 지정된 시간이 지난 후에 한 번 함수를 실행합니다.
