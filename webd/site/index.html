@@ -171,19 +171,19 @@
 
         // 이미지 슬라이드
 
-        let currentIndex = 0;
-        $(".slider-wrap").append($(".slider").first().clone(true));  //첫번째 이미지 복사 마지막에 추가
-        setInterval(() => {
-            currentIndex++;
-            $(".slider-wrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
+        // let currentIndex = 0;
+        // $(".slider-wrap").append($(".slider").first().clone(true));
+        // setInterval(() => {
+        //     currentIndex++;
+        //     $(".slider-wrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
 
-            if (currentIndex == 3) {
-                setTimeout(() => {
-                    $(".slider-wrap").animate({ marginLeft: 0 }, 0);
-                    currentIndex = 0;
-                }, 700);
-            }
-        }, 3000);
+        //     if (currentIndex == 3) {
+        //         setTimeout(() => {
+        //             $(".slider-wrap").animate({ marginLeft: 0 }, 0);
+        //             currentIndex = 0;
+        //         }, 700);
+        //     }
+        // }, 3000);
 
 
     </script>

@@ -1,23 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>type 선택자</title>
+    <title>A-1</title>
     <style>
-        /* 인접 선택자 */
-        #title + p {
-            color: blue;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        /* 일반 형제 선택자 */
-        #title ~ p {
-            color: blue;
+
+        #wrap {
+            width: 1200px;
+            height: 700px;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 1200px;
+            display: flex;
+        }
+
+        #header .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #ffecec;
+        }
+
+        #header .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #ffe0e0;
+        }
+
+        #slider {
+            width: 1200px;
+            height: 300px;
+            background-color: #ffd5d5;
+        }
+
+        #contents {
+            width: 1200px;
+            display: flex;
+        }
+
+        #contents .content1 {
+            width: 33.33%;
+            height: 200px;
+            background-color: #ffcbcb;
+        }
+
+        #contents .content2 {
+            width: 33.33%;
+            height: 200px;
+            background-color: #ffbbbb;
+        }
+
+        #contents .content3 {
+            width: 33.33%;
+            height: 200px;
+            background-color: #ffa7a7;
+        }
+
+        #footer {
+            width: 1200px;
+            display: flex;
+        }
+
+        #footer .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #fcb4b4;
+        }
+
+        #footer .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #fac4c4;
+        }
+
+        #footer .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #f8d0d0;
         }
     </style>
 </head>
+
 <body>
-    <h1 class="title"></h1>
-    <p>노력하면 이뤄진다.</p>
-    <p>정말이다.</p>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo"></div>
+            <div class="nav"></div>
+        </div>
+        <!-- //header -->
+        <div id="slider">
+            <div class="slider-wrap">
+                <div class="slider S1">
+                    <img src="../site/siteA/images/banner01.jpg" alt="건물이 아닌 미래를 만듭니다.">
+                    <div class="text">
+                        <h2>건물이 아닌 미래를 만듭니다.</h2>
+                        <p>미래를 선도하는 유진그룹</p>
+                    </div>
+                </div>
+                <div class="slider S2">
+                    <img src="../site/siteA/images/banner02.jpg" alt="과거와 미래를 이어갑니다.">
+                    <div class="text">
+                        <h2>과거와 미래를 이어갑니다.</h2>
+                        <p>조화를 이룩하는 유진그룹</p>
+                    </div>
+                </div>
+                <div class="slider S3">
+                    <img src="../site/siteA/images/banner03.jpg" alt="고객의 상상을 현실로 만듭니다.">
+                    <div class="text">
+                        <h2>고객의 상상을 현실로 만듭니다.</h2>
+                        <p>상상을 실현하는 유진그룹</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //slider -->
+        <div id="contents">
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </div>
+        <!-- //contents -->
+        <div id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </div>
+        <!-- //footer -->
+    </div>
+
 </body>
+
 </html>
