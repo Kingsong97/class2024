@@ -4,90 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 :: 문자열 객체</title>
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <header id="header">
-        <h1>
-            <a href="index.html">Javascript</a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
-                <li><a href="javascript02.html">데이터 불러오기</a></li>
-                <li><a href="javascript03.html">데이터 실행하기</a></li>
-                <li><a href="javascript04.html">데이터 제어하기</a></li>
-            </ul>
-            <ul>
-                <li><a href="object01.html">문자열 객체</a></li>
-                <li><a href="object02.html">배열 객체</a></li>
-                <li><a href="object03.html">수학 객체</a></li>
-                <li><a href="object04.html">숫자 객체</a></li>
-                <li><a href="object05.html">브라우저 객체</a></li>
-                <li><a href="object06.html">요소 객체</a></li>
-                <li><a href="object07.html">이벤트 객체</a></li>
-                <li class="active"><a href="test.html">연습</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- //header -->
-
-    <main id="main">
-        <div class="main__menu container">
-            <ul>
-                <li><a href="#">01. if문</a></li>
-            </ul>
-        </div>
-        <!-- //main__menu container -->
-        <div class="main__sample container">
-            <div id="sample01" class="sample">
-                <h3>01. 1부터 100까지 출력하기(for문, while, do while)</h3>
-                <p></p>
-                <pre class="line-numbers"><code class="language-js">
-  </code></pre>
-                <div class="reuslt">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample01 -->
-
-        </div>
-        <!-- //main__sample containe -->
-    </main>
-    <!-- //main -->
-    <footer id="footer">
-
-    </footer>
-    <!-- //footer -->
-
-    <script src="assets/js/prism.js"></script>
-
     <script>
-        {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javascript",
+        for (let i = 1; i < 11; i++) {
+            console.log(i)
+        }
+
+        // 출력 : 1~10
+
+        for (let i = 0; i < 46; i += 5) {
+            console.log(i)
+        }
+
+        // 출력 
+
+        function func() {
+            let i = 5, j = 4, k = 1, l, m;
+            l = i > 10;
+            m = j <= 4 && k < 1;
+            console.log(l);
+            console.log(m);
+        }
+        func()
+        // ㅣㅣ && 등등 섞어서 나옴 공부
+        // 출력  false, false
+
+        const arr = [100, 200, 300];
+
+        arr.push(600);
+
+        console.log(arr);
+
+        // 출력 [100, 200, 300, 600]
+
+        let num = 0;
+        while (true) {
+            num++;
+
+            if (num == 5) {
+                break // or continue
+            }
+            console.log(num);
+        }
+        // console.log(num); // 반복문 밖에 있으면 5
+
+        //출력 1,2,3,4
+
+        // 논리연산자, 산술연산자, 대입연산자, 비트연산자
+
+        // 최고 점수 구하기 / 최저 점수 구하기 / 평균 구하기
+        let data = [70, 80, 90, 20, 30, 40];
+        let best = 0;
+        let score = 0;
+
+        for (let i = 0; i < data.length; i++) {
+            console.log(data[i]);
+
+            if (data[i] > 80) {
+                best++;
             }
 
-            const { a, b, c } = obj;
-
-            console.log(a);
-            console.log(b);
-            console.log(c);
+            if (score < data[i]) {
+                score = data[i];
+            }
+            console.log(best);
         }
+
+
+        //매개변수
+        function func1(num1, num2, num3) {
+            if (num1 > num3) return num1
+            else return num2
+        }
+        func1(10, 200, 30) + func1(300, 400, 400)
+
+        function func2() {
+            let i = 100, j = 200, k = 300;
+            i /= j; // 0.5
+            j -= i; // 199.5
+            console.log(i);
+            console.log(j);
+        }
+        func2();
+
     </script>
-
-
 </body>
 
 </html>
