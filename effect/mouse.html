@@ -7,10 +7,15 @@
     <title>Mouse Efeect</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+10&family=Jersey+10+Charted&family=Play:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+10&family=Jersey+10+Charted&family=PT+Sans+Narrow:wght@400;700&family=Play:wght@400;700&family=Roboto+Slab:wght@100..900&family=Signika+Negative:wght@300..700&display=swap"
         rel="stylesheet">
 
+
     <style>
+        body {
+            cursor: none;
+        }
+
         .main__inner {
             display: flex;
             align-items: center;
@@ -20,9 +25,17 @@
         .main__inner p {
             color: #DECF95;
             padding: 10vw;
-            font-size: 1.5vw;
+            font-size: 1.8vw;
             text-align: center;
-            font-family: "Play", sans-serif;
+            font-family: "PT Sans Narrow", sans-serif;
+        }
+
+        .main__inner p em,
+        span,
+        i,
+        strong {
+            font-style: normal;
+            font-weight: 700;
         }
 
         .main__info {
@@ -58,7 +71,24 @@
             top: 10px;
             border-radius: 50%;
             z-index: 10000;
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.5s,
+                background-color 0.3s, border 0.3s;
             /* https://cur.cursors-4u.net/anime/ani-11/ani1090.cur */
+        }
+
+        .cursor.em {
+            background-color: #ebe07943;
+            border: 1px solid #e3d97f43;
+        }
+
+        .cursor.em::before {
+            background-color: #c24e00;
+        }
+
+        .cursor.em::after {
+            background-color: #c24e00;
         }
 
         .cursor::before {
@@ -82,6 +112,66 @@
             top: 50%;
             transform: translate(-50%, -50%);
         }
+
+        .cursor.span {
+            background-color: #41bfdc;
+            border: 1px solid #28b8c8;
+            border-radius: 1%;
+            transform: rotate(720deg);
+        }
+
+        .cursor.span::after {
+            background-color: #448c2c;
+        }
+
+        .cursor.span::before {
+            background-color: #359b3d;
+        }
+
+        .cursor.span2 {
+            background-color: #811d9c;
+            border: 1px solid #883183;
+            border-radius: 1%;
+            transform: scale(0.5);
+        }
+
+        .cursor.span2::after {
+            background-color: #3b8961;
+        }
+
+        .cursor.span2::before {
+            background-color: #359b3d;
+        }
+
+        .cursor.span3 {
+            background-color: #d34519;
+            border: 1px solid #6d140f;
+            border-radius: 1%;
+            transform: rotate(720deg);
+        }
+
+        .cursor.span3::after {
+            background-color: #448c2c;
+        }
+
+        .cursor.span3::before {
+            background-color: #359b3d;
+        }
+
+        .cursor.span4 {
+            background-color: #f5e60f;
+            border: 1px solid #abbc16;
+            border-radius: 1%;
+            transform: rotate(720deg) scale(2);
+        }
+
+        .cursor.span4::after {
+            background-color: #448c2c;
+        }
+
+        .cursor.span4::before {
+            background-color: #359b3d;
+        }
     </style>
 </head>
 
@@ -97,16 +187,21 @@
             <div class="cursor"></div>
             <div class="main__inner">
                 <p>
-                    JavaScript is a programming language used to make web pages interactive. It runs directly in web
+                    <span>JavaScript</span> is a programming <span>language</span> used to make web pages interactive.
+                    It runs
+                    directly in
+                    web
                     browsers, allowing for user interactions and dynamic data updates.<br>
                     <br>
                     Versatile Scripting Language: JavaScript is one of the three core technologies of the web, governing
                     the behavior of web pages alongside HTML and CSS.<br>
                     Client-Side Execution: Most JavaScript code runs on the user's computer, enhancing page
                     responsiveness and speed.<br>
-                    Event-Based Programming: JavaScript responds to user interactions like clicks and scrolls to execute
+                    Event-Based Programming: JavaScript responds to user <span>interactions</span> like clicks and
+                    scrolls to execute
                     functions.<br>
-                    DOM Manipulation: JavaScript can dynamically change the structure of HTML documents through the
+                    <span>DOM Manipulation</span>: JavaScript can dynamically change the structure of HTML documents
+                    through the
                     Document Object Model (DOM).
                 </p>
             </div>
@@ -137,8 +232,9 @@
     <!-- //wrap -->
 
     <script>
+        const Wrap = document.querySelector("#wrap");
+
         window.addEventListener("mousemove", function (event) {
-            const Wrap = document.querySelector("#wrap");
             const clientX = Wrap.querySelector(".main__info .clientX");
             const offsetX = Wrap.querySelector(".main__info .offsetX");
             const pageX = Wrap.querySelector(".main__info .pageX");
@@ -148,12 +244,30 @@
             offsetX.innerText = event.offsetX;
             pageX.innerText = event.pageX;
             screenX.innerText = event.screenX;
-            // clientX 에 숫자 100을 넣어보세요 !
-
-            // offsetX 에 숫자 200을 넣어보세요 !
-            // pageX 에 숫자 300을 넣어보세요 !
-            // screenX 에 숫자 400을 넣어보세요 !
         });
+
+        //mouse
+        const cursor = Wrap.querySelector(".cursor");
+
+        window.addEventListener("mousemove", function (e) {
+            cursor.style.left = (e.clientX - 50) + "px"
+            cursor.style.top = (e.clientY - 50) + "px"
+        })
+
+        // const spans = Wrap.querySelectorAll(".main__inner p span");
+        // spans.forEach((span, index) => {
+        //     span.addEventListener("mouseover", function () {
+        //         cursor.classList.add("span");
+        //     });
+        //     span.addEventListener("mouseout", function () {
+        //         cursor.classList.remove("span");
+        //     });
+        // });
+
+        for (let i = 0; i < array.length; i++) {
+            document.querySelector(`..main__inner p span:nth-child(${i})`).addEventListener("mouseover", cursor.c)
+
+        }
     </script>
 </body>
 

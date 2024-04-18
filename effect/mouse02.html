@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* cursor: none; */
+        }
+
+        .main__inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main__inner p {
+            color: #BFEF9A;
+            padding: 10vw;
+            font-size: 20vmax;
+            text-align: center;
+            font-family: "Orbitron";
+            font-weight: 900;
+            margin-left: -20vw;
+            letter-spacing: -1vw;
+        }
+
+        .main__info {
+            color: #BFEF9A;
+            position: absolute;
+            width: 100%;
+            left: 16px;
+            top: 60px;
+            font-size: 14px;
+        }
+
+        .main__info ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .main__info ul li {
+            width: 25%;
+            text-transform: uppercase;
+            font-family: 'Catamaran';
+            color: #BFEF9A;
+            font-weight: 200;
+        }
+
+        .cursor {
+            width: 100px;
+            height: 100px;
+            background-color: #bfef9a78;
+            border: 1px solid #bfef9a44;
+            position: absolute;
+            backdrop-filter: blur(5px);
+            left: 10px;
+            top: 10px;
+            border-radius: 50%;
+            z-index: 10000;
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.5s,
+                background-color 0.3s, border 0.3s, border-radius 0.3s;
+        }
+
+        .cursor::before {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background-color: #BFEF9A;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor::after {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: #BFEF9A;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header__inner">
+                <h1>Mouse Effect <em>02</em></h1>
+            </div>
+        </header>
+        <!-- //header -->
+        <main id="main">
+            <div class="cursor"></div>
+            <div class="main__inner">
+                <p>JavaScript</p>
+            </div>
+            <div class="main__info">
+                <ul>
+                    <li>clientY <span class="clientY">0</span></li>
+                    <li>offsetY <span class="offsetY">0</span></li>
+                    <li>pageY <span class="pageY">0</span></li>
+                    <li>screenY <span class="screenY">0</span></li>
+                </ul>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <div class="footer__inner">
+                <nav>
+                    <ul>
+                        <li><a href="mouse.html">01</a></li>
+                        <li class="active"><a href="mouse02.html">02</a></li>
+                        <li><a href="mouse03.html">03</a></li>
+                        <li><a href="mouse04.html">04</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        // info
+        window.addEventListener("mousemove", function (e) {
+            document.querySelector(".clientY").innerHTML = e.clientY;
+            document.querySelector(".offsetY").innerHTML = e.offsetY;
+            document.querySelector(".pageY").innerHTML = e.pageY;
+            document.querySelector(".screenY").innerHTML = e.screenY;
+        });
+        // use a script tag or an external JS file
+        document.addEventListener("mousemove", (e) => {
+            gsap.to(".cursor", { duration: 0.6, left: e.clientX, top: e.clientY })
+        });
+    </script>
+</body>
+
+</html>
