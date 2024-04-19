@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#wrap {
+    width: 1000px;
+    display: flex;
+}
+
+#aside {
+    width: 20%;
+    height: 650px;
+}
+
+#main {
+    width: 80%;
+    height: 650px;
+}
+
+#aside .logo {
+    height: 10%;
+    background-color: #eee;
+}
+
+#aside .menubar {
+    height: 90%;
+    background-color: #ccc;
+}
+
+.menubar ul {
+    text-align: center;
+}
+
+.menubar li {}
+
+.menubar li a {
+    padding: 10px 40px;
+    display: inline-block;
+    background-color: #333;
+    border: 1px solid #000;
+
+}
+
+/* aside */
+
+#main #slider {
+    width: 100%;
+    height: 350px;
+    background-color: #ddd;
+    position: relative;
+}
+
+.slider_wrap {
+    vertical-align: top;
+    display: flex;
+    width: 400%;
+}
+
+.slider_wrap .slider {}
+
+
+/* slider */
+
+#main #contents {
+    height: 200px;
+    display: flex;
+}
+
+#main #contents .notice {
+    width: 33.33%;
+    height: 100%;
+    background-color: #333;
+}
+
+#main #contents .gallery {
+    width: 33.33%;
+    height: 100%;
+    background-color: #5d3434;
+}
+
+#main #contents .banner {
+    width: 33.33%;
+    height: 100%;
+    background-color: #561e1e;
+}
+
+/* contents */
+
+#main #footer {
+    height: 100px;
+    display: flex;
+}
+
+#main #footer .footer1 {
+    width: 20%;
+    height: 100%;
+    background-color: #380c06;
+}
+
+#main #footer .footer2 {
+    width: 80%;
+    height: 100%;
+}
+
+#main #footer .footer2 .footer_menu {
+    height: 50%;
+    background-color: #753c35;
+}
+
+#main #footer .footer2 .copyright {
+    height: 50%;
+    background-color: #5b261f;
+}
+
+/* footer */

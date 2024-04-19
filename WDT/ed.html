@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남도맛기행</title>
+</head>
+<link rel="stylesheet" href="assets/css/style.css">
+
+<body>
+    <div id="wrap">
+        <div id="aside">
+            <h1 class="logo"></h1>
+            <nav class="menubar">
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu1</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main">
+            <article id="slider">
+                <div class="slider_wrap">
+                    <div class="slider s1">
+                        <img src="assets/img/food1.jpg" alt="이미지1">
+                    </div>
+                    <div class="slider s2">
+                        <img src="assets/img/food2.jpg" alt="이미지2">
+                    </div>
+                    <div class="slider s3">
+                        <img src="assets/img/food3.jpg" alt="이미지3">
+                    </div>
+                </div>
+            </article>
+            <section id="contents">
+                <div class="notice"></div>
+                <div class="gallery"></div>
+                <div class="banner"></div>
+            </section>
+            <footer id="footer">
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer_menu"></div>
+                    <div class="copyright"></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        let currentIndex = 0;
+        $(".slider_wrap").append($(".slider").first().clone(true));
+        setInterval(() => {
+            currentIndex++;
+            $(".slider_wrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
+
+            if (currentIndex == 3) {
+                setTimeout(() => {
+                    $(".slider_wrap").animate({ marginLeft: 0 }, 0);
+                    currentIndex = 0;
+                }, 700);
+            }
+        }, 3000);
+
+    </script>
+</body>
+
+</html>
