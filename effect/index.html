@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,6 +58,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="canvas"></div> <!-- ID 추가 -->
 
@@ -65,7 +67,7 @@
         <nav>
             <ul>
                 <li><a href="mouse01.html">Mouse</a></li>
-                <li><a href="mouse01.html">Parallax</a></li>
+                <li><a href="parallax01.html">Parallax</a></li>
                 <li><a href="mouse01.html">GSAP</a></li>
             </ul>
         </nav>
@@ -75,70 +77,70 @@
     <script>
         // 화면 설정 
         const scene = new THREE.Scene();
-    
+
         // 카메라 설정
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
         camera.position.z = 500;
         scene.add(camera);
-    
+
         // 렌더링 설정
-        const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.getElementById("canvas").appendChild(renderer.domElement);
-    
+
         // 오브젝트 설정
         const circle = new THREE.Object3D();
         const net = new THREE.Object3D();
         const particle = new THREE.Object3D();
-    
+
         scene.add(circle);
         scene.add(net);
         scene.add(particle);
-    
+
         // 01
         const geometry1 = new THREE.IcosahedronGeometry(5, 1);
         const material1 = new THREE.MeshPhongMaterial({
             color: 0x142f45,
             flatShading: true
         });
-    
+
         const planet = new THREE.Mesh(geometry1, material1);
         planet.scale.x = 20;
         planet.scale.y = 20;
         planet.scale.z = 20;
         circle.add(planet);
-    
+
         // 02
         const geometry2 = new THREE.OctahedronGeometry(25, 1);
         const material2 = new THREE.MeshPhongMaterial({
             color: 0x142f45,
             wireframe: true,
         });
-    
+
         const planet2 = new THREE.Mesh(geometry2, material2);
         planet2.scale.set(10, 10, 10);
         net.add(planet2);
-    
+
         // 03 - CapsuleGeometry를 SphereGeometry로 변경
-        const geometry3 = new THREE.TetrahedronGeometry(2, 1); 
-        const material3 = new THREE.MeshBasicMaterial({ 
+        const geometry3 = new THREE.TetrahedronGeometry(2, 1);
+        const material3 = new THREE.MeshBasicMaterial({
             color: 0xffffff,
             flatShading: true
-        }); 
-    
-        for(let i = 0; i < 700; i++) {
+        });
+
+        for (let i = 0; i < 700; i++) {
             const particleMesh = new THREE.Mesh(geometry3, material3);
             particleMesh.position.set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
             particleMesh.position.multiplyScalar(90 + (Math.random() * 1000));
             particleMesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
             particle.add(particleMesh);
         }
-    
+
         // 조명 설정
         const ambientLight = new THREE.AmbientLight(0x999999);
         scene.add(ambientLight);
-    
+
         const lights = [];
         lights[0] = new THREE.DirectionalLight(0xffffff, 1);
         lights[0].position.set(1, 0, 0);
@@ -146,11 +148,11 @@
         lights[1].position.set(0.75, 1, 0.5);
         lights[2] = new THREE.DirectionalLight(0xffffff, 1);
         lights[2].position.set(-0.75, -1, 0.5);
-    
+
         scene.add(lights[0]);
         scene.add(lights[1]);
         scene.add(lights[2]);
-    
+
         // 애니메이션 설정
         function animate() {
             circle.rotation.x += 0.002;
@@ -160,14 +162,14 @@
             net.rotation.y -= 0.005;
             net.rotation.z -= 0.008;
             particle.rotation.y += 0.004;
-    
+
             requestAnimationFrame(animate);
             renderer.render(scene, camera);
         }
         animate();
 
         // 화면 사이트 설정
-        function onWindowResize(){
+        function onWindowResize() {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
@@ -175,4 +177,5 @@
         window.addEventListener("resize", onWindowResize);
     </script>
 </body>
+
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mouse.css">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
             font-size: 20vmax;
             text-align: center;
             font-family: "Orbitron";
-            font-weight: 900;
+            font-weight: 700;
             margin-left: -20vw;
             letter-spacing: -1vw;
         }
@@ -68,7 +68,8 @@
             user-select: none;
             pointer-events: none;
             transition: transform 0.5s,
-                background-color 0.3s, border 0.3s, border-radius 0.3s;
+                background-color 0.3s, border 0.3s;
+            border-radius: 0.3s;
         }
 
         .cursor::before {
@@ -99,14 +100,15 @@
     <div id="wrap">
         <header id="header">
             <div class="header__inner">
-                <h1>Mouse Effect <em>02</em></h1>
+                <h1><a href="index.html">Mouse Effect</a> <em>02</em></h1>
             </div>
         </header>
         <!-- //header -->
         <main id="main">
             <div class="cursor"></div>
             <div class="main__inner">
-                <p>JavaScript</p>
+                <p><span>J</span><span>a</span><span>v</span><span>a</span><span>S</span><span>c</span><span>r</span><span>i</span><span>p</span><span>t</span>
+                </p>
             </div>
             <div class="main__info">
                 <ul>
@@ -128,25 +130,59 @@
                         <li><a href="mouse04.html">04</a></li>
                     </ul>
                 </nav>
+                <div class="link">
+                    <ul>
+                        <li><a href="parallax01.html">parallax</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
         <!-- //footer -->
     </div>
     <!-- //wrap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script>
-        // info
         window.addEventListener("mousemove", function (e) {
             document.querySelector(".clientY").innerHTML = e.clientY;
             document.querySelector(".offsetY").innerHTML = e.offsetY;
             document.querySelector(".pageY").innerHTML = e.pageY;
             document.querySelector(".screenY").innerHTML = e.screenY;
         });
-        // use a script tag or an external JS file
+
         document.addEventListener("mousemove", (e) => {
-            gsap.to(".cursor", { duration: 0.6, left: e.clientX, top: e.clientY })
+            gsap.to(".cursor", { duration: 0.5, left: e.clientX - 50, top: e.clientY - 50 });
         });
+
+        let spans = document.querySelectorAll(".main__inner p span");
+
+        function ME() {
+            gsap.to(this, {
+                duration: 1,
+                fontSize: "22vmax",
+                color: "#ccc"
+            });
+        }
+        function MO() {
+            gsap.to(this, {
+                duration: 1,
+                fontSize: "20vmax",
+                color: "#BFEF9A"
+            });
+        }
+
+        spans.forEach(span => {
+            span.addEventListener("mouseenter", ME);
+            span.addEventListener("mouseout", MO);
+        });
+
+
+        gsap.to(".main__inner p span", {
+
+        })
     </script>
+
 </body>
 
 </html>
