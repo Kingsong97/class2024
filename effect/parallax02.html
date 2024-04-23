@@ -179,7 +179,13 @@
 
                 <section id="section09">
                     <span class="num">09</span>
-                    <div class="img"></div>
+                    <div class="img i1"></div>
+                    <div class="img i2"></div>
+                    <div class="img i3"></div>
+                    <div class="img i4"></div>
+                    <div class="img i5"></div>
+                    <div class="img i6"></div>
+                    <div class="img i7"></div>
                 </section>
             </div>
         </main>
@@ -361,6 +367,30 @@
             anticipatePin: 1,
             markers: false,
         });
+
+        // 09 : 숙제
+
+        const ani9 = gsap.timeline();
+
+        ani9.to("#section09 .i1", { x: innerWidth * 1 }, "img")
+            .to("#section09 .i2", { x: innerWidth * -1 }, "img")
+            .to("#section09 .i3", { x: innerWidth * 1 }, "img")
+            .to("#section09 .i4", { x: innerWidth * -1 }, "img")
+            .to("#section09 .i5", { x: innerWidth * 1 }, "img")
+            .to("#section09 .i6", { x: innerWidth * -1 }, "img")
+            .to("#section09 .i7", { x: innerWidth * 1 }, "img")
+
+        ScrollTrigger.create({
+            animation: ani9,
+            trigger: "#section09",
+            start: "top top",
+            end: "+=3000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: false,
+        });
+
     </script>
 </body>
 
