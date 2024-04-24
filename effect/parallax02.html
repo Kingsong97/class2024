@@ -94,6 +94,13 @@
             height: 100px;
             border-radius: 50%;
         }
+
+        #section09 .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 
@@ -186,6 +193,7 @@
                     <div class="img i5"></div>
                     <div class="img i6"></div>
                     <div class="img i7"></div>
+                    <div class="text">이제 시작합니다.</div>
                 </section>
             </div>
         </main>
@@ -379,12 +387,14 @@
             .to("#section09 .i5", { x: innerWidth * 1 }, "img")
             .to("#section09 .i6", { x: innerWidth * -1 }, "img")
             .to("#section09 .i7", { x: innerWidth * 1 }, "img")
+            .to("#section09 .text", { scale: 90, rotation: 100, duration: 2 }, "text")
+            .to("#section09 .text", { autoAlpha: 0 }, "text")
 
         ScrollTrigger.create({
             animation: ani9,
             trigger: "#section09",
             start: "top top",
-            end: "+=3000",
+            end: "+=4000",
             scrub: true,
             pin: true,
             anticipatePin: 1,
