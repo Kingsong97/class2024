@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 E-2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="#">역사박물관</a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">박물관 소개</a>
+                        <ul>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">박물관연혁</a></li>
+                            <li><a href="#">유물현황</a></li>
+                            <li><a href="#">관람안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">전시</a>
+                        <ul>
+                            <li><a href="#">선사시대</a></li>
+                            <li><a href="#">삼국시대</a></li>
+                            <li><a href="#">조선시대</a></li>
+                            <li><a href="#">근대시대</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">연구</a>
+                        <ul>
+                            <li><a href="#">생활유적</a></li>
+                            <li><a href="#">분묘유적</a></li>
+                            <li><a href="#">생산유적</a></li>
+                            <li><a href="#">통신유적</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">교육</a>
+                        <ul>
+                            <li><a href="#">문화행사</a></li>
+                            <li><a href="#">진로체험</a></li>
+                            <li><a href="#">외부교육</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+        <main id="main">
+            <section class="cont1">
+                <div class="notice">
+                    <h3>공지사항</h3>
+                    <ul>
+                        <li><a href="#">박물관장 인사말<span>2024.04.26</span></a></li>
+                        <li><a href="#">청소관장 인사말<span>2024.04.27</span></a></li>
+                        <li><a href="#">경비관장 인사말<span>2024.04.28</span></a></li>
+                        <li><a href="#">외주관장 인사말<span>2024.04.29</span></a></li>
+                        <li><a href="#">전시관장 인사말<span>2024.04.30</span></a></li>
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <h3>갤러리</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/gal01-min.jpg" alt="갤1">
+                                <span>근대박물관</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/gal02-min.jpg" alt="갤2">
+                                <span>현대박물관</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/l1.jpg" alt="링1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/l2.jpg" alt="링2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/l3.jpg" alt="링3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/l4.jpg" alt="링4">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="cont2">
+                <div class="slider">
+                    <div class="slider-wrap">
+                        <div class="slide S1">
+                        </div>
+                        <div class="slide S2">
+                        </div>
+                        <div class="slide S3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <div class="title">
+                <a href="#">역사박물관</a>
+            </div>
+            <div class="copy">
+                <p>Here's an English version of a copyright notice for you:
+
+                    "© 2024 Example Company. All rights reserved."
+
+                    This statement is concise and clearly asserts the rights reserved by the owner, making it easy to
+                    apply to any content. You can adjust it according to your specific needs or context!</p>
+            </div>
+            <div class="family">
+                <select>
+                    <option value="1">전쟁 박물관</option>
+                    <option value="2">경제 박물관</option>
+                    <option value="3">천체 박물관</option>
+                </select>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            // 메뉴
+            $(".nav > ul > li").mouseover(function () {
+                $(this).find(">ul").stop().slideDown();
+            });
+            $(".nav > ul > li").mouseout(function () {
+                $(this).find(">ul").stop().slideUp();
+            });
+
+            // 슬라이드
+            let currentIndex = 0;
+            $(".slider-wrap").append($(".slide").first().clone(true));
+
+            setInterval(() => {
+                currentIndex++;
+
+                $(".slider-wrap").animate({ marginTop: -650 * currentIndex + "px" }, 600);
+
+                if (currentIndex == 3) {
+                    setTimeout(() => {
+                        $(".slider-wrap").animate({ marginTop: 0 }, 0);
+                        currentIndex = 0;
+                    }, 700)
+                }
+            }, 2000);
+        });
+    </script>
+
+</body>
+
+</html>
