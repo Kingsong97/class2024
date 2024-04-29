@@ -1,52 +1,67 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.chrome.options import Options as ChromeOptions
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-import time
 import json
+import time
 from datetime import datetime
 
-def scroll_to_bottom(driver):
-    last_height = driver.execute_script("return document.body.scrollHeight")
-    while True:
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(3)  # 페이지 로드 대기
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "Poster__image--d9XTI"))
-        )
-        new_height = driver.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            break
-        last_height = new_height
+# 현재 날짜 가져오기
+current_date = datetime.now().strftime("%Y-%m-%d")
+filename = f"webtoon_titles_{current_date}.json"
 
-options = ChromeOptions()
-options.add_argument("--headless")
-service = ChromeService(executable_path=ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service, options=options)
-driver.get("https://comic.naver.com/webtoon")
+# 웹 드라이버 초기화 및 페이지 로드
+options = webdriver.ChromeOptions()
+browser = webdriver.Chrome(options=options)
+browser.get("https://comic.naver.com/webtoon")
 
-scroll_to_bottom(driver)
+# 페이지가 완전히 로드될 때까지 대기
+WebDriverWait(browser, 10).until(
+    EC.presence_of_all_elements_located((By.CLASS_NAME, "component_wrap"))
+)
 
-soup = BeautifulSoup(driver.page_source, 'html.parser')
-webtoons = soup.find_all('li', class_='DailyListItem__item--LP6_T')
+# 천천히 스크롤 다운
+scroll_pause_time = 1  # 1초 대기
+pixels_to_scroll = 1000  # 한 번에 스크롤할 픽셀 수
+max_time_limit = 40  # 전체 작업 시간 제한 (60초)
+start_time = time.time()  # 작업 시작 시간
 
+def scroll_down():
+    """현재 위치에서 지정된 픽셀 수만큼 아래로 스크롤"""
+    browser.execute_script(f"window.scrollBy(0, {pixels_to_scroll});")
+
+while (time.time() - start_time) < max_time_limit:
+    scroll_down()
+    time.sleep(scroll_pause_time)
+    # 스크롤 이동 후 새로운 높이를 계산
+    new_height = browser.execute_script("return document.body.scrollHeight")
+    if new_height == browser.execute_script("return window.pageYOffset + window.innerHeight"):
+        break  # 페이지 끝에 도달
+
+# 업데이트된 페이지 소스를 변수에 저장
+html_source_updated = browser.page_source
+soup = BeautifulSoup(html_source_updated, 'html.parser')
+
+# 웹툰 타이틀 정보를 추출
 webtoon_data = []
-for webtoon in webtoons:
-    title_tag = webtoon.find('a', class_='ContentTitle__title_area--x24vt')
-    image_tag = webtoon.find('img', class_='Poster__image--d9XTI')
+webtoon_list = soup.select('li.DailyListItem__item--LP6_T')  # CSS 선택자로 웹툰 리스트 선택
+
+for webtoon in webtoon_list:
+    title_tag = webtoon.select_one('a.ContentTitle__title_area--x24vt')
+    image_tag = webtoon.select_one('img.Poster__image--d9XTI')
     title = title_tag.text.strip() if title_tag else "Title not found"
     image_url = image_tag['src'] if image_tag else "Image URL not found"
-    webtoon_data.append({'title': title, 'image_url': image_url})
+    webtoon_data.append({
+        'title': title,
+        'image_url': image_url
+    })
 
-driver.quit()
+# 데이터를 JSON 파일로 저장
+with open(filename, 'w', encoding='utf-8') as f:
+    json.dump(webtoon_data, f, ensure_ascii=False, indent=4)
 
-current_date = datetime.now().strftime("%Y-%m-%d")
-filename = f"naver_webtoon_data_{current_date}.json"
-with open(filename, 'w', encoding='utf-8') as file:
-    json.dump(webtoon_data, file, ensure_ascii=False, indent=4)
+# 브라우저 종료
+browser.quit()
 
 print(f"JSON 파일이 저장되었습니다: {filename}")
