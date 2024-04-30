@@ -10,11 +10,11 @@
 
 body {
 	margin: 0;
-	--color-text: #000;
-	--color-bg: #b7b19f;
-	--color-link: #000;
-	--color-link-hover: #000;
-	--color-heading: #111;
+	--color-text: #fff;
+	--color-bg: #191919;
+	--color-link: #fff;
+	--color-link-hover: #fff;
+	--color-heading: #fff;
 	color: var(--color-text);
 	background-color: var(--color-bg);
 	font-family: nimbus-sans, sans-serif;
@@ -140,7 +140,7 @@ main::after {
 	grid-template-rows: auto auto;
 	grid-template-columns: 1fr auto;
 	grid-template-areas: 'title menu'
-						'links links';
+		'links links';
 }
 
 .frame__title {
