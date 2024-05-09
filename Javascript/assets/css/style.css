@@ -203,6 +203,7 @@ li {
 
 .main__menu ul li a em {
   font-style: normal;
+  position: relative;
 }
 
 .main__menu ul li a em::before {
