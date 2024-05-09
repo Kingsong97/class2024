@@ -20,7 +20,8 @@
         }
 
         body {
-            background-color: #111;
+            --bg-color: #111;
+            background-color: var(--bg-color);
         }
 
         .header__inner a {
@@ -151,9 +152,30 @@
             margin-right: -4vw;
         }
 
-        .split>span {
-            display: inline-block;
-            min-width: 1.3vw;
+        .parallax__progress progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            width: 100%;
+            height: 4px;
+            bottom: 0;
+            appearance: none;
+            background: transparent;
+        }
+
+        .parallax__progress progress::-webkit-progress-bar {
+            background: transparent;
+        }
+
+        .parallax__progress progress::-webkit-progress-value {
+            background: linear-gradient(to left, #db38b5, #01b3e3, #25ce7b, #fdc741, #ff6b01, #fc4236);
+            background-attachment: fixed;
+        }
+
+        .parallax__progress progress::-moz-progress-bar {
+            background: linear-gradient(to left, #db38b5, #01b3e3, #25ce7b, #fdc741, #ff6b01, #fc4236);
+            background-attachment: fixed;
         }
     </style>
 </head>
@@ -162,8 +184,8 @@
     <div id="wrap">
         <header id="header">
             <div class="header__inner">
-                <h1><a href="index.html">Parallax Effect 06</a></h1>
-                <p>GSAP scrollTrigger - 나타나기</p>
+                <h1><a href="index.html">Parallax Effect 08</a></h1>
+                <p>GSAP scrollTrigger - 진행바</p>
 
                 <div class="link">
                     <ul>
@@ -175,7 +197,7 @@
         <!-- //header -->
 
         <main id="parallax__cont">
-            <section id="section1" class="parallax__item">
+            <section id="section1" class="parallax__item" data-bgcolor="#111111">
                 <span class="parallax__item__num">01</span>
                 <h2 class="parallax__item__title">section1</h2>
                 <figure class="parallax__item__imgWrap">
@@ -185,7 +207,7 @@
             </section>
             <!-- //section1 -->
 
-            <section id="section2" class="parallax__item">
+            <section id="section2" class="parallax__item" data-bgcolor="#369369">
                 <span class="parallax__item__num">02</span>
                 <h2 class="parallax__item__title">section2</h2>
                 <figure class="parallax__item__imgWrap">
@@ -195,7 +217,7 @@
             </section>
             <!-- //section2 -->
 
-            <section id="section3" class="parallax__item">
+            <section id="section3" class="parallax__item" data-bgcolor="#146146">
                 <span class="parallax__item__num">03</span>
                 <h2 class="parallax__item__title">section3</h2>
                 <figure class="parallax__item__imgWrap">
@@ -205,7 +227,7 @@
             </section>
             <!-- //section3 -->
 
-            <section id="section4" class="parallax__item">
+            <section id="section4" class="parallax__item" data-bgcolor="#866466">
                 <span class="parallax__item__num">04</span>
                 <h2 class="parallax__item__title">section4</h2>
                 <figure class="parallax__item__imgWrap">
@@ -215,7 +237,7 @@
             </section>
             <!-- //section4 -->
 
-            <section id="section5" class="parallax__item">
+            <section id="section5" class="parallax__item" data-bgcolor="#343453">
                 <span class="parallax__item__num">05</span>
                 <h2 class="parallax__item__title">section5</h2>
                 <figure class="parallax__item__imgWrap">
@@ -225,7 +247,7 @@
             </section>
             <!-- //section5 -->
 
-            <section id="section6" class="parallax__item">
+            <section id="section6" class="parallax__item" data-bgcolor="#229988">
                 <span class="parallax__item__num">06</span>
                 <h2 class="parallax__item__title">section6</h2>
                 <figure class="parallax__item__imgWrap">
@@ -235,7 +257,7 @@
             </section>
             <!-- //section6 -->
 
-            <section id="section7" class="parallax__item">
+            <section id="section7" class="parallax__item" data-bgcolor="#478999">
                 <span class="parallax__item__num">07</span>
                 <h2 class="parallax__item__title">section7</h2>
                 <figure class="parallax__item__imgWrap">
@@ -245,7 +267,7 @@
             </section>
             <!-- //section7 -->
 
-            <section id="section8" class="parallax__item">
+            <section id="section8" class="parallax__item" data-bgcolor="#576856">
                 <span class="parallax__item__num">08</span>
                 <h2 class="parallax__item__title">section8</h2>
                 <figure class="parallax__item__imgWrap">
@@ -255,7 +277,7 @@
             </section>
             <!-- //section8 -->
 
-            <section id="section9" class="parallax__item">
+            <section id="section9" class="parallax__item" data-bgcolor="#777777">
                 <span class="parallax__item__num">09</span>
                 <h2 class="parallax__item__title">section9</h2>
                 <figure class="parallax__item__imgWrap">
@@ -275,7 +297,9 @@
                         <li><a href="parallax03.html">03</a></li>
                         <li><a href="parallax04.html">04</a></li>
                         <li><a href="parallax05.html">05</a></li>
-                        <li class="active"><a href="parallax05.html">06</a></li>
+                        <li><a href="parallax06.html">06</a></li>
+                        <li><a href="parallax07.html">07</a></li>
+                        <li class="active"><a href="parallax08.html">08</a></li>
                     </ul>
                 </nav>
             </div>
@@ -283,96 +307,19 @@
         <!-- //footer -->
     </div>
     <!-- //wrap -->
-
+    <div class="parallax__progress">
+        <progress max="100" value="0"></progress>
+    </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script>
-        // 단수
-
-        // let text = document.querySelector(".split");
-        // let splitText = text.innerText;
-        // let splitWrap = splitText.split("").join("</span><span>");
-        // text.innerHTML = splitWrap = "<span>" + splitWrap + "</span>";
-
-        // 복수
-        // document.querySelectorAll(".split").forEach((text) => {
-        //     let splitText = text.innerText;
-        //     let splitWrap = splitText.split("").join("</span><span aria-hidden='true'>");
-        //     text.innerHTML = splitWrap = "<span>" + splitWrap + "</span>";
-        //     text.setAttribute("aria-label", splitText);
-        // });
-
-        //gsap
-        // gsap.from(".split span", {
-        //     yPercent: 100,
-        //     autoAlpha: 0,
-        //     duration: 2,
-        //     ease: "circ.out",
-        //     stagger: 0.1,
-
-        //     scrollTrigger: {
-        //         trigger: ".split",
-        //         start: "top center",
-        //         end: "+=400",
-        //         markers: true,
-        //         scrub: 1
-        //     }
-        // })
-
-        //
-        // gsap.utils.toArray(".split").forEach((text) => {
-        //     gsap.from(text.querySelectorAll("span"), {
-        //         yPercent: 100,
-        //         autoAlpha: 0,
-        //         duration: 1,
-        //         ease: "circ.out",
-        //         stagger: {
-        //             amount: 1,
-        //             from: "random"
-        //         },
-
-        //         scrollTrigger: {
-        //             trigger: text,
-        //             start: "top center",
-        //             end: "+=400",
-        //             markers: true,
-        //         }
-        //     })
-        // });
-
-        //
-    </script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script>
-        const targets = gsap.utils.toArray(".split");
-
-        targets.forEach((target) => {
-            let SplitClient = new SplitType(target, { type: "lines, words, chars" });
-            let lines = SplitClient.lines;
-            let words = SplitClient.words;
-            let chars = SplitClient.chars;
-
-            gsap.from(lines, {
-                yPercent: 100,
-                autoAlpha: 0,
-                duration: 1,
-                ease: "circ.out",
-                stagger: {
-                    amount: 1,
-                    from: "random"
-                },
-
-                scrollTrigger: {
-                    trigger: target,
-                    start: "top center",
-                    end: "+=400",
-                    markers: true,
-                }
-            })
-        });
-
-
+        gsap.to("progress", {
+            value: 100,
+            ease: "none",
+            scrollTrigger: { scrub: 0.3 }
+        })
     </script>
 </body>
 

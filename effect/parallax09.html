@@ -20,7 +20,8 @@
         }
 
         body {
-            background-color: #111;
+            --bg-color: #111;
+            background-color: var(--bg-color);
         }
 
         .header__inner a {
@@ -151,9 +152,43 @@
             margin-right: -4vw;
         }
 
-        .split>span {
+        #parallax__nav {
+            position: fixed;
+            right: 120px;
+            top: 20px;
+            z-index: 10000;
+            background-color: rgba(255, 255, 255, 1);
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        #parallax__nav li {
+            display: inline;
+        }
+
+        #parallax__nav li a {
             display: inline-block;
-            min-width: 1.3vw;
+            width: 34px;
+            height: 34px;
+            padding: 5px;
+            text-align: center;
+            line-height: 34px;
+            border-radius: 50px;
+            background-color: #000;
+            color: #fff;
+            font-family: 'NexonLv1Gothic';
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        #parallax__nav li a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #parallax__nav li a.active {
+            background-color: red;
         }
     </style>
 </head>
@@ -162,8 +197,8 @@
     <div id="wrap">
         <header id="header">
             <div class="header__inner">
-                <h1><a href="index.html">Parallax Effect 06</a></h1>
-                <p>GSAP scrollTrigger - 나타나기</p>
+                <h1><a href="index.html">Parallax Effect 08</a></h1>
+                <p>GSAP scrollTrigger - 메뉴 이동 효과</p>
 
                 <div class="link">
                     <ul>
@@ -173,6 +208,20 @@
             </div>
         </header>
         <!-- //header -->
+        <nav id="parallax__nav">
+            <ul>
+                <li><a href="#section1" class="active">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
+            </ul>
+        </nav>
+
 
         <main id="parallax__cont">
             <section id="section1" class="parallax__item">
@@ -270,12 +319,21 @@
             <div class="footer__inner">
                 <nav>
                     <ul>
-                        <li><a href="parallax01.html">01</a></li>
-                        <li><a href="parallax02.html">02</a></li>
-                        <li><a href="parallax03.html">03</a></li>
-                        <li><a href="parallax04.html">04</a></li>
-                        <li><a href="parallax05.html">05</a></li>
-                        <li class="active"><a href="parallax05.html">06</a></li>
+                        <li><a href="parallax01.html">1</a></li>
+                        <li><a href="parallax02.html">2</a></li>
+                        <li><a href="parallax03.html">3</a></li>
+                        <li><a href="parallax04.html">4</a></li>
+                        <li><a href="parallax05.html">5</a></li>
+                        <li><a href="parallax06.html">6</a></li>
+                        <li><a href="parallax07.html">7</a></li>
+                        <li><a href="parallax08.html">8</a></li>
+                        <li class="active"><a href="parallax09.html">9</a></li>
+                        <li><a href="parallax10.html">10</a></li>
+                        <li><a href="parallax11.html">11</a></li>
+                        <li><a href="parallax12.html">12</a></li>
+                        <li><a href="parallax13.html">13</a></li>
+                        <li><a href="parallax14.html">14</a></li>
+                        <li><a href="parallax15.html">15</a></li>
                     </ul>
                 </nav>
             </div>
@@ -283,96 +341,38 @@
         <!-- //footer -->
     </div>
     <!-- //wrap -->
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script>
-        // 단수
+        let links = gsap.utils.toArray("#parallax__nav ul li a");
 
-        // let text = document.querySelector(".split");
-        // let splitText = text.innerText;
-        // let splitWrap = splitText.split("").join("</span><span>");
-        // text.innerHTML = splitWrap = "<span>" + splitWrap + "</span>";
+        links.forEach(link => {
+            let element = document.querySelector(link.getAttribute("href")),
 
-        // 복수
-        // document.querySelectorAll(".split").forEach((text) => {
-        //     let splitText = text.innerText;
-        //     let splitWrap = splitText.split("").join("</span><span aria-hidden='true'>");
-        //     text.innerHTML = splitWrap = "<span>" + splitWrap + "</span>";
-        //     text.setAttribute("aria-label", splitText);
-        // });
+                linkST = ScrollTrigger.create({
+                    trigger: element,
+                    start: "top top"
+                });
 
-        //gsap
-        // gsap.from(".split span", {
-        //     yPercent: 100,
-        //     autoAlpha: 0,
-        //     duration: 2,
-        //     ease: "circ.out",
-        //     stagger: 0.1,
+            ScrollTrigger.create({
+                trigger: element,
+                start: "top center",
+                end: "bottom center",
+                onToggle: self => setActive(link)
+            });
 
-        //     scrollTrigger: {
-        //         trigger: ".split",
-        //         start: "top center",
-        //         end: "+=400",
-        //         markers: true,
-        //         scrub: 1
-        //     }
-        // })
-
-        //
-        // gsap.utils.toArray(".split").forEach((text) => {
-        //     gsap.from(text.querySelectorAll("span"), {
-        //         yPercent: 100,
-        //         autoAlpha: 0,
-        //         duration: 1,
-        //         ease: "circ.out",
-        //         stagger: {
-        //             amount: 1,
-        //             from: "random"
-        //         },
-
-        //         scrollTrigger: {
-        //             trigger: text,
-        //             start: "top center",
-        //             end: "+=400",
-        //             markers: true,
-        //         }
-        //     })
-        // });
-
-        //
-    </script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script>
-        const targets = gsap.utils.toArray(".split");
-
-        targets.forEach((target) => {
-            let SplitClient = new SplitType(target, { type: "lines, words, chars" });
-            let lines = SplitClient.lines;
-            let words = SplitClient.words;
-            let chars = SplitClient.chars;
-
-            gsap.from(lines, {
-                yPercent: 100,
-                autoAlpha: 0,
-                duration: 1,
-                ease: "circ.out",
-                stagger: {
-                    amount: 1,
-                    from: "random"
-                },
-
-                scrollTrigger: {
-                    trigger: target,
-                    start: "top center",
-                    end: "+=400",
-                    markers: true,
-                }
-            })
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
+            });
         });
 
-
+        function setActive(link) {
+            links.forEach(el => el.classList.remove("active"));
+            link.classList.add("active");
+        }
     </script>
 </body>
 
