@@ -135,19 +135,19 @@
                                         <li>음수인 경우 문자열의 오른쪽에서부터 인덱스를 샙니다.</li>
                                 </ul>
                                 <pre><code class="javascript">{
-    "javascript reference".at()       //j
-    "javascript reference".at(0)      //j
-    "javascript reference".at(1)      //a
-    "javascript reference".at(2)      //v
-    "javascript reference".at(3)      //a
-    "javascript reference".at(4)      //s
-    "javascript reference".at(5)      //c
-    "javascript reference".at(-1)     //e
-    "javascript reference".at(-2)     //c
-    "javascript reference".at(-3)     //n
-    "javascript reference".at(-4)     //e
-    "javascript reference".at(-5)     //r
-    "javascript reference".at(100)    // undefined
+        "javascript reference".at()       //j
+        "javascript reference".at(0)      //j
+        "javascript reference".at(1)      //a
+        "javascript reference".at(2)      //v
+        "javascript reference".at(3)      //a
+        "javascript reference".at(4)      //s
+        "javascript reference".at(5)      //c
+        "javascript reference".at(-1)     //e
+        "javascript reference".at(-2)     //c
+        "javascript reference".at(-3)     //n
+        "javascript reference".at(-4)     //e
+        "javascript reference".at(-5)     //r
+        "javascript reference".at(100)    // undefined
 }</code></pre>
 
                         </div>
@@ -480,7 +480,6 @@
                                         </li>
                                 </ul>
                                 <pre><code class="javascript">{
-
         //JavaScript: String.prototype.trim
         const text = "   Hello, world!   ";
         console.log(text.trim()); // "Hello, world!"
@@ -496,7 +495,7 @@
                         <!-- //sample02 -->
                 </div>
 
-                <button id="topBtn" onclick="topFunction()">TOP</button>
+
         </main>
         <!-- //main -->
         <footer id="footer">
@@ -505,29 +504,6 @@
         <!-- //footer -->
         <script src="assets/js/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
-        <script>
-
-        </script>
-        <script>
-                let mybutton = document.getElementById("topBtn");
-
-                // When the user scrolls down 20px from the top of the document, show the button
-                window.onscroll = function () { scrollFunction() };
-
-                function scrollFunction() {
-                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                                mybutton.style.display = "block";
-                        } else {
-                                mybutton.style.display = "none";
-                        }
-                }
-
-                // When the user clicks on the button, scroll to the top of the document
-                function topFunction() {
-                        document.body.scrollTop = 0;
-                        document.documentElement.scrollTop = 0;
-                }
-        </script>
 </body>
 
 </html>
