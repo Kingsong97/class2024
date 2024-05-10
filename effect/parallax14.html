@@ -263,7 +263,7 @@
 
         <section id="section8" class="parallax__item">
             <span class="parallax__item__num">08</span>
-            <figure class="parallax__item__imgWrap">
+            <figure class="parallax__item__imgWrap img8">
                 <div class="parallax__item__img"></div>
             </figure>
         </section>
@@ -271,7 +271,7 @@
 
         <section id="section9" class="parallax__item">
             <span class="parallax__item__num">09</span>
-            <figure class="parallax__item__imgWrap">
+            <figure class="parallax__item__imgWrap img9">
                 <div class="parallax__item__img"></div>
             </figure>
         </section>
@@ -381,6 +381,36 @@
                 containerAnimation: scrollTween,
                 start: "left center",
                 toggleActions: "play none none none",
+            }
+        });
+
+        gsap.fromTo(".img8", {
+            scale: 1
+        }, {
+            scale: 1.5,
+            duration: 3,
+            ease: "power1.inOut",
+            scrollTrigger: {
+                trigger: ".img8",
+                start: "top center+=100",
+                end: "bottom center-=100",
+                toggleActions: "play none none reverse",
+                scrub: true
+            }
+        });
+
+        gsap.fromTo(".img9", {
+            opacity: 0
+        }, {
+            opacity: 1,
+            duration: 3,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".img9",
+                start: "top center+=100",
+                end: "bottom center-=100",
+                toggleActions: "play none none reverse",
+                scrub: true
             }
         });
 
