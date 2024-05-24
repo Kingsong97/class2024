@@ -1,0 +1,137 @@
+footer {
+    background-color: #222222;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    /* 추가: footer를 화면 전체 너비로 설정 */
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content .left,
+.footer-content .right {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-content .right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 2rem;
+}
+
+.footer-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 2rem;
+    font-family: "nimbus-sans";
+}
+
+.footer-content p {
+    margin: 0;
+    line-height: 1.5;
+    color: #b4b4b4;
+    text-align: left;
+    margin-left: 2rem;
+    margin-bottom: 0.7rem;
+    font-family: "SUITE-Regular";
+}
+
+.sns ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sns ul li {
+    margin-right: 10px;
+}
+
+.sns ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* 푸터 반응형 스타일 */
+@media (max-width: 1024px) {
+    .footer__inner {
+        padding: 5rem 2rem;
+    }
+
+    .footer-content .left,
+    .footer-content .right {
+        padding: 0 10px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5rem 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content .left,
+    .footer-content .right {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .footer-content .right {
+        margin-top: 1rem;
+    }
+
+    .footer-content h4,
+    .footer-content p {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__inner {
+        padding: 1rem;
+    }
+
+    .footer-content .left,
+    .footer-content .right {
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer-content h4,
+    .footer-content p {
+        margin: 0.5rem 0;
+    }
+}
