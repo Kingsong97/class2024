@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티 게시판</title>
+    <link rel="stylesheet" href="../coding/assets/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/njz5ajv.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="header-title">COMMUNITY</h1>
+        <div class="text">
+            <ul>
+                <li><a href="#">login</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div id="wrapper">
+        <div class="common-width">
+            <div class="navigation">
+                <nav class="tab">
+                    <button class="tablink" onclick="openTab(event, 'Community')"
+                        data-title="COMMUNITY">COMMUNITY</button>
+                    <button class="tablink active" onclick="openTab(event, 'Notice')"
+                        data-title="NOTICE">NOTICE</button>
+                </nav>
+
+                <form action="boardSearch.php" name="boardSearch" method="get">
+                    <fieldset>
+                        <legend class="blind"></legend>
+                        <input type="text" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요!">
+                        <select name="searchOption" id="searchOption">
+                            <option value="title">제목</option>
+                            <option value="content">내용</option>
+                            <option value="name">등록자</option>
+                        </select>
+                        <button type="submit">검색</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <section id="Notice" class="tabcontent active">
+                <main id="main-notice" role="main">
+                    <div class="container">
+                        <div class="intro__inner line-bot"></div>
+                        <div class="logo-container">
+                            <img src="/coding/assets/img/svg/logo.svg" alt="logo" id="main-logo">
+                        </div>
+                        <div class="intro__inner line-bot"></div>
+                    </div>
+                </main>
+                <!-- //main -->
+
+                <div class="board__inner">
+                    <div class="board__header">
+                        <a href="bord-write.html" class="write">글쓰기</a>
+                    </div>
+                    <div class="board__table">
+                        <table>
+                            <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>등록자</th>
+                                    <th>등록일</th>
+                                    <th>조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 예시 데이터 -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>공지사항1</td>
+                                    <td>관리자</td>
+                                    <td>2023-05-16</td>
+                                    <td>999</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>공지사항 제목 2</td>
+                                    <td>관리자</td>
+                                    <td>2023-05-15</td>
+                                    <td>999</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>공지사항 제목 3</td>
+                                    <td>관리자</td>
+                                    <td>2023-05-14</td>
+                                    <td>999</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>공지사항 제목 4</td>
+                                    <td>관리자</td>
+                                    <td>2023-05-13</td>
+                                    <td>999</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>공지사항 제목 5</td>
+                                    <td>관리자</td>
+                                    <td>2023-05-12</td>
+                                    <td>999</td>
+                                </tr>
+                                <!-- 예시 데이터 끝 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Community" class="tabcontent">
+                <main id="main-community" role="main">
+                    <div class="container">
+                        <div class="intro__inner line-bot"></div>
+                        <div class="logo-container">
+                            <img src="/coding/assets/img/svg/logo.svg" alt="logo" id="main-logo">
+                        </div>
+                        <div class="intro__inner line-bot"></div>
+                    </div>
+                </main>
+                <!-- //main -->
+
+                <div class="board__inner">
+                    <div class="board__header">
+                        <a href="bord-write.html" class="write">글쓰기</a>
+                    </div>
+                    <div class="board__table">
+                        <table>
+                            <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>등록자</th>
+                                    <th>등록일</th>
+                                    <th>조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 예시 데이터 -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>커뮤니티</td>
+                                    <td>가나다</td>
+                                    <td>2023-05-16</td>
+                                    <td>999</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>커뮤니티2</td>
+                                    <td>가나다</td>
+                                    <td>2023-05-14</td>
+                                    <td>999</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>커뮤니티3</td>
+                                    <td>가나다</td>
+                                    <td>2023-05-14</td>
+                                    <td>999</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>커뮤니티4</td>
+                                    <td>관리자</td>
+                                    <td>2023-05-13</td>
+                                    <td>999</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>커뮤니티5</td>
+                                    <td>관리자</td>
+                                    <td>2023-05-12</td>
+                                    <td>999</td>
+                                </tr>
+                                <!-- 예시 데이터 끝 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="footer-line-top"></div>
+    <div class="pagination-container">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+    <footer id="footer" class="common-width">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer-content">
+                    <div class="left">
+                        <h4>FORMYCELEB</h4>
+                        <p>
+                            이메일 문의: formyceleb.com<br>
+                            제휴 / 광고 문의<br>
+                            공지사항
+                        </p>
+                    </div>
+                    <div class="right">
+                        <p>Copyright © WEBS Corp. All Rights Reserved.</p>
+                        <div class="sns">
+                            <ul>
+                                <li><a href="#"><img src="../coding/assets/img/svg/insta.svg" alt="insta"></a></li>
+                                <li><a href="#"><img src="../coding/assets/img/svg/youtube.svg" alt="youtube"></a>
+                                </li>
+                                <li><a href="#"><img src="../coding/assets/img/svg/git.svg" alt="github"></a></li>
+                                <li><a href="#"><img src="../coding/assets/img/svg/figma.svg" alt="figma"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-line-bottom"></div>
+
+    <script src="../coding/assets/js/board.js"></script>
+</body>
+
+</html>

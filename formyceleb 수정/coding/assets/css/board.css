@@ -1,0 +1,483 @@
+/* 모든 요소에 대해 box-sizing을 border-box로 설정 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 기본 스타일 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'SUITE-Regular', sans-serif;
+    background-color: #111;
+    color: #fff;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1.2rem;
+}
+
+header h1 {
+    color: #000000;
+    font-size: 2rem;
+    font-family: "nimbus-sans";
+}
+
+header .text {
+    margin-right: 5rem;
+}
+
+header ul>li>a {
+    color: #000000;
+    font-size: 20px;
+    font-family: 'nimbus-sans';
+    font-weight: 500;
+    text-decoration-line: underline;
+}
+
+.navigation {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #111;
+}
+
+.tab {
+    display: flex;
+    flex-grow: 1;
+    max-width: 60%;
+}
+
+.tab button {
+    width: auto;
+    background: white;
+    color: #000000;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    font-family: 'nimbus-sans';
+}
+
+.tab button.active {
+    border-bottom: 2px solid #fff;
+    font-family: 'nimbus-sans';
+}
+
+fieldset {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border: none;
+}
+
+input {
+    width: 270px;
+    height: 40px;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-family: 'SUITE-Regular';
+}
+
+select {
+    width: 80px;
+    height: 40px;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-family: 'SUITE-Regular';
+}
+
+button {
+    width: 80px;
+    height: 40px;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: #ffffff;
+    line-height: normal;
+    font-family: 'SUITE-Regular';
+}
+
+input,
+select {
+    background-color: #ffffff;
+}
+
+button {
+    cursor: pointer;
+    background-color: #222;
+    color: white;
+}
+
+.board__inner {
+    padding: 70px 0;
+    background-color: #111;
+    margin-left: 0;
+}
+
+.board__inner .write {
+    font-size: 12px;
+    border: 1px solid var(--white700);
+    border-radius: 20px;
+    color: var(--white700);
+    padding: 4px 16px;
+}
+
+.board__table {
+    border-top: 3px solid #111111;
+}
+
+.tabcontent {
+    display: none;
+    padding: 2rem;
+    background-color: #111111;
+    min-height: 80%;
+}
+
+.tabcontent.active {
+    display: block;
+    background-color: #111111;
+}
+
+/* 탭 버튼의 active 상태 스타일링 */
+.tab button.active {
+    border-bottom: 2px solid #fff;
+    font-family: 'nimbus-sans';
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 1rem;
+    border-bottom: 2px solid #333;
+}
+
+th {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination a {
+    color: #fff;
+    padding: 1rem 1em;
+    margin: 0 0.5rem;
+    background-color: #222;
+    border-radius: 0.5rem;
+    line-height: 1;
+    justify-content: center;
+}
+
+.pagination a:hover {
+    background-color: #333;
+}
+
+.board__search .right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.board__table th,
+.board__table td {
+    border-bottom: 1px solid #B6B6B6;
+    padding: 15px 5px;
+    text-align: center;
+    font-family: 'SUITE-Regular';
+}
+
+.write {
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #111111 !important;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    text-decoration: none;
+    font-family: 'SUITE-Regular', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.board__header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.write:hover {
+    background-color: #454040;
+    color: #ffffff !important;
+}
+
+#main {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#main-logo {
+    max-width: 550px;
+    height: auto;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    #wrapper {
+        width: 90%;
+    }
+
+    .tab {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+
+    .tab button {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-left: 1rem;
+        font-size: 1.75rem;
+    }
+
+    .logo {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #main-logo {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tab button {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        max-width: 45%;
+    }
+
+    #main-logo {
+        max-width: 300px;
+    }
+}
+
+/* board__write 스타일 추가 */
+
+.board__write fieldset {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+}
+
+.board__write form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.board__write div {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.board__write input,
+.board__write textarea {
+    width: 100%;
+    height: 50px;
+    margin-right: 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-family: 'SUITE-Regular';
+    box-sizing: border-box;
+}
+
+.board__write textarea {
+    height: 200px;
+    resize: none;
+}
+
+.board__write button {
+    width: auto;
+    height: 40px;
+    padding: 8px 12px;
+    margin-right: 0;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: #ffffff;
+    line-height: normal;
+    font-family: 'SUITE-Regular';
+    cursor: pointer;
+    background-color: #222;
+    color: white;
+}
+
+.board__write {
+    background-color: #111;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.board__write h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-family: 'nimbus-sans';
+    margin-left: 5rem;
+}
+
+.board__write form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    padding-left: 1rem;
+    /* 폼 내용의 시작점 조정 */
+}
+
+.board__write div {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    display: block;
+}
+
+.board__write label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    width: 100%;
+    font-family: 'SUITE-Regular', sans-serif;
+}
+
+.board__write .input-style {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1.2rem 1.4rem;
+    font-size: 1rem;
+}
+
+.board__write textarea.input-style {
+    height: 500px;
+    resize: none;
+}
+
+.board__write .btn {
+    text-align: right;
+    width: 100%;
+    padding-left: 5rem;
+    /* 버튼의 시작점 조정 */
+}
+
+.board__write .btn-style {
+    padding: 10px 20px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 10%;
+}
+
+.board__write .btn-style:hover {
+    background-color: #555;
+}
+
+/* 버튼 스타일 */
+.btn-style {
+    background-color: var(--pointColor1);
+    width: 100%;
+    padding: 0.5rem 4rem;
+    color: var(--white);
+    font-weight: 800;
+    border-radius: 40px;
+    font-size: 1.25rem;
+    line-height: 1;
+    font-family: var(--fontN);
+    display: inline-block;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+}
+
+
+
+.sns ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sns ul li {
+    margin-right: 10px;
+}
+
+.sns ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+}

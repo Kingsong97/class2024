@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티 게시판</title>
+    <link rel="stylesheet" href="../coding/assets/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/njz5ajv.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="header-title">COMMUNITY</h1>
+        <div class="text">
+            <ul>
+                <li><a href="#">login</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div id="wrapper">
+        <section id="Notice" class="tabcontent active">
+            <main id="main-notice" role="main">
+                <div class="container">
+                    <div class="intro__inner line-bot"></div>
+                    <div class="logo-container">
+                        <img src="/coding/assets/img/svg/logo.svg" alt="logo" id="main-logo">
+                    </div>
+                    <div class="intro__inner line-bot"></div>
+                </div>
+            </main>
+            <!-- //main -->
+
+            <div class="board__inner">
+                <div class="board__write">
+                    <form action="#" name="#" method="post">
+                        <fieldset>
+                            <legend class="blind"></legend>
+                            <div>
+                                <label for="boardTitle">제목</label>
+                                <input type="text" id="boardTitle" name="boardTitle" class="input-style"
+                                    placeholder="제목을 작성해주세요!">
+                            </div>
+                            <div>
+                                <label for="boardContents">내용</label>
+                                <textarea id="boardContents" name="boardContents" rows="10" class="input-style"
+                                    placeholder="내용을 작성해주세요!"></textarea>
+                            </div>
+                            <div class="btn">
+                                <button type="submit" class="btn-style">저장하기</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- //board__write -->
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer-content">
+                    <div class="left">
+                        <h4>FORMYCELEB</h4>
+                        <p>
+                            이메일 문의: formyceleb.com<br>
+                            제휴 / 광고 문의<br>
+                            공지사항
+                        </p>
+                    </div>
+                    <div class="right">
+                        <p>Copyright © WEBS Corp. All Rights Reserved.</p>
+                        <div class="sns">
+                            <ul>
+                                <li><a href="#"><img src="../coding/assets/img/svg/insta.svg" alt="insta"></a></li>
+                                <li><a href="#"><img src="../coding/assets/img/svg/youtube.svg" alt="youtube"></a>
+                                </li>
+                                <li><a href="#"><img src="../coding/assets/img/svg/git.svg" alt="github"></a></li>
+                                <li><a href="#"><img src="../coding/assets/img/svg/figma.svg" alt="figma"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* 기본 설정 */
+@import "fonts.css";
+@import "commons.css";
+@import "vars.css";
+
+/* 섹션 설정 */
+@import "header.css";
+@import "footer.css";
+@import "board.css";
+@import "main.css";
+
+
+/* 외부 CSS */
+@import "../outcss/index.css";
+@import "../outcss/login.css";

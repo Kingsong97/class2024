@@ -1,0 +1,25 @@
+#main {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#main-logo {
+    max-width: 550px;
+    height: auto;
+}
+
+/* 반응형 스타일 */
+
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+}

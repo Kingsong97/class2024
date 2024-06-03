@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="../coding/assets/css/mypage.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-right-icons">
+            <a href="#" title="home">
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="23" cy="23" r="23" fill="white" />
+                    <rect width="30" height="30" transform="translate(8 8)" fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M23.8837 10.866C23.6493 10.6316 23.3314 10.5 23 10.5C22.6685 10.5 22.3506 10.6316 22.1162 10.866L13.3662 19.616L10.8662 22.116C10.7468 22.2313 10.6516 22.3692 10.5861 22.5217C10.5206 22.6742 10.4861 22.8383 10.4847 23.0042C10.4832 23.1702 10.5149 23.3348 10.5777 23.4884C10.6406 23.642 10.7334 23.7816 10.8507 23.899C10.9681 24.0163 11.1077 24.1092 11.2613 24.172C11.4149 24.2349 11.5795 24.2665 11.7455 24.265C11.9115 24.2636 12.0755 24.2291 12.228 24.1636C12.3805 24.0981 12.5184 24.0029 12.6337 23.8835L13 23.5172V31.7497C13 32.7443 13.3951 33.6981 14.0983 34.4014C14.8016 35.1046 15.7554 35.4997 16.75 35.4997H29.25C30.2445 35.4997 31.1984 35.1046 31.9016 34.4014C32.6049 33.6981 33 32.7443 33 31.7497V23.5172L33.3662 23.8835C33.602 24.1112 33.9177 24.2372 34.2455 24.2343C34.5732 24.2315 34.8867 24.1 35.1185 23.8683C35.3503 23.6365 35.4817 23.323 35.4846 22.9952C35.4874 22.6675 35.3614 22.3517 35.1337 22.116L23.8837 10.866Z"
+                        fill="#F5BA09" />
+                </svg>
+            </a>
+            <a href="#" title="menu">
+                <!-- <img src="/coding/assets/img/menu.png" alt=""> -->
+                <svg width="34" height="20" viewBox="0 0 34 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.5625" y1="1.5332" x2="33.3122" y2="1.5332" stroke="white" stroke-width="2" />
+                    <line x1="0.5625" y1="10.2666" x2="33.3122" y2="10.2666" stroke="white" stroke-width="2" />
+                    <line x1="0.5625" y1="19" x2="33.3122" y2="19" stroke="white" stroke-width="2" />
+                </svg>
+            </a>
+        </div>
+        <h1>마이페이지</h1>
+        <div id="profile">
+            <input type="file" id="fileInput" style="display:none;" accept="image/*" onchange="handleFileSelect(this)">
+            <a href="#">
+                <div class="circle" onclick="document.getElementById('fileInput').click();">
+                    <img src="../coding/assets/img/icon.png" alt="">
+                </div>
+            </a>
+        </div>
+        <h2>닉네임</h2>
+        <div class="tabs">
+            <a href="#" class="active">All</a>
+            <a href="#">폴더</a>
+        </div>
+    </header>
+    <main>
+        <div class="gallery">
+            <a href="#"><img src="../coding/assets/img/001_n.jpg" alt="Image description"></a>
+            <a href="#"><img src="../coding/assets/img/002_n.jpg" alt="Image description"></a>
+            <a href="#"><img src="../coding/assets/img/003_n.jpg" alt="Image description"></a>
+            <a href="#"><img src="../coding/assets/img/004_n.jpg" alt="Image description"></a>
+            <a href="#"><img src="../coding/assets/img/006_n.jpg" alt="Image description"></a>
+            <a href="#"><img src="../coding/assets/img/007_n.jpg" alt="Image description"></a>
+            <a href="#"><img src="../coding/assets/img/008_n.jpg" alt="Image description"></a>
+        </div>
+    </main>
+    <footer>
+        <a href="#">↑</a>
+    </footer>
+    <script>
+        function handleFileSelect(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var img = document.querySelector('.circle img');
+                    img.src = e.target.result; // 이미지 데이터로 src 설정
+                };
+                reader.readAsDataURL(input.files[0]); // 파일을 Data URL로 읽기
+            }
+        }
+    </script>
+</body>
+
+</html>
