@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../css/A-4.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="images/Logo.png" alt="로고">
+                </a>
+            </h1>
+            <div class="menubar">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">회사소개</a>
+                            <ul class="sub_menu">
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">조직구성도</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">사업영역</a>
+                            <ul class="sub_menu">
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">조직구성도</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">입주정보</a>
+                            <ul class="sub_menu">
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">조직구성도</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객센터</a>
+                            <ul class="sub_menu">
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">조직구성도</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div class="slide_wrap">
+                <div class="slide">
+                    <img src="images/slider01.jpg" alt="slide01">
+                    <p>나의꿈을</p>
+                </div>
+                <div class="slide">
+                    <img src="images/slider02.jpg" alt="slide02">
+                    <p>우리의꿈을</p>
+                </div>
+                <div class="slide">
+                    <img src="images/slider03.jpg" alt="slide03">
+                    <p>당신의꿈을</p>
+                </div>
+            </div>
+        </main>
+        <div id="contents">
+            <div class="notice">
+                <h3>공지사항</h3>
+                <ul>
+                    <li><a class="modal-btn" href="#">공지사항1</a><span>2024.06.01</span></li>
+                    <li><a href="#">공지사항1</a><span>2024.06.01</span></li>
+                    <li><a href="#">공지사항1</a><span>2024.06.01</span></li>
+                    <li><a href="#">공지사항1</a><span>2024.06.01</span></li>
+                </ul>
+            </div>
+            <div class="gallery">
+                <h3>갤러리</h3>
+                <ul>
+                    <li><img src="images/gallery01.jpg" alt="갤러리1"></li>
+                    <li><img src="images/gallery02.jpg" alt="갤러리2"></li>
+                    <li><img src="images/gallery03.jpg" alt="갤러리3"></li>
+                </ul>
+            </div>
+            <div class="link"></div>
+        </div>
+        <footer id="footer">
+
+        </footer>
+        <div class="modal">
+            안녕하세요?
+            우리는 꿈을 꿉니다.
+            <a class="exit" href="#">닫기</a>
+        </div>
+    </div>
+</body>
+<script>
+    $(".menu > ul > li").mouseover(function () {
+        $(".menu > ul > li > ul").stop().slideDown(200);
+    });
+    $(".menu > ul > li").mouseout(function () {
+        $(".menu > ul > li > ul").stop().slideUp(200);
+    });
+
+    $(function () {
+        let currentImg = 0;
+
+        setInterval(() => {
+            let nextImg = (currentImg + 1) % 3;
+            $(".slide").eq(currentImg).fadeOut(1000);
+            $(".slide").eq(nextImg).fadeIn(1000);
+            currentImg = nextImg;
+        }, 3000);
+    })
+
+    $(".modal-btn").click(function () {
+        $(".modal").show();
+    });
+    $(".exit").click(function () {
+        $(".modal").hide();
+    });
+</script>
+
+</html>
