@@ -5,18 +5,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/D-1.css">
+    <script src="script/jquery.min.js"></script>
 </head>
 
 <body>
     <div id="wrap">
         <div id="main">
-            <header id="header"></header>
-            <div id="slider"></div>
-            <div id="banner"></div>
-            <div id="contents"></div>
+            <div class="left">
+                <header id="header">
+                    <h1 class="logo"><a href="#">아옹</a></h1>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">1</a>
+                                <ul class="submenu">
+                                    <li><a href="#">1-1</a></li>
+                                    <li><a href="#">1-2</a></li>
+                                    <li><a href="#">1-3</a></li>
+                                    <li><a href="#">1-4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">2</a>
+                                <ul class="submenu">
+                                    <li><a href="#">2-1</a></li>
+                                    <li><a href="#">2-2</a></li>
+                                    <li><a href="#">2-3</a></li>
+                                    <li><a href="#">2-4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">3</a>
+                                <ul class="submenu">
+                                    <li><a href="#">3-1</a></li>
+                                    <li><a href="#">3-2</a></li>
+                                    <li><a href="#">3-3</a></li>
+                                    <li><a href="#">3-4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">4</a>
+                                <ul class="submenu">
+                                    <li><a href="#">4-1</a></li>
+                                    <li><a href="#">4-2</a></li>
+                                    <li><a href="#">4-3</a></li>
+                                    <li><a href="#">4-4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+            <div class="right">
+                <div id="slider">
+                    <div class="slide_wrap">
+                        <div class="slide">
+                            <a href="#"><img src="images/slider01.jpg" alt="이미지1"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="#"><img src="images/slider02-min.jpg" alt="이미지2"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="#"><img src="images/slider03-min.jpg" alt="이미지3"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="banner"></div>
+                <div id="contents"></div>
+            </div>
         </div>
+        <div id="footer"></div>
     </div>
-    <div id="footer"></div>
+    <script>
+        $(function () {
+            $(".menu > ul > li").mouseover(function () {
+                $(this).find(".submenu").stop().slideDown(200);
+            });
+            $(".menu > ul > li").mouseout(function () {
+                $(this).find(".submenu").stop().slideUp(200);
+            });
+        });
+
+        $(function () {
+            let currentImg = 0;
+            $(".slide_wrap").append($(".slide").first().clone());
+            setInterval(() => {
+                currentImg++;
+                $(".slide_wrap").animate({ marginTop: -400 * currentImg + "px" }, 600)
+                if (currentImg == 3) {
+                    $(".slide_wrap").animate({ marginTop: 0 }, 0);
+                    currentImg = 0;
+                }
+            }, 3000);
+        })
+    </script>
 </body>
 
 </html>
