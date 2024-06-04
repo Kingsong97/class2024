@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/D-3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="aside">
+            <h1 class="logo">
+                푸른마을
+            </h1>
+            <nav class="menu">
+                <div class="sub_menu">
+                    <ul>
+                        <li><a href="#">OnSale</a>
+                            <ul>
+                                <li><a href="#">할인행사</a></li>
+                                <li><a href="#">덤증정</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">기획전</a>
+                            <ul class="sub2">
+                                <li><a href="#">봄 먹거리</a></li>
+                                <li><a href="#">여름 먹거리</a></li>
+                                <li><a href="#">가을 먹거리</a></li>
+                                <li><a href="#">겨을 먹거리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">푸른마을 레시피</a>
+                            <ul class="sub3">
+                                <li><a href="#">메인요리</a></li>
+                                <li><a href="#">밑반찬</a></li>
+                                <li><a href="#">간식</a></li>
+                                <li><a href="#">브런치</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">매장안내</a>
+                            <ul class="sub4">
+                                <li><a href="#">신규매장</a></li>
+                                <li><a href="#">추천매장</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">menu5</a>
+                            <ul class="sub5">
+                                <li><a href="#">sub5-1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="spot_menu">
+                        <a href="#" class="login">로그인</a>
+                        <a href="#" class="sign-up">회원가입</a>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+        <div id="main">
+            <div class="slide">
+                <div class="image-wrap">
+                    <div class="slider"></div>
+                    <div class="slider"></div>
+                    <div class="slider"></div>
+                </div>
+                <div class="container">
+                    <div class="s-link1"><a href="#"></a></div>
+                    <div class="s-link2"><a href="#"></a></div>
+                    <div class="s-link3"><a href="#"></a></div>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="container">
+
+                </div>
+            </div>
+            <div id="contents">
+                <div class="notice">
+                    <h3 class="no">공지사항</h3>
+                    <h3 class="gal">갤러리</h3>
+                    <ul class="notice_list">
+                        <li><a href="#">푸른마을 폐장</a><span>2024.06.01</span></li>
+                        <li><a href="#">푸른마을 개장</a><span>2024.06.01</span></li>
+                        <li><a href="#">푸른마을 정정</a><span>2024.06.01</span></li>
+                        <li><a href="#">푸른마을 개명</a><span>2024.06.01</span></li>
+                    </ul>
+                    <ul class="gal_list">
+                        <li>
+                            <img src="images/card05.jpg" alt="1">
+                            <img src="images/card06.jpg" alt="2">
+                            <img src="images/card07.jpg" alt="3">
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="f-logo"></div>
+            <div class="container">
+                <div class="container">
+                    <div class="link"></div>
+                    <div class="copyright"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        $(function () {
+            let currentIndex = 0;
+            setInterval(() => {
+                $(function () {
+                    let nextIndex = (currentIndex + 1) % 3;
+
+                    $(".slider").eq(currentIndex).fadeOut(2000);
+                    $(".slider").eq(nextIndex).fadeIn(2000);
+
+                    currentIndex = nextIndex;
+                })
+            }, 2000);
+        })
+
+        $(function () {
+            $(".menu > .sub_menu > ul > li").hover(function () {
+                $(this).find("ul").stop().slideDown(300);
+                $(this).find("ul").css("display", "flex");
+            }, function () {
+                $(this).find("ul").stop().slideUp(300);
+            })
+        })
+
+
+        $(function () {
+            $(".no").click(function () {
+                $(".notice_list").css("display", "block");
+
+            })
+            $(".gal").click(function () {
+                $(".notice_list").css("display", "none");
+                $(".gal_list").remove().css("display", "none");
+                $(".gal_list").css("display", "block");
+            })
+        })
+
+    </script>
+</body>
+
+</html>
