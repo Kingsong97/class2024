@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-1</title>
+    <link rel="stylesheet" href="css/E-1.css">
+    <script src="script/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header id="header">
+                <h1 class="logo">
+                    <a href="#"><img src="../siteA/images/Logo.png" alt="logo"></a>
+                </h1>
+                <nav class="menubar">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">김치소개</a>
+                                <ul class="submenu">
+                                    <li><a href="#">초대의 글</a></li>
+                                    <li><a href="#">김치의 유래</a></li>
+                                    <li><a href="#">김치 재료</a></li>
+                                    <li><a href="#">오시는 길</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">김치퓨전</a>
+                                <ul class="submenu">
+                                    <li><a href="#">지역별 김치</a></li>
+                                    <li><a href="#">김치 스파게티</a></li>
+                                    <li><a href="#">김치 볶음밥</a></li>
+                                    <li><a href="#">김치와 고기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">페험프로그램</a>
+                                <ul class="submenu">
+                                    <li><a href="#">김치 담그기</a></li>
+                                    <li><a href="#">명사와 함께</a></li>
+                                    <li><a href="#">관람하기</a></li>
+                                    <li><a href="#">예약하기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">커뮤니티</a>
+                                <ul class="submenu">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">참여게시판</a></li>
+                                    <li><a href="#">자료실</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div id="aside">
+
+            </div>
+            <div id="slider">
+                <div class="slide_wrap">
+                    <div class="slide">
+                        <img src="images/slider01.jpg" alt="이미지1">
+                        <p>이미지1</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/slider02.jpg" alt="이미지2">
+                        <p>이미지2</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/slider03.jpg" alt="이미지3">
+                        <p>이미지3</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+
+    <script>
+        $(function () {
+            $(".menu > ul > li").mouseenter(function () {
+                $(this).find(".submenu").stop().slideDown(200);
+            });
+            $(".menu > ul > li").mouseleave(function () {
+                $(this).find(".submenu").stop().slideUp(200);
+            });
+        })
+
+        $(function () {
+            currentImg = 0;
+            $(".slide_wrap").append($(".slide").first().clone(true));
+
+            setInterval(() => {
+                currentImg++;
+                $(".slide_wrap").animate({ marginLeft: -100 * currentImg + "%" }, 600);
+                if (currentImg == 3) {
+                    setTimeout(() => {
+                        $(".slide_wrap").animate({ marginLeft: 0 }, 0);
+                        currentImg = 0;
+                    }, 600);
+                }
+            }, 3000);
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
