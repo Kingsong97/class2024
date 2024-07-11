@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <style>
+        .AHome__inner {
+            background-color: #eee;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .containerbox {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .container01 {
+            width: 100%;
+            height: 33.33%;
+            display: flex;
+            gap: 15px;
+        }
+
+        .profile {
+            width: 20%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .icon_user {
+            font-size: 100px;
+        }
+
+        .icon_setting {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .profile p {
+            margin-top: 10px;
+        }
+
+        .top_bar {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .top_bar01 {
+            height: 30%;
+            display: flex;
+            gap: 15px;
+        }
+
+        .notice {
+            width: 20%;
+            background-color: #47CAC7;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .notice_banner {
+            width: 80%;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding-left: 2rem;
+        }
+
+        .top_bar02 {
+            height: 70%;
+            display: flex;
+            gap: 15px;
+        }
+
+        .quick_board {
+            width: 20%;
+            border-radius: 10px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .container02 {
+            width: 100%;
+            height: 33.33%;
+            display: flex;
+            gap: 15px;
+        }
+
+        .second_menu01 {
+            width: 20%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .second_menu01 h3 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .menu_01_box {
+            margin: 0 auto;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .second_mini {
+            width: 30%;
+            height: auto;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .second_mini p {
+            margin-top: 5px;
+        }
+
+        .second_menu02 {
+            width: 40%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .second_menu02 h3 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-left: 1rem;
+        }
+
+        .line {
+            width: 90%;
+            height: 1px;
+            background-color: #D8D8D8;
+            position: absolute;
+        }
+
+        .menu02_box {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu02_box ul {
+            margin-top: 10px;
+        }
+
+        .menu02_box .pie_chart {
+            width: 10rem;
+            height: 10rem;
+        }
+
+        .second_menu03 {
+            width: 40%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .second_menu03 h3 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-left: 1rem;
+        }
+
+        .second_menu03 .line {
+            width: 90%;
+            height: 1px;
+            background-color: #D8D8D8;
+            position: absolute;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+
+        .list li {
+            display: flex;
+            align-items: center;
+        }
+
+        .list span {
+            margin-left: 2rem;
+        }
+
+        .container03 {
+            width: 100%;
+            height: 33.33%;
+            display: flex;
+            gap: 15px;
+        }
+
+        .third_menu01 {
+            width: 20%;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .third_menu02 {
+            width: 80%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .third_menu02 h3 {
+            font-weight: bold;
+        }
+
+        .daysbox {
+            display: flex;
+            margin-top: 2rem;
+            gap: 3rem;
+        }
+
+        .days {
+            width: 20%;
+            height: 20%;
+            background-color: #ccc;
+            border-radius: 5px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            font-size: 1rem;
+        }
+
+
+        @media (max-width: 1200px) {
+
+            .second_menu02 svg {
+                display: none;
+            }
+
+            .second_menu02 li {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        @media (max-width: 960px) {
+            .second_menu01 p {
+                display: none;
+            }
+
+            .second_menu02 .mail_date {
+                display: none;
+            }
+
+            .menu02_box .pie_chart {
+                width: 7rem;
+                height: 7rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .container01,
+            .container02,
+            .container03 {
+                flex-direction: column;
+            }
+
+            .profile,
+            .top_bar,
+            .second_menu01,
+            .second_menu02,
+            .second_menu03,
+            .third_menu01,
+            .third_menu02 {
+                width: 100%;
+            }
+
+            .profile {
+                height: 50%;
+            }
+
+            .profile p {
+                display: none;
+            }
+
+            .top_bar02 .quick_board {
+                height: 50%;
+            }
+
+            .top_bar02 .quick_board p {
+                display: none;
+            }
+
+            .second_menu01 p {
+                display: none;
+            }
+
+            .second_menu02 .mail_text {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .second_menu02 .mail_date {
+                display: none;
+            }
+
+            .container03 {
+                width: 100%;
+                height: auto;
+            }
+
+            .container03>.third_menu01 {
+                width: 100% !important;
+            }
+
+            .container03>.third_menu02 {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="AHome__inner">
+        <div class="containerbox">
+            <div class="container01">
+                <div class="profile">
+                    <span class='icon_setting'>⚙️</span>
+                    <span class='icon_user'>👤</span>
+                    <p>ㅇㅇㅇ님 환영합니다.</p>
+                </div>
+                <div class="top_bar">
+                    <div class="top_bar01">
+                        <div class="notice">공지사항</div>
+                        <div class="notice_banner">업무 정보를 한 눈에 파악할 수 있는 업무포탈 KT BizOffice!</div>
+                    </div>
+                    <div class="top_bar02">
+                        <div class="quick_board top_menu01">
+                            <a href="academy"><span role="img" aria-label="mail">✉️</span></a>
+                            <p>전자우편</p>
+                        </div>
+                        <div class="quick_board top_menu02">
+                            <span role="img" aria-label="storage">💾</span>
+                            <p>전자결재</p>
+                        </div>
+                        <div class="quick_board top_menu03">
+                            <span role="img" aria-label="calendar">📅</span>
+                            <p>일정</p>
+                        </div>
+                        <div class="quick_board top_menu04">
+                            <span role="img" aria-label="chart">📊</span>
+                            <p>프로젝트</p>
+                        </div>
+                        <div class="quick_board top_menu05">
+                            <span role="img" aria-label="chat">💬</span>
+                            <p>SNS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container02">
+                <div class="second_menu01">
+                    <h3>Speed 작성</h3>
+                    <div class="menu_01_box">
+                        <div class="second_mini box01_01">
+                            <span role="img" aria-label="mail">✉️</span>
+                            <p>메일쓰기</p>
+                        </div>
+                        <div class="second_mini box01_02">
+                            <span role="img" aria-label="mail">✉️</span>
+                            <p>메일쓰기</p>
+                        </div>
+                        <div class="second_mini box01_03">
+                            <span role="img" aria-label="mail">✉️</span>
+                            <p>메일쓰기</p>
+                        </div>
+                        <div class="second_mini box01_04">
+                            <span role="img" aria-label="mail">✉️</span>
+                            <p>메일쓰기</p>
+                        </div>
+                        <div class="second_mini box01_05">
+                            <span role="img" aria-label="mail">✉️</span>
+                            <p>메일쓰기</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="second_menu02">
+                    <h3>받은 편지함</h3>
+                    <div class='line'></div>
+                    <div class="menu02_box">
+                        <img src="../assets/svg/chart.svg" alt="chart" class="pie_chart">
+                        <ul class='mail_text'>
+                            <li><a href='/'>안녕하세요, 환영합니다.</a></li>
+                            <li><a href='/'>반갑습니다. 여러분.</a></li>
+                            <li><a href='/'>국리니닷컴 개시</a></li>
+                            <li><a href='/'>삐약삐약 병아리</a></li>
+                        </ul>
+                        <ul class='mail_date'>
+                            <li>07.10</li>
+                            <li>07.11</li>
+                            <li>07.12</li>
+                            <li>07.13</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="second_menu03">
+                    <h3>결재할 문서</h3>
+                    <div class="line"></div>
+                    <ul class='list'>
+                        <li><span role="img" aria-label="ellipse">⭕</span>하루<span><a href='/'>경비신청서</a></span></li>
+                        <li><span role="img" aria-label="ellipse">⭕</span>일주일<span><a href='/'>인사명령</a></span></li>
+                        <li><span role="img" aria-label="ellipse">⭕</span>한달<span><a href='/'>휴가신청서</a></span></li>
+                        <li><span role="img" aria-label="ellipse">⭕</span>이후<span><a href='/'>경비신청서</a></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container03">
+                <div class="third_menu01">
+
+                </div>
+                <div class="third_menu02">
+                    <h3>자원관리</h3>
+                    <div class="daysbox">
+                        <div class="days day01"><span>21</span>MON</div>
+                        <div class="days day02"><span>22</span>THE</div>
+                        <div class="days day03"><span>23</span>WED</div>
+                        <div class="days day04"><span>24</span>THU</div>
+                        <div class="days day05"><span>25</span>FRI</div>
+                        <div class="days day06"><span>26</span>SAT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

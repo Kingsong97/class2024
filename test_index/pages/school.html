@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>학원목록</title>
+</head>
+
+<body>
+    <header id="header" role="banner">
+        <div class="header__inner">
+            <span><i class="ri-menu-line"></i></span>
+            <h1 class="header__logo">
+                <a href="main.html">국리니 닷컴</a>
+            </h1>
+        </div>
+        <!-- //header__ inner -->
+
+        <div class="search__box">
+            <input type="text" placeholder="어떤 강의를 찾고 있나요??" autocapitalize="off">
+            <span><i class="ri-search-line"></i></span>
+        </div>
+        <div class="m__search__box">
+            <div class="mb__search__box">
+                <span><i class="ri-search-line"></i></span>
+                <input type="text" placeholder="어떤 강의를 찾고 있나요??" autocapitalize="off">
+
+            </div>
+            <button class="mb__cancel">취소</button>
+        </div>
+
+        <!-- //search -->
+        <div class="header__user">
+            <a href="#"><span>스튜디오 예약</span></a>
+            <a href="notice.html"><span>공지사항</span></a>
+            <button class="mb__search"><span><i class="ri-search-line"></i></span></button>
+            <div class="profile">
+                <span><i class="ri-map-pin-user-fill"></i></span>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <aside id="aside">
+        <nav class="menu">
+            <ul class="menu__like">
+                <li><a href="#"><i class="ri-bookmark-fill"></i>내가 찜한 학원</a></li>
+            </ul>
+            <ul class="menu__list">
+                <li><a href="school.html"><i class="ri-school-fill"></i>학원목록</a></li>
+                <li><a href="#"><i class="ri-team-fill"></i>강사 목록</a></li>
+                <li><a href="#"><i class="ri-clipboard-line"></i>국비 토크</a></li>
+                <li><a href="#"><i class="ri-book-2-fill"></i>각종 리뷰</a></li>
+            </ul>
+            <ul class="menu__job">
+                <li><a href="#"><i class="ri-thumb-up-line"></i>취업 정보</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- //aside -->
+
+    <main id="main" class="main">
+        <div class="main__inner">
+            <div class="school__title">
+                <h1>어디를 가야 좋을까??</h1>
+                <div class="school__filter">
+                    <select name="quantity" id="quantity">
+                        <option value="10">10개씩</option>
+                        <option value="30">30개씩</option>
+                        <option value="30">50개씩</option>
+                    </select>
+                    <select name="address" id="address">
+                        <option value="전체">전체</option>
+                        <option value="서울">서울</option>
+                        <option value="인천">인천</option>
+                        <option value="부산">부산</option>
+                        <option value="대구">대구</option>
+                        <option value="광주">광주</option>
+                        <option value="대전">대전</option>
+                        <option value="울산">울산</option>
+                        <option value="세종">세종</option>
+                        <option value="경기">경기</option>
+                        <option value="강원">강원</option>
+                        <option value="충북">충북</option>
+                        <option value="충남">충남</option>
+                        <option value="전북">전북</option>
+                        <option value="전남">전남</option>
+                        <option value="경북">경북</option>
+                        <option value="경남">경남</option>
+                        <option value="제주">제주</option>
+                    </select>
+                    <select name="sort" id="sort">
+                        <option value="latest">최신순</option>
+                        <option value="popular">인기순</option>
+                        <option value="rating">평점순</option>
+                    </select>
+                </div>
+            </div>
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="school__list">
+                <div class="school__list__title">
+                    <span><a href=""><i class="ri-award-fill"></i>수원캐드디자인학원</a></span>
+                    <p>국민내일배움</p>
+                </div>
+                <div class="school__list__sub">
+                    <span><a href="">컴활1급] 컴퓨터활용능력 1급 실기(엑셀,엑세스) 자격증 취득과정</a></span>
+                    <div class="schoo___list__star">
+                        <p>건축설계</p>
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <p>평점 (3.0 / 5.0)</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="school__list__sub2">
+                    <span><i class="ri-map-pin-line"></i>서울</span>
+                    <span><i class="ri-calendar-fill"></i>2024.03.18</span>
+                    <span><i class="ri-calendar-schedule-fill"></i>2024.09.02</span>
+                    <span><i class="ri-user-add-line"></i></i>10명</span>
+                </div>
+                <div class="school__list__sub3">
+                    <span><a href="#">모집중</a></span>
+                </div>
+            </div>
+
+            <div class="list__button">
+                <ul>
+                    <li class="first"><a href="#">이전</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="end"><a href="#">다음</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer id="footer" class="footer">
+        <div class="footer__inner">
+            <div class="footer__title">
+                <ul>
+                    <li><a href="main.html">국리니닷컴</a></li>
+                    <li><a href="main.html">개인정보 처리 방침</a></li>
+                    <li><a href="main.html">비즈니스 스쿨 운영 정책</a></li>
+                    <li><a href="main.html"><i class="ri-github-fill"></i>공식 블로그</a></li>
+                    <li><a href="main.html"><i class="ri-tv-fill"></i>네이버 비즈니스 스쿨 TV</a></li>
+                </ul>
+            </div>
+            <div class="footer__sub">
+                <ul>
+                    <li><span>사업자등록번호 220-81-62517</span></li>
+                    <li><span>통신판매업신고번호 경기성남 제 2006-692호</span></li>
+                    <li><span>대표이사 최수연</span></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

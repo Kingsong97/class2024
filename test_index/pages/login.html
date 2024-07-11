@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국리니닷컴 로그인</title>
+    <style>
+        #login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 26px;
+            color: #ffb30f;
+        }
+
+        .member__inner {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend.blind {
+            font-size: 0;
+            height: 0;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            margin-left: 20px;
+        }
+
+        input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .login-actions {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        button {
+            width: calc(100% - 40px);
+            padding: 10px;
+            background-color: #ffb30f;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-sizing: border-box;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .login-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ffa200
+        }
+
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="login">
+        <div class="member__inner">
+            <h2>국리니닷컴 로그인</h2>
+            <form>
+                <fieldset>
+                    <legend class="blind">로그인 영역</legend>
+                    <div>
+                        <label for="youEmail" class="blind">이메일</label>
+                        <input type="text" id="youEmail" placeholder="이메일을 입력해주세요!" autocomplete="off"
+                            class="input_style">
+                    </div>
+                    <div>
+                        <label for="youPass" class="blind">비밀번호</label>
+                        <input type="password" id="youPass" placeholder="비밀번호를 입력해주세요!" autocomplete="off"
+                            class="input_style">
+                    </div>
+                </fieldset>
+                <div class="login-actions">
+                    <button type="submit">로그인</button>
+                </div>
+            </form>
+            <div class="login-links">
+                <a href="#find-email">이메일 찾기</a>
+                <a href="#find-password">비밀번호 찾기</a>
+                <a href="#signup">회원가입</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

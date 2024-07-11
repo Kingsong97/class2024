@@ -1,0 +1,41 @@
+:root {
+
+    --fontM: "MaruBuri";
+    --fontN: "Noto Sans KR";
+    --fontJ: "Jua";
+    --fontI: "IBM Plex Sans KR";
+
+    --black: #000;
+    --black100: #111;
+    --black200: #222;
+    --black300: #333;
+    --black400: #444;
+    --black500: #555;
+    --black600: #666;
+    --black700: #777;
+    --black800: #888;
+
+    --white: #fff;
+    --white100: #f9f9f9;
+    --white200: #eeeeee;
+    --white300: #dfdfdf;
+    --white400: #cfcfcf;
+    --white500: #bfbfbf;
+
+    --pointColor: #71E5D7;
+    --subColor: #dd9e45;
+    --mainBg: #191A1F;
+
+    font-family: "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+
+}

@@ -1,0 +1,164 @@
+.school__title {
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--black700);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.school__title h1 {
+    font-size: 1.6rem;
+    font-family: var(--fontJ);
+}
+
+.school__list {
+    border-bottom: 1px solid var(--black700);
+    padding: 1.4rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.school__list__title {
+    width: 12%;
+}
+
+.school__list__sub {
+    width: 48%;
+}
+
+.schoo___list__star {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.schoo___list__star p {
+    font-family: var(--fontI);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.schoo___list__star span {
+    font-size: 0.85rem;
+    display: flex;
+}
+
+.schoo___list__star span p {
+    padding-left: 10px;
+    font-size: 1rem;
+    font-family: var(--fontJ);
+}
+
+.school__list__sub2 {
+    width: 20%;
+}
+
+.school__list__sub3 {
+    width: 10%;
+}
+
+.school__list .school__list__title span {
+    font-family: var(--fontJ);
+    font-size: 1rem;
+    color: var(--subColor);
+}
+
+.school__list .school__list__title span a i {
+    padding-right: 4px;
+}
+
+.school__list .school__list__title p {
+    font-size: 12px;
+    padding-top: 10px;
+    font-family: var(--fontI);
+}
+
+.school__list__sub>span {
+    font-size: 20px;
+    color: var(--subColor);
+    font-family: var(--fontJ);
+}
+
+/* .school__list__sub p {
+    font-size: 1rem;
+    margin-top: 10px;
+} */
+
+.school__list__sub2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.school__list__sub2 i {
+    padding-right: 10px;
+}
+
+.school__list__sub2 span {
+    padding-bottom: 4px;
+    font-size: 14px;
+}
+
+.school__list__sub3 span {
+    color: var(--subColor);
+    border: 1px solid var(--subColor);
+    font-family: var(--fontJ);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.school__filter select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid var(--black700);
+    border-radius: 5px;
+    background-color: #13151A;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+.school__filter #address {
+    margin-left: 4px;
+}
+
+.list__button {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.list__button ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.list__button li a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    margin: 2px;
+    border-radius: 5px;
+    font-weight: normal;
+}
+
+.list__button li.active a {
+    font-weight: bold;
+    border: 1px solid var(--white);
+}
+
+.list__button li:hover a {
+    background-color: var(--black700);
+}

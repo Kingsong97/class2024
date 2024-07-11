@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+        }
+
+        .academy__inner {
+            padding: 20px;
+        }
+
+        .academy__controls {
+            margin-bottom: 20px;
+        }
+
+        .academy__controls select,
+        .academy__controls input {
+            margin-left: 10px;
+            padding: 5px;
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        .academy__list__to {
+            display: flex;
+            padding: 10px;
+            border-bottom: 1px solid #333;
+        }
+
+        .academy__list__to:nth-child(even) {
+            background-color: #222;
+        }
+
+        .academy__list__to:nth-child(odd) {
+            background-color: #333;
+        }
+
+        .list__title,
+        .list__day,
+        .list__field,
+        .list__address,
+        .list__yardMan,
+        .list__ncscd {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .list__title {
+            flex: 2;
+        }
+
+        .list__title p:first-child {
+            margin-right: 5px;
+            font-weight: bold;
+        }
+
+        .list__title p:last-child {
+            margin-right: 10px;
+            color: #FF7F50;
+        }
+
+        .list__title span {
+            font-weight: bold;
+            color: #FF7F50;
+        }
+
+        .list__day span,
+        .list__field span,
+        .list__address span,
+        .list__yardMan span,
+        .list__ncscd span {
+            color: #cccccc;
+        }
+
+        .academy__pagination {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .academy__pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .academy__pagination button.active {
+            background-color: #FF7F50;
+        }
+
+        .academy__pagination button:hover {
+            background-color: #555;
+        }
+
+        .academy__pagination button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="academy__inner">
+        <div class="academy__controls">
+            <label for="itemsPerPage">Show: </label>
+            <select id="itemsPerPage">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <input type="text" placeholder="Search..." />
+            <select>
+                <option value="">All</option>
+                <option value="ongoing">모집중</option>
+                <option value="closed">모집마감</option>
+            </select>
+            <select>
+                <option value="">분야</option>
+                <!-- 필드 옵션 -->
+            </select>
+            <select>
+                <option value="">위치</option>
+                <!-- 위치 옵션 -->
+            </select>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <span>교육기관명 | 과정제목</span>
+            </div>
+            <div class="list__day">
+                <span>모집기한</span>
+            </div>
+            <div class="list__field">
+                <span>분야</span>
+            </div>
+            <div class="list__address">
+                <span>위치</span>
+            </div>
+            <div class="list__yardMan">
+                <span>정원</span>
+            </div>
+            <div class="list__ncscd">
+                <span>NCS코드</span>
+            </div>
+        </div>
+        <!-- 각 아이템 데이터 -->
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>1</p>
+                <p>서울대학교</p>
+                <span>컴퓨터 공학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-01-01 ~ 2024-12-31</span>
+            </div>
+            <div class="list__field">
+                <span>컴퓨터 공학</span>
+            </div>
+            <div class="list__address">
+                <span>서울특별시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>30명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>123456</span>
+            </div>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>2</p>
+                <p>고려대학교</p>
+                <span>경영학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-02-01 ~ 2024-11-30</span>
+            </div>
+            <div class="list__field">
+                <span>경영학</span>
+            </div>
+            <div class="list__address">
+                <span>서울특별시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>40명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>654321</span>
+            </div>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>3</p>
+                <p>연세대학교</p>
+                <span>경제학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-03-01 ~ 2024-10-31</span>
+            </div>
+            <div class="list__field">
+                <span>경제학</span>
+            </div>
+            <div class="list__address">
+                <span>서울특별시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>35명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>112233</span>
+            </div>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>4</p>
+                <p>부산대학교</p>
+                <span>의학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-04-01 ~ 2024-09-30</span>
+            </div>
+            <div class="list__field">
+                <span>의학</span>
+            </div>
+            <div class="list__address">
+                <span>부산광역시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>25명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>445566</span>
+            </div>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>5</p>
+                <p>한양대학교</p>
+                <span>건축학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-05-01 ~ 2024-08-31</span>
+            </div>
+            <div class="list__field">
+                <span>건축학</span>
+            </div>
+            <div class="list__address">
+                <span>서울특별시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>40명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>778899</span>
+            </div>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>6</p>
+                <p>성균관대학교</p>
+                <span>전자공학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-06-01 ~ 2024-07-31</span>
+            </div>
+            <div class="list__field">
+                <span>전자공학</span>
+            </div>
+            <div class="list__address">
+                <span>서울특별시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>50명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>998877</span>
+            </div>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>7</p>
+                <p>중앙대학교</p>
+                <span>심리학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-07-01 ~ 2024-06-30</span>
+            </div>
+            <div class="list__field">
+                <span>심리학</span>
+            </div>
+            <div class="list__address">
+                <span>서울특별시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>30명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>554433</span>
+            </div>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>8</p>
+                <p>경북대학교</p>
+                <span>화학공학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-08-01 ~ 2024-05-31</span>
+            </div>
+            <div class="list__field">
+                <span>화학공학</span>
+            </div>
+            <div class="list__address">
+                <span>대구광역시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>45명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>221122</span>
+            </div>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>9</p>
+                <p>전남대학교</p>
+                <span>생명과학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-09-01 ~ 2024-04-30</span>
+            </div>
+            <div class="list__field">
+                <span>생명과학</span>
+            </div>
+            <div class="list__address">
+                <span>광주광역시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>20명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>332211</span>
+            </div>
+        </div>
+        <div class="academy__list__to">
+            <div class="list__title">
+                <p>10</p>
+                <p>인하대학교</p>
+                <span>기계공학 과정</span>
+            </div>
+            <div class="list__day">
+                <span>2024-10-01 ~ 2024-03-31</span>
+            </div>
+            <div class="list__field">
+                <span>기계공학</span>
+            </div>
+            <div class="list__address">
+                <span>인천광역시</span>
+            </div>
+            <div class="list__yardMan">
+                <span>50명</span>
+            </div>
+            <div class="list__ncscd">
+                <span>778800</span>
+            </div>
+        </div>
+        <div class="academy__pagination">
+            <button>&lt;</button>
+            <!-- 페이지 버튼 -->
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>10</button>
+            <!-- 페이지 버튼 끝 -->
+            <button>&gt;</button>
+        </div>
+    </div>
+</body>
+
+</html>
